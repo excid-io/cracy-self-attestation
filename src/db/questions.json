@@ -1,0 +1,20 @@
+{
+    "sections" :[{
+        "title":"Essential Requirements",
+        "description":"Essential defined in Annex 1",
+        "questions":[
+            {
+                "title": "Does your PDE support secure updates",
+                "type": "mchoices",
+                "responses":
+                [
+                    {
+                        "title": "Yes",
+                        "descritpion": "Select this if you support secure updates",
+                        "type": "choice"
+                    }
+                ]
+            }
+        ]
+    }]
+}
