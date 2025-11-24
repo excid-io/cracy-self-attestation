@@ -40,7 +40,6 @@ function renderMarkdownInline(text)
     return html;
 }
 
-
 export function renderQuestions(params)
 {
     const container = params.container;
@@ -76,26 +75,6 @@ export function renderQuestions(params)
         card.className = "question-card";
 
         //
-        // CHECKBOX WRAPPER + CHECKBOX
-        //
-        const checkboxWrapper = document.createElement("div");
-        checkboxWrapper.className = "checkbox-wrapper";
-
-        const checkbox = document.createElement("input");
-        checkbox.type = "checkbox";
-        checkbox.id = q.id;
-
-        const stored = loadQuestionState(setId, q.id);
-
-        if (stored.checked)
-        {
-            checkbox.checked = true;
-            card.classList.add("answered");
-        }
-
-        checkboxWrapper.appendChild(checkbox);
-
-        //
         // CONTENT AREA
         //
         const content = document.createElement("div");
@@ -109,42 +88,26 @@ export function renderQuestions(params)
 
         if (q.title)
         {
-            textEl.innerHTML = `<strong>${q.title}:</strong> ${q.text}`;
+            textEl.innerHTML = `<strong>${renderMarkdownInline(q.title)}:</strong> ${renderMarkdownInline(q.text)}`;
         }
         else
         {
-            textEl.textContent = q.text;
+            textEl.innerHTML = renderMarkdownInline(q.text);
         }
 
         content.appendChild(textEl);
 
         //
-        // BADGE (Answered / Pending)
+        // BADGE (status label)
         //
         const badge = document.createElement("span");
         badge.className = "badge";
 
         const dot = document.createElement("span");
-        dot.className = "badge-dot";
-
-        if (stored.checked || (stored.notes && stored.notes.length > 0))
-        {
-            dot.classList.remove("pending");
-        }
-        else
-        {
-            dot.classList.add("pending");
-        }
+        dot.className = "badge-dot pending";
 
         const label = document.createElement("span");
-        if (stored.checked || (stored.notes && stored.notes.length > 0))
-        {
-            label.textContent = "Answered";
-        }
-        else
-        {
-            label.textContent = "Pending";
-        }
+        label.textContent = "Not done";
 
         badge.appendChild(dot);
         badge.appendChild(label);
@@ -158,20 +121,21 @@ export function renderQuestions(params)
         {
             const detailsList = document.createElement("ul");
             detailsList.className = "question-details";
-        
+
             q.details.forEach((detailLine) =>
             {
                 const li = document.createElement("li");
                 li.innerHTML = renderMarkdownInline(detailLine);
                 detailsList.appendChild(li);
             });
-        
+
             content.appendChild(detailsList);
         }
 
         //
         // NOTES AREA
         //
+        const stored = loadQuestionState(setId, q.id) || {};
         const notes = document.createElement("textarea");
         notes.className = "notes";
         notes.placeholder = "Optional notes / where this is documented…";
@@ -180,38 +144,111 @@ export function renderQuestions(params)
         content.appendChild(notes);
 
         //
+        // STATUS CONTROLS (Done, In Progress, Not Done)
+        //
+        const statusWrapper = document.createElement("div");
+        statusWrapper.className = "status-controls";
+
+        // Done (checkbox)
+        const checkbox = document.createElement("input");
+        checkbox.type = "checkbox";
+        checkbox.id = q.id;
+        checkbox.className = "status-done";
+
+        // In Progress button
+        const progressBtn = document.createElement("button");
+        progressBtn.className = "status-progress";
+        progressBtn.textContent = "In Progress";
+
+        // Not Done button
+        const notDoneBtn = document.createElement("button");
+        notDoneBtn.className = "status-notdone";
+        notDoneBtn.textContent = "Not Done";
+
+        statusWrapper.appendChild(checkbox);
+        statusWrapper.appendChild(progressBtn);
+        statusWrapper.appendChild(notDoneBtn);
+
+        //
+        // LOAD STORED STATE (status + notes)
+        //
+        let status;
+        if (stored.status)
+        {
+            status = stored.status;
+        }
+        else if (stored.checked)   // backward compatibility with old schema
+        {
+            status = "done";
+        }
+        else
+        {
+            status = "notdone";
+        }
+
+        applyStatus(card, badge, checkbox, status);
+
+        //
         // EVENT HANDLERS
         //
         checkbox.addEventListener("change", () =>
         {
+            const newStatus = checkbox.checked ? "done" : "notdone";
+
             const state =
             {
-                checked: checkbox.checked,
+                status: newStatus,
                 notes: notes.value.trim()
             };
 
             saveQuestionState(setId, q.id, state);
-            updateCardAnsweredState(card, badge, state);
+            applyStatus(card, badge, checkbox, newStatus);
+            updateProgress(container, progressFillEl, progressTextEl);
+        });
+
+        progressBtn.addEventListener("click", () =>
+        {
+            const state =
+            {
+                status: "progress",
+                notes: notes.value.trim()
+            };
+
+            saveQuestionState(setId, q.id, state);
+            applyStatus(card, badge, checkbox, "progress");
+            updateProgress(container, progressFillEl, progressTextEl);
+        });
+
+        notDoneBtn.addEventListener("click", () =>
+        {
+            const state =
+            {
+                status: "notdone",
+                notes: notes.value.trim()
+            };
+
+            saveQuestionState(setId, q.id, state);
+            applyStatus(card, badge, checkbox, "notdone");
             updateProgress(container, progressFillEl, progressTextEl);
         });
 
         notes.addEventListener("input", () =>
         {
+            // Keep current status, just update notes
             const state =
             {
-                checked: checkbox.checked || notes.value.trim().length > 0,
+                status: status,
                 notes: notes.value.trim()
             };
 
             saveQuestionState(setId, q.id, state);
-            updateCardAnsweredState(card, badge, state);
-            updateProgress(container, progressFillEl, progressTextEl);
+            // status/colours do not change just by typing notes
         });
 
         //
         // ASSEMBLE CARD
         //
-        card.appendChild(checkboxWrapper);
+        card.appendChild(statusWrapper);   // <-- buttons live here (instead of checkboxWrapper)
         card.appendChild(content);
 
         container.appendChild(card);
@@ -223,24 +260,32 @@ export function renderQuestions(params)
     updateProgress(container, progressFillEl, progressTextEl);
 }
 
-function updateCardAnsweredState(card, badge, state)
+function applyStatus(card, badge, checkbox, status)
 {
+    card.classList.remove("answered", "inprogress", "notdone");
+
     const dot = badge.querySelector(".badge-dot");
     const label = badge.querySelector("span:nth-child(2)");
 
-    const answered = state.checked || (state.notes && state.notes.length > 0);
+    checkbox.checked = (status === "done");
 
-    if (answered)
+    if (status === "done")
     {
         card.classList.add("answered");
         dot.classList.remove("pending");
-        label.textContent = "Answered";
+        label.textContent = "Done";
+    }
+    else if (status === "progress")
+    {
+        card.classList.add("inprogress");
+        dot.classList.remove("pending");
+        label.textContent = "In progress";
     }
     else
     {
-        card.classList.remove("answered");
+        card.classList.add("notdone");
         dot.classList.add("pending");
-        label.textContent = "Pending";
+        label.textContent = "Not done";
     }
 }
 
@@ -249,20 +294,29 @@ export function updateProgress(container, progressFillEl, progressTextEl)
     const cards = Array.from(container.querySelectorAll(".question-card"));
     const total = cards.length;
 
-    let answered = 0;
+    let done = 0;
+    let progress = 0;
+    let notdone = 0;
 
     cards.forEach((card) =>
     {
-        const checkbox = card.querySelector("input[type='checkbox']");
-        const notes = card.querySelector(".notes");
-
-        if (checkbox.checked || notes.value.trim().length > 0)
+        if (card.classList.contains("answered"))
         {
-            answered += 1;
+            done++;
+        }
+        else if (card.classList.contains("inprogress"))
+        {
+            progress++;
+        }
+        else
+        {
+            notdone++;
         }
     });
 
-    const pct = (total === 0) ? 0 : (answered / total) * 100.0;
+    const pct = (total == 0) ? 0 : (done / total) * 100.0;
     progressFillEl.style.width = `${pct.toFixed(1)}%`;
-    progressTextEl.textContent = `${answered} / ${total} answered`;
+
+    progressTextEl.textContent =
+        `${done} done | ${progress} in progress | ${notdone} not done`;
 }

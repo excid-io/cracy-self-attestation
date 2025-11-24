@@ -1,0 +1,32 @@
+# Questions - Essential Cybersecurity Requirements - Annex I
+## Part I 
+	- **No expoitable vulnerabities**: Has the product been tested to confirm there are no known exploitable vulnerabilities when placed on the market?
+	- **Secure by default**: Does the product ship with a secure default configuration, including safe default settings and the ability to reset to its original secure state?
+	- **Vulnerability and update management**: Can vulnerabilities be addressed through timely security updates, and are automatic updates enabled by default with clear notifications and user control options?
+	- **Protection from unauthorized access**: Have you implemented authentication, identity, and access control mechanisms to prevent and detect unauthorized access?
+	- **Confidentiality of data**: Is data (personal or otherwise) encrypted at rest and in transit using state-of-the-art methods, and are other technical means used to ensure confidentiality?
+	- **Integrity of data and software**: Are there mechanisms to protect data, programs, and configurations from unauthorized modification, and to detect and report any corruption?
+	- **Data minimization**: Does the product collect and process only the data necessary for its intended purpose, avoiding unnecessary personal or other data?
+	- **Availability and resilience**: Have you implemented measures to ensure essential functions remain available even after incidents, including mitigation against denial-of-service attacks?
+	- **Minimizing negative impact on other systems**: Have you implemented measures to ensure essential functions remain available even after incidents, including mitigation against denial-of-service attacks?
+	- **Limiting attack surfaces**: Have you designed and produced the product to minimize attack surfaces, especially through secure management of external interfaces?
+	- **Reducing impact of incidents**: Are appropriate mechanisms and techniques in place to reduce the impact of cybersecurity incidents?
+	- **Monitoring and logging**: Does the product record and monitor internal activity relevant to security, including access to or modification of data, and allow users to opt out where required?
+	- **Secure data deletion and transfer**: Can users securely erase or transfer personal data and settings, ensuring that this process is done safely and cannot compromise security?
+## Part II
+	- **Vulnerability identification and documentation**: Have you identified and documented all known vulnerabilities and software components, including by maintaining a **software bill of materials (SBOM)** in a machine-readable format that covers at least top-level dependencies?
+	- **Timely remediation and security updates**: Do you have a process to **address and remediate vulnerabilities without delay**, and, where possible, **provide security updates separately from functionality updates**?
+	- **Regular testing and security reviews**: Are **regular and effective tests, reviews, or audits** performed to evaluate and maintain the security of the product with digital elements?
+	- **Public disclosure of fixed vulnerabilities**: After releasing a security update, do you **share and publicly disclose clear information** about the fixed vulnerabilities — including their impact, severity, affected products, and mitigation guidance — while balancing security risks of early disclosure?
+	- **Coordinated vulnerability disclosure (CVD) policy**: Have you established and enforced a **policy on coordinated vulnerability disclosure**, specifying how vulnerabilities are reported, validated, and addressed?
+	- **Secure update distribution**: Have you implemented **secure mechanisms for distributing updates**, ensuring that security patches are delivered, verified, and applied in a **timely and safe** manner?
+	- **Free and accessible security updates**: Are **security updates provided free of charge** and accompanied by **advisory messages** to inform users about the issue, its impact, and any recommended actions to take?
+- Have you included a copy of the EU DoC ( Declaration of Conformity ) ? 
+	- **Product identification**: Have you included the **name, type, and any additional information** necessary to uniquely identify the product with digital elements?
+	- **Manufacturer details**: Does the declaration clearly state the **name and address** of the manufacturer or their **authorised representative**?
+	- **Provider responsibility**: Does the declaration contain a **statement confirming** that it is issued **under the sole responsibility of the provider**?
+	- **Object of the declaration**: Have you **identified the object of the declaration**, including sufficient information to ensure **traceability** (e.g., product identifiers, model, or photograph if relevant)?
+	- **Conformity statement**: Does the declaration include a **statement confirming** that the product complies with the **relevant Union harmonisation legislation**?
+	- **Applied standards and references**: Have you listed all **harmonised standards**, **common specifications**, or **cybersecurity certifications** used to demonstrate conformity?
+	- **Notified body and certificate details** (where applicable):  If a **notified body** was involved, have you included its **name, number, description of the conformity assessment procedure**, and **certificate identification**?
+	- **Additional information and sign-off**: Does the declaration include any **additional information**, along with the **place and date of issue**, and the **name, function, and signature** of the person authorised to sign on behalf of the manufacturer?

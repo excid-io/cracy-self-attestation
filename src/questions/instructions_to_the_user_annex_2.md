@@ -1,4 +1,4 @@
-# Questions for Annex II
+# Questions - Instructions to the User - Annex II
 
 - **Manufacturer identification**: Have you provided the **manufacturer’s name, registered trade name or trademark, postal address, email or digital contact**, and, where available, the **website** where users can reach you?
 - **Single Point of Contact (SPOC)**: Have you included a **single point of contact** for reporting and receiving information about **vulnerabilities**, along with a reference to your **coordinated vulnerability disclosure (CVD) policy**?
