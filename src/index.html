@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>CRA Question Checklist</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <aside class="sidebar">
+    <h1>CRA Question Checklist</h1>
+    <p class="sidebar-intro">
+      Choose which question set to review. Tick items as you complete them and add notes if you want.
+    </p>
+    <label for="setSelect">Question set</label>
+    <select id="setSelect"></select>
+    <p class="sidebar-footer">
+      Progress is saved in your browser (localStorage) per question, per set.
+    </p>
+  </aside>
+
+  <main class="main">
+    <div class="summary">
+      <div class="summary-progress-bar">
+        <div class="summary-progress-fill" id="progressFill"></div>
+      </div>
+      <div class="summary-count" id="progressText">0 / 0 answered</div>
+    </div>
+
+    <div class="questions" id="questionsContainer"></div>
+  </main>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
