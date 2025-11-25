@@ -1,4 +1,4 @@
-# Identification of Economic Operators - Article 23 
+# Questions - Identification of Economic Operators - Article 23 
 ## Providing to Market Surveillance Authorities 
 -  **Upstream Traceability**: Can you provide, upon request, the **name and address of any economic operator who supplied you** with the product with digital elements? 
 -   **Downstream Traceability**: Where applicable, can you provide, upon request, the **name and address of any economic operator to whom you have supplied** the product with digital elements?
