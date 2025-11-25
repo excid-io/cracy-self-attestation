@@ -1,4 +1,4 @@
-### Questions - EU Declaration of Conformity - Annex V
+# Questions - EU Declaration of Conformity - Annex V
 - **Product Identification**: - Have you provided the **name, type, and any additional information** needed to uniquely identify the product with digital elements?
 - **Manufacturer / Authorised Representative Details**: Have you included the **name and address** of the manufacturer or the authorised representative?
 - **Sole Responsibility Statement**: Does the declaration explicitly state that it is **issued under the sole responsibility of the provider**?
