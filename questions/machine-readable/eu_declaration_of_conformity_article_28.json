@@ -5,7 +5,7 @@
       "questions": [
         {
           "title": "Creation of the EU Declaration of Conformity (DoC)",
-          "content": "Have you drawn up an EU Declaration of Conformity confirming that all applicable essential cybersecurity requirements in Annex I (check other question set for Annex I) have been met, as required by Article 13(12)?",
+          "content": "Have you drawn up an EU Declaration of Conformity confirming that all applicable essential cybersecurity requirements in Annex I (check other question set for Annex I) have been met, as required by Article 13(12)?\n- **Article 13 (12)**: Before a manufacturer can sell a product with digital elements in the EU, they must first **prepare the full technical documentation** required under Article 31 (check questions). Then they must **perform the appropriate conformity assessment procedure** (or have a notified body perform it) as described in Article 32 ( check questions ). If this assessment shows that both the **product** and the **manufacturer’s processes** meet the essential cybersecurity requirements in Annex I (Parts I and II), the manufacturer must then **create the EU Declaration of Conformity** (Article 28) and **affix the CE marking** (Article 30 check question) to the product.",
           "type": "mchoices",
           "responses": [
             {
@@ -22,12 +22,6 @@
               "type": "choice"
             }
           ]
-        },
-        {
-          "title": "Article 13 (12)",
-          "content": "Before a manufacturer can sell a product with digital elements in the EU, they must first **prepare the full technical documentation** required under Article 31 (check questions). Then they must **perform the appropriate conformity assessment procedure** (or have a notified body perform it) as described in Article 32 ( check questions ). If this assessment shows that both the **product** and the **manufacturer’s processes** meet the essential cybersecurity requirements in Annex I (Parts I and II), the manufacturer must then **create the EU Declaration of Conformity** (Article 28) and **affix the CE marking** (Article 30 check question) to the product.",
-          "type": "paragraph",
-          "responses": []
         },
         {
           "title": "EU Declaration of Conformity Structure & Availability",
@@ -51,13 +45,7 @@
         },
         {
           "title": "Simplified EU Declaration of Conformity (Structure & Languages)",
-          "content": "If you use a simplified EU Declaration of Conformity, model structure from Article 13 (20), does it follow the model structure set out in Annex VI (check questions) and is it made available in all languages required by the Member State where the product is placed on the market?",
-          "type": "paragraph",
-          "responses": []
-        },
-        {
-          "title": "Article 13 (20)",
-          "content": "Manufacturers shall either provide a copy of the EU declaration of conformity or a simplified EU declaration of conformity with the product with digital elements. Where a simplified EU declaration of conformity is provided, it shall contain the exact internet address at which the full EU declaration of conformity can be accessed.",
+          "content": "If you use a simplified EU Declaration of Conformity, model structure from Article 13 (20), does it follow the model structure set out in Annex VI (check questions) and is it made available in all languages required by the Member State where the product is placed on the market?\n- **Article 13 (20)**: Manufacturers shall either provide a copy of the EU declaration of conformity or a simplified EU declaration of conformity with the product with digital elements. Where a simplified EU declaration of conformity is provided, it shall contain the exact internet address at which the full EU declaration of conformity can be accessed.",
           "type": "paragraph",
           "responses": []
         },
@@ -75,7 +63,7 @@
         },
         {
           "title": "Awareness of Future Delegated Acts (EU Declaration Content)",
-          "content": "Are you prepared to update your EU Declaration of Conformity if the European Commission adopts delegated acts under Article 61 that expand the required minimum content in Annex V (check questions) to reflect technological developments?",
+          "content": "Are you prepared to update your EU Declaration of Conformity if the European Commission adopts delegated acts under Article 61 that expand the required minimum content in Annex V (check questions) to reflect technological developments?\n- Article 61: Article 61 governs how the European Commission is allowed to create _delegated acts_ under the Cyber Resilience Act (CRA). Delegated acts are legal updates made _by the Commission_—without going through the full legislative process—to keep the regulation up to date. The CRA gives the Commission the authority to add or update certain regulatory details (e.g., update Annexes, add technical content) **as long as it follows the rules in this article**.\n- The initial delegation lasts **five years** starting **10 December 2024**.\n- Before the 5 years expire, the Commission must report on how it used these powers.\n- Unless Parliament or the Council objects, the delegation **automatically renews** for another 5 years.\n- Parliament or Council: Either body can cancel the Commission’s authority to adopt delegated acts.\n- If they revoke it, the Commission must stop immediately.\n- Revocation does **not** affect acts already in force.\n- **Comission must consult experts before delegating**: Experts from each Member State must be consulted to ensure high-quality, technically sound acts.\n- Consultations must follow EU rules on better law-making.\n- **Once a delegated act is adopted, the Commission must notify Parliament and the Council**:\n- Notification must be **simultaneous**.\n- This triggers a review period.\n- **Delegated acts only enter into force if Parliament and Council do NOT object**\n- They have **2 months** to object (extendable by 2 more months).\n- If neither objects in time, the delegated act becomes law.\n- If either objects, the act does **not** enter into force.",
           "type": "mchoices",
           "responses": [
             {
@@ -92,102 +80,6 @@
               "type": "choice"
             }
           ]
-        },
-        {
-          "title": "Questions - EU Declaration of Conformity - Article 28 - Q1",
-          "content": "Article 61: Article 61 governs how the European Commission is allowed to create _delegated acts_ under the Cyber Resilience Act (CRA). Delegated acts are legal updates made _by the Commission_—without going through the full legislative process—to keep the regulation up to date. The CRA gives the Commission the authority to add or update certain regulatory details (e.g., update Annexes, add technical content) **as long as it follows the rules in this article**.",
-          "type": "paragraph",
-          "responses": []
-        },
-        {
-          "title": "Questions - EU Declaration of Conformity - Article 28 - Q2",
-          "content": "The initial delegation lasts **five years** starting **10 December 2024**.",
-          "type": "paragraph",
-          "responses": []
-        },
-        {
-          "title": "Questions - EU Declaration of Conformity - Article 28 - Q3",
-          "content": "Before the 5 years expire, the Commission must report on how it used these powers.",
-          "type": "paragraph",
-          "responses": []
-        },
-        {
-          "title": "Questions - EU Declaration of Conformity - Article 28 - Q4",
-          "content": "Unless Parliament or the Council objects, the delegation **automatically renews** for another 5 years.",
-          "type": "paragraph",
-          "responses": []
-        },
-        {
-          "title": "Questions - EU Declaration of Conformity - Article 28 - Q5",
-          "content": "Parliament or Council: Either body can cancel the Commission’s authority to adopt delegated acts.",
-          "type": "paragraph",
-          "responses": []
-        },
-        {
-          "title": "Questions - EU Declaration of Conformity - Article 28 - Q6",
-          "content": "If they revoke it, the Commission must stop immediately.",
-          "type": "paragraph",
-          "responses": []
-        },
-        {
-          "title": "Questions - EU Declaration of Conformity - Article 28 - Q7",
-          "content": "Revocation does **not** affect acts already in force.",
-          "type": "paragraph",
-          "responses": []
-        },
-        {
-          "title": "Comission must consult experts before delegating",
-          "content": "Experts from each Member State must be consulted to ensure high-quality, technically sound acts.",
-          "type": "paragraph",
-          "responses": []
-        },
-        {
-          "title": "Questions - EU Declaration of Conformity - Article 28 - Q8",
-          "content": "Consultations must follow EU rules on better law-making.",
-          "type": "paragraph",
-          "responses": []
-        },
-        {
-          "title": "Once a delegated act is adopted, the Commission must notify Parliament and the Council",
-          "content": "**Once a delegated act is adopted, the Commission must notify Parliament and the Council**:",
-          "type": "paragraph",
-          "responses": []
-        },
-        {
-          "title": "Questions - EU Declaration of Conformity - Article 28 - Q9",
-          "content": "Notification must be **simultaneous**.",
-          "type": "paragraph",
-          "responses": []
-        },
-        {
-          "title": "Questions - EU Declaration of Conformity - Article 28 - Q10",
-          "content": "This triggers a review period.",
-          "type": "paragraph",
-          "responses": []
-        },
-        {
-          "title": "Questions - EU Declaration of Conformity - Article 28 - Q11",
-          "content": "**Delegated acts only enter into force if Parliament and Council do NOT object**",
-          "type": "paragraph",
-          "responses": []
-        },
-        {
-          "title": "Questions - EU Declaration of Conformity - Article 28 - Q12",
-          "content": "They have **2 months** to object (extendable by 2 more months).",
-          "type": "paragraph",
-          "responses": []
-        },
-        {
-          "title": "Questions - EU Declaration of Conformity - Article 28 - Q13",
-          "content": "If neither objects in time, the delegated act becomes law.",
-          "type": "paragraph",
-          "responses": []
-        },
-        {
-          "title": "Questions - EU Declaration of Conformity - Article 28 - Q14",
-          "content": "If either objects, the act does **not** enter into force.",
-          "type": "paragraph",
-          "responses": []
         }
       ]
     }

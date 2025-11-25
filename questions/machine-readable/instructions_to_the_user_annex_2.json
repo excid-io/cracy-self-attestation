@@ -65,7 +65,7 @@
         },
         {
           "title": "Intended Purpose and Security Environment",
-          "content": "Have you clearly described the **intended purpose**, **essential functionalities**, and the **security environment** of the product as provided by the manufacturer?",
+          "content": "Have you clearly described the **intended purpose**, **essential functionalities**, and the **security environment** of the product as provided by the manufacturer?\n- ‘Intended Purpose’ means the use for which a product with digital elements is intended by the manufacturer, including the specific context and conditions of use, as specified in the information supplied by the manufacturer in the instructions for use, promotional or sales materials and statements, as well as in the technical documentation",
           "type": "mchoices",
           "responses": [
             {
@@ -82,12 +82,6 @@
               "type": "choice"
             }
           ]
-        },
-        {
-          "title": "Questions - Instructions to the User - Annex II - Q1",
-          "content": "‘Intended Purpose’ means the use for which a product with digital elements is intended by the manufacturer, including the specific context and conditions of use, as specified in the information supplied by the manufacturer in the instructions for use, promotional or sales materials and statements, as well as in the technical documentation",
-          "type": "paragraph",
-          "responses": []
         },
         {
           "title": "Foreseeable Misuse and Associated Risks",
@@ -137,7 +131,7 @@
         },
         {
           "title": "Detailed User Instructions",
-          "content": "Have you provided **detailed security-related instructions** (or a link to them) covering the following aspects:",
+          "content": "Have you provided **detailed security-related instructions** (or a link to them) covering the following aspects:\n- Measures for **secure installation, commissioning, and operation** throughout the product’s lifetime;\n- How **changes to the product** could affect **data security**;\n- How to **install security updates**;\n- How to **decommission or dispose** of the product securely, ensuring data removal;\n- How to **disable automatic installation of security updates** if desired; ( Annex I Part I point C )\n- For integrators, how to meet **Annex I cybersecurity requirements**  and **Annex VII documentation requirements** (these are covered above) when the product is integrated into other systems.",
           "type": "mchoices",
           "responses": [
             {
@@ -154,42 +148,6 @@
               "type": "choice"
             }
           ]
-        },
-        {
-          "title": "Questions - Instructions to the User - Annex II - Q2",
-          "content": "Measures for **secure installation, commissioning, and operation** throughout the product’s lifetime;",
-          "type": "paragraph",
-          "responses": []
-        },
-        {
-          "title": "Questions - Instructions to the User - Annex II - Q3",
-          "content": "How **changes to the product** could affect **data security**;",
-          "type": "paragraph",
-          "responses": []
-        },
-        {
-          "title": "Questions - Instructions to the User - Annex II - Q4",
-          "content": "How to **install security updates**;",
-          "type": "paragraph",
-          "responses": []
-        },
-        {
-          "title": "Questions - Instructions to the User - Annex II - Q5",
-          "content": "How to **decommission or dispose** of the product securely, ensuring data removal;",
-          "type": "paragraph",
-          "responses": []
-        },
-        {
-          "title": "Questions - Instructions to the User - Annex II - Q6",
-          "content": "How to **disable automatic installation of security updates** if desired; ( Annex I Part I point C )",
-          "type": "paragraph",
-          "responses": []
-        },
-        {
-          "title": "Questions - Instructions to the User - Annex II - Q7",
-          "content": "For integrators, how to meet **Annex I cybersecurity requirements**  and **Annex VII documentation requirements** (these are covered above) when the product is integrated into other systems.",
-          "type": "paragraph",
-          "responses": []
         },
         {
           "title": "Software Bill of Materials (SBOM)",

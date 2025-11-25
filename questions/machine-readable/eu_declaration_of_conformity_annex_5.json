@@ -111,31 +111,13 @@
         },
         {
           "title": "Notified Body Information (If Applicable)",
-          "content": "If a notified body was involved, have you included:",
-          "type": "paragraph",
-          "responses": []
-        },
-        {
-          "title": "Questions - EU Declaration of Conformity - Annex V - Q1",
-          "content": "The **name and number** of the notified body?",
-          "type": "paragraph",
-          "responses": []
-        },
-        {
-          "title": "Questions - EU Declaration of Conformity - Annex V - Q2",
-          "content": "A **description of the conformity assessment procedure** performed?",
-          "type": "paragraph",
-          "responses": []
-        },
-        {
-          "title": "Questions - EU Declaration of Conformity - Annex V - Q3",
-          "content": "The **identification of the certificate issued**?",
+          "content": "If a notified body was involved, have you included:\n- The **name and number** of the notified body?\n- A **description of the conformity assessment procedure** performed?\n- The **identification of the certificate issued**?",
           "type": "paragraph",
           "responses": []
         },
         {
           "title": "Additional Information & Signature",
-          "content": "Have you included:",
+          "content": "Have you included:\n- Any required **additional information**?\n- The **signature block** with:\n- Name and function of the signatory\n- Place and date of issue\n- Signature made on behalf of the provider?",
           "type": "mchoices",
           "responses": [
             {
@@ -152,36 +134,6 @@
               "type": "choice"
             }
           ]
-        },
-        {
-          "title": "Questions - EU Declaration of Conformity - Annex V - Q4",
-          "content": "Any required **additional information**?",
-          "type": "paragraph",
-          "responses": []
-        },
-        {
-          "title": "Questions - EU Declaration of Conformity - Annex V - Q5",
-          "content": "The **signature block** with:",
-          "type": "paragraph",
-          "responses": []
-        },
-        {
-          "title": "Questions - EU Declaration of Conformity - Annex V - Q6",
-          "content": "Name and function of the signatory",
-          "type": "paragraph",
-          "responses": []
-        },
-        {
-          "title": "Questions - EU Declaration of Conformity - Annex V - Q7",
-          "content": "Place and date of issue",
-          "type": "paragraph",
-          "responses": []
-        },
-        {
-          "title": "Questions - EU Declaration of Conformity - Annex V - Q8",
-          "content": "Signature made on behalf of the provider?",
-          "type": "paragraph",
-          "responses": []
         }
       ]
     }

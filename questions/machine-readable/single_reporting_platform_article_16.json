@@ -54,71 +54,13 @@
           "questions": [
             {
               "title": "CSIRT Dissemination of Notifications - Q1",
-              "content": "",
-              "type": "paragraph",
-              "responses": []
-            },
-            {
-              "title": "Immediate Dissemination",
-              "content": "Are you aware that the CSIRT receiving your notification must immediately disseminate it through the platform to the CSIRTs in all relevant Member States?",
-              "type": "mchoices",
-              "responses": [
-                {
-                  "title": "Yes",
-                  "type": "choice"
-                },
-                {
-                  "title": "No",
-                  "type": "choice"
-                },
-                {
-                  "title": "In Progress",
-                  "description": "Work is underway but not yet completed.",
-                  "type": "choice"
-                }
-              ]
-            },
-            {
-              "title": "Conditions for Delayed Dissemination",
-              "content": "Do you understand that dissemination may be delayed upon your request, under notification Article 14(2)(a), if you indicate that the information is sensitive under Article 12(1) of Directive (EU) 2022/2555 (check below) ?",
-              "type": "mchoices",
-              "responses": [
-                {
-                  "title": "Yes",
-                  "type": "choice"
-                },
-                {
-                  "title": "No",
-                  "type": "choice"
-                },
-                {
-                  "title": "In Progress",
-                  "description": "Work is underway but not yet completed.",
-                  "type": "choice"
-                }
-              ]
-            },
-            {
-              "title": "CSIRT Dissemination of Notifications - Q2",
-              "content": "The tasks of the CSIRT designated as coordinator shall include:\n1. identifying and contacting the entities concerned;\n2. assisting the natural or legal persons reporting a vulnerability; and\n3. **negotiating disclosure timelines and managing vulnerabilities that affect multiple entities**.",
+              "content": "- **Immediate Dissemination**: Are you aware that the CSIRT receiving your notification must immediately disseminate it through the platform to the CSIRTs in all relevant Member States?\n- **Conditions for Delayed Dissemination**: Do you understand that dissemination may be delayed upon your request, under notification Article 14(2)(a), if you indicate that the information is sensitive under Article 12(1) of Directive (EU) 2022/2555 (check below) ?\n- The tasks of the CSIRT designated as coordinator shall include:\n1. identifying and contacting the entities concerned;\n2. assisting the natural or legal persons reporting a vulnerability; and\n3. **negotiating disclosure timelines and managing vulnerabilities that affect multiple entities**.",
               "type": "paragraph",
               "responses": []
             },
             {
               "title": "Justification for Delay",
-              "content": "If dissemination is delayed, can you provide:",
-              "type": "paragraph",
-              "responses": []
-            },
-            {
-              "title": "CSIRT Dissemination of Notifications - Q3",
-              "content": "a justification for withholding the information, and",
-              "type": "paragraph",
-              "responses": []
-            },
-            {
-              "title": "CSIRT Dissemination of Notifications - Q4",
-              "content": "an indication of when dissemination should occur?",
+              "content": "If dissemination is delayed, can you provide:\n- a justification for withholding the information, and\n- an indication of when dissemination should occur?",
               "type": "paragraph",
               "responses": []
             }

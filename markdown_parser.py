@@ -1,13 +1,13 @@
 #!/usr/bin/env python3
 """
-Markdown → JSON converter with hierarchy:
+Markdown → JSON converter with hierarchy and proper handling of nested bullets:
 
 - # Heading        → top-level section
 - ## Heading       → subsection within current section
 - ### Heading      → sub-subsection within current subsection
-- Bullets (-, *)   → questions in the current scope:
-                     sub-subsection if present, else subsection,
-                     else section (Option D titles).
+- Top-level bullets (-, *)   → questions in the current scope
+- Indented bullets           → extra lines in the current question's content
+                               (NOT new questions)
 
 Question title rules:
 - If bullet starts with "**Title**: Question text":
@@ -15,7 +15,7 @@ Question title rules:
     - question.content = "Question text"
 - Otherwise (Option D):
     - question.title   = "<Scope Title> - Q<index>"
-    - question.content = full bullet text
+    - question.content = full bullet text (including any nested bullets)
 
 Question type:
 - "mchoices" for yes/no-style questions (Do/Does/Is/Are/Have/Has/etc.)
@@ -203,7 +203,6 @@ def parse_markdown(md_text: str):
             elif level == 3:
                 # sub-subsection inside current_subsection (or section if no subsection)
                 if current_subsection is None:
-                    # if no subsection, attach directly under section
                     parent = current_section
                     if parent is None:
                         parent = {
@@ -239,13 +238,30 @@ def parse_markdown(md_text: str):
 
             continue
 
-        # BULLET START = new question
-        if stripped.startswith("- ") or stripped.startswith("* "):
-            finalize_question()
-            flush_description()
-            collecting_question = True
-            content = re.sub(r"^[-*]\s*", "", stripped)
-            question_lines = [content]
+        # BULLETS (questions or nested points)
+        bullet_match = re.match(r"^(\s*)[-*]\s+(.*)$", raw)
+        if bullet_match:
+            indent = bullet_match.group(1) or ""
+            # treat tabs as 4 spaces for rough indent measurement
+            indent_width = len(indent.replace("\t", "    "))
+            content = bullet_match.group(2).strip()
+
+            if indent_width == 0:
+                # Top-level bullet → new question
+                finalize_question()
+                flush_description()
+                collecting_question = True
+                question_lines = [content]
+            else:
+                # Indented bullet:
+                # If we're already in a question, append as part of its content.
+                # This prevents nested bullets from becoming separate questions.
+                if collecting_question:
+                    question_lines.append(f"- {content}")
+                else:
+                    # No active question; treat as descriptive text for current scope
+                    pending_description.append(content)
+
             continue
 
         # CONTINUATION OF MULTI-LINE QUESTION

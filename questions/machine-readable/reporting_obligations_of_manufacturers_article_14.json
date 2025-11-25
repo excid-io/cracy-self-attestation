@@ -6,34 +6,8 @@
       "subsections": [
         {
           "title": "Actively Exploited Vulnerabilities - General Obligation",
-          "questions": [
-            {
-              "title": "Awareness & Reporting Process",
-              "content": "Do you have a defined process to detect and identify actively exploited vulnerabilities in your product with digital elements?",
-              "type": "mchoices",
-              "responses": [
-                {
-                  "title": "Yes",
-                  "type": "choice"
-                },
-                {
-                  "title": "No",
-                  "type": "choice"
-                },
-                {
-                  "title": "In Progress",
-                  "description": "Work is underway but not yet completed.",
-                  "type": "choice"
-                }
-              ]
-            },
-            {
-              "title": "Mandatory Reporting",
-              "content": "When you become aware of an actively exploited vulnerability, do you notify the CSIRT coordinator and ENISA without undue delay via the single reporting platform?",
-              "type": "paragraph",
-              "responses": []
-            }
-          ]
+          "description": "**Awareness & Reporting Process**: Do you have a defined process to detect and identify actively exploited vulnerabilities in your product with digital elements? **Mandatory Reporting**: When you become aware of an actively exploited vulnerability, do you notify the CSIRT coordinator and ENISA without undue delay via the single reporting platform?",
+          "questions": []
         },
         {
           "title": "Early Warning Reporting",
@@ -105,7 +79,7 @@
             },
             {
               "title": "Required Content Check",
-              "content": "Does your 72-hour report include:",
+              "content": "Does your 72-hour report include:\n- General information about the affected product?\n- The nature of the exploit and the vulnerability?\n- Corrective or mitigating measures taken?\n- Recommended actions for users?\n- A sensitivity rating (if applicable)?",
               "type": "mchoices",
               "responses": [
                 {
@@ -122,36 +96,6 @@
                   "type": "choice"
                 }
               ]
-            },
-            {
-              "title": "Vulnerability Notification - General Information - Q1",
-              "content": "General information about the affected product?",
-              "type": "paragraph",
-              "responses": []
-            },
-            {
-              "title": "Vulnerability Notification - General Information - Q2",
-              "content": "The nature of the exploit and the vulnerability?",
-              "type": "paragraph",
-              "responses": []
-            },
-            {
-              "title": "Vulnerability Notification - General Information - Q3",
-              "content": "Corrective or mitigating measures taken?",
-              "type": "paragraph",
-              "responses": []
-            },
-            {
-              "title": "Vulnerability Notification - General Information - Q4",
-              "content": "Recommended actions for users?",
-              "type": "paragraph",
-              "responses": []
-            },
-            {
-              "title": "Vulnerability Notification - General Information - Q5",
-              "content": "A sensitivity rating (if applicable)?",
-              "type": "paragraph",
-              "responses": []
             }
           ]
         },
@@ -180,7 +124,7 @@
             },
             {
               "title": "Final Report Content",
-              "content": "Does your final report include:",
+              "content": "Does your final report include:\n- A description of the vulnerability, severity, and impact?\n- Information about malicious actors exploiting it (if available)?\n- Details of applied updates or mitigation measures?",
               "type": "mchoices",
               "responses": [
                 {
@@ -197,24 +141,6 @@
                   "type": "choice"
                 }
               ]
-            },
-            {
-              "title": "Final Report - Q1",
-              "content": "A description of the vulnerability, severity, and impact?",
-              "type": "paragraph",
-              "responses": []
-            },
-            {
-              "title": "Final Report - Q2",
-              "content": "Information about malicious actors exploiting it (if available)?",
-              "type": "paragraph",
-              "responses": []
-            },
-            {
-              "title": "Final Report - Q3",
-              "content": "Details of applied updates or mitigation measures?",
-              "type": "paragraph",
-              "responses": []
             }
           ]
         },
@@ -313,7 +239,7 @@
                 },
                 {
                   "title": "Early Warning Content – Severe Incident",
-                  "content": "Does the early warning for severe incidents include:",
+                  "content": "Does the early warning for severe incidents include:\n- Whether the incident is malicious/unlawful?\n- The Member States where affected products were made available?",
                   "type": "mchoices",
                   "responses": [
                     {
@@ -330,18 +256,6 @@
                       "type": "choice"
                     }
                   ]
-                },
-                {
-                  "title": "(a) Early Warning Notification – Severe Incident (within 24 hours) - Q1",
-                  "content": "Whether the incident is malicious/unlawful?",
-                  "type": "paragraph",
-                  "responses": []
-                },
-                {
-                  "title": "(a) Early Warning Notification – Severe Incident (within 24 hours) - Q2",
-                  "content": "The Member States where affected products were made available?",
-                  "type": "paragraph",
-                  "responses": []
                 }
               ]
             },
@@ -370,7 +284,7 @@
                 },
                 {
                   "title": "Required Content for Severe Incident Report",
-                  "content": "Does the 72-hour incident notification include:",
+                  "content": "Does the 72-hour incident notification include:\n- General information about the incident?\n- Initial assessment of severity?\n- Corrective or mitigating actions already taken?\n- Mitigation actions users can take?\n- A sensitivity rating?",
                   "type": "mchoices",
                   "responses": [
                     {
@@ -387,36 +301,6 @@
                       "type": "choice"
                     }
                   ]
-                },
-                {
-                  "title": "(b) Incident Notification – General Information (within 72 hours) - Q1",
-                  "content": "General information about the incident?",
-                  "type": "paragraph",
-                  "responses": []
-                },
-                {
-                  "title": "(b) Incident Notification – General Information (within 72 hours) - Q2",
-                  "content": "Initial assessment of severity?",
-                  "type": "paragraph",
-                  "responses": []
-                },
-                {
-                  "title": "(b) Incident Notification – General Information (within 72 hours) - Q3",
-                  "content": "Corrective or mitigating actions already taken?",
-                  "type": "paragraph",
-                  "responses": []
-                },
-                {
-                  "title": "(b) Incident Notification – General Information (within 72 hours) - Q4",
-                  "content": "Mitigation actions users can take?",
-                  "type": "paragraph",
-                  "responses": []
-                },
-                {
-                  "title": "(b) Incident Notification – General Information (within 72 hours) - Q5",
-                  "content": "A sensitivity rating?",
-                  "type": "paragraph",
-                  "responses": []
                 }
               ]
             },
@@ -445,7 +329,7 @@
                 },
                 {
                   "title": "Final Report Content – Severe Incident",
-                  "content": "Does your final report include:",
+                  "content": "Does your final report include:\n- Detailed description, severity, and impact?\n- The likely root cause or threat type?\n- Applied and ongoing mitigation measures?",
                   "type": "mchoices",
                   "responses": [
                     {
@@ -462,24 +346,6 @@
                       "type": "choice"
                     }
                   ]
-                },
-                {
-                  "title": "(c) Final Report – Severe Incident (within one month) - Q1",
-                  "content": "Detailed description, severity, and impact?",
-                  "type": "paragraph",
-                  "responses": []
-                },
-                {
-                  "title": "(c) Final Report – Severe Incident (within one month) - Q2",
-                  "content": "The likely root cause or threat type?",
-                  "type": "paragraph",
-                  "responses": []
-                },
-                {
-                  "title": "(c) Final Report – Severe Incident (within one month) - Q3",
-                  "content": "Applied and ongoing mitigation measures?",
-                  "type": "paragraph",
-                  "responses": []
                 }
               ]
             },
@@ -508,89 +374,9 @@
                 },
                 {
                   "title": "No EU Establishment",
-                  "content": "If you have no main establishment in the EU, can you determine the correct CSIRT based on **in order**:",
+                  "content": "If you have no main establishment in the EU, can you determine the correct CSIRT based on **in order**:\n- Have you identified **the EU Member State where your authorised representative is established**, _specifically the representative that acts on your behalf for the highest number of products with digital elements (PDEs)_?\n- Have you determined **which importer places the highest number of your PDEs on the EU market**, and **in which Member State that importer is established**?  If no authorised representative exists, this becomes the **next criterion**.\n- Have you identified **the distributor who makes available the highest number of your PDEs**, and **the EU Member State where that distributor is established**?  This is the **third fallback criterion**.\n- Have you assessed **which Member State has the highest number of users** of your PDEs?",
                   "type": "paragraph",
                   "responses": []
-                },
-                {
-                  "title": "Notification Submission Method (CSIRT Coordinator) - Q1",
-                  "content": "Have you identified **the EU Member State where your authorised representative is established**, _specifically the representative that acts on your behalf for the highest number of products with digital elements (PDEs)_?",
-                  "type": "mchoices",
-                  "responses": [
-                    {
-                      "title": "Yes",
-                      "type": "choice"
-                    },
-                    {
-                      "title": "No",
-                      "type": "choice"
-                    },
-                    {
-                      "title": "In Progress",
-                      "description": "Work is underway but not yet completed.",
-                      "type": "choice"
-                    }
-                  ]
-                },
-                {
-                  "title": "Notification Submission Method (CSIRT Coordinator) - Q2",
-                  "content": "Have you determined **which importer places the highest number of your PDEs on the EU market**, and **in which Member State that importer is established**?  If no authorised representative exists, this becomes the **next criterion**.",
-                  "type": "mchoices",
-                  "responses": [
-                    {
-                      "title": "Yes",
-                      "type": "choice"
-                    },
-                    {
-                      "title": "No",
-                      "type": "choice"
-                    },
-                    {
-                      "title": "In Progress",
-                      "description": "Work is underway but not yet completed.",
-                      "type": "choice"
-                    }
-                  ]
-                },
-                {
-                  "title": "Notification Submission Method (CSIRT Coordinator) - Q3",
-                  "content": "Have you identified **the distributor who makes available the highest number of your PDEs**, and **the EU Member State where that distributor is established**?  This is the **third fallback criterion**.",
-                  "type": "mchoices",
-                  "responses": [
-                    {
-                      "title": "Yes",
-                      "type": "choice"
-                    },
-                    {
-                      "title": "No",
-                      "type": "choice"
-                    },
-                    {
-                      "title": "In Progress",
-                      "description": "Work is underway but not yet completed.",
-                      "type": "choice"
-                    }
-                  ]
-                },
-                {
-                  "title": "Notification Submission Method (CSIRT Coordinator) - Q4",
-                  "content": "Have you assessed **which Member State has the highest number of users** of your PDEs?",
-                  "type": "mchoices",
-                  "responses": [
-                    {
-                      "title": "Yes",
-                      "type": "choice"
-                    },
-                    {
-                      "title": "No",
-                      "type": "choice"
-                    },
-                    {
-                      "title": "In Progress",
-                      "description": "Work is underway but not yet completed.",
-                      "type": "choice"
-                    }
-                  ]
                 }
               ]
             },

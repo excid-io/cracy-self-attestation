@@ -29,7 +29,7 @@
             },
             {
               "title": "Responsibility Declaration",
-              "content": "Do you **declare, under your sole responsibility**, that your products with digital elements comply with all **essential cybersecurity requirements** in:",
+              "content": "Do you **declare, under your sole responsibility**, that your products with digital elements comply with all **essential cybersecurity requirements** in:\n- **Part I of Annex I** (product requirements), and (check questions)\n- **Part II of Annex I** (process and vulnerability handling requirements)? (check questions )",
               "type": "mchoices",
               "responses": [
                 {
@@ -46,18 +46,6 @@
                   "type": "choice"
                 }
               ]
-            },
-            {
-              "title": "Part I Conformity assessment procedure based on internal control (based on module A) - Q1",
-              "content": "**Part I of Annex I** (product requirements), and (check questions)",
-              "type": "paragraph",
-              "responses": []
-            },
-            {
-              "title": "Part I Conformity assessment procedure based on internal control (based on module A) - Q2",
-              "content": "**Part II of Annex I** (process and vulnerability handling requirements)? (check questions )",
-              "type": "paragraph",
-              "responses": []
             },
             {
               "title": "Technical Documentation",
@@ -161,7 +149,7 @@
             },
             {
               "title": "DoC retention period",
-              "content": "Do you keep the EU Declaration of Conformity **together with the technical documentation** for:",
+              "content": "Do you keep the EU Declaration of Conformity **together with the technical documentation** for:\n- **10 years** after the product is placed on the market, **or**\n- the **duration of the support period**, whichever is longer?",
               "type": "mchoices",
               "responses": [
                 {
@@ -178,18 +166,6 @@
                   "type": "choice"
                 }
               ]
-            },
-            {
-              "title": "Part I Conformity assessment procedure based on internal control (based on module A) - Q3",
-              "content": "**10 years** after the product is placed on the market, **or**",
-              "type": "paragraph",
-              "responses": []
-            },
-            {
-              "title": "Part I Conformity assessment procedure based on internal control (based on module A) - Q4",
-              "content": "the **duration of the support period**, whichever is longer?",
-              "type": "paragraph",
-              "responses": []
             },
             {
               "title": "Product identification",
@@ -233,29 +209,9 @@
             },
             {
               "title": "Authorized representative",
-              "content": "If you use an authorised representative, have you ensured that they are **mandated** to fulfil the obligations in **CE Marking**, **Draw up an EU DoC**, **DoC Retention Period** on and **Product Identification** your behalf?",
+              "content": "If you use an authorised representative, have you ensured that they are **mandated** to fulfil the obligations in **CE Marking**, **Draw up an EU DoC**, **DoC Retention Period** on and **Product Identification** your behalf?\n- **Manufacturer verifies representative responsibility**: Do you verify that the authorised representative acts **under your responsibility** and within the scope of the obligations defined in the mandate? ( I'm not sure I understand the two above which come through 5 correctly )",
               "type": "paragraph",
               "responses": []
-            },
-            {
-              "title": "Manufacturer verifies representative responsibility",
-              "content": "Do you verify that the authorised representative acts **under your responsibility** and within the scope of the obligations defined in the mandate? ( I'm not sure I understand the two above which come through 5 correctly )",
-              "type": "mchoices",
-              "responses": [
-                {
-                  "title": "Yes",
-                  "type": "choice"
-                },
-                {
-                  "title": "No",
-                  "type": "choice"
-                },
-                {
-                  "title": "In Progress",
-                  "description": "Work is underway but not yet completed.",
-                  "type": "choice"
-                }
-              ]
             }
           ]
         },
@@ -264,7 +220,7 @@
           "questions": [
             {
               "title": "Purpose and Scope of EU-Type Examination",
-              "content": "Are you aware that the EU-type examination will assess both:",
+              "content": "Are you aware that the EU-type examination will assess both:\n- the **technical design and development** of the product with digital elements, and\n- the **vulnerability handling processes** you have put in place?",
               "type": "mchoices",
               "responses": [
                 {
@@ -281,22 +237,10 @@
                   "type": "choice"
                 }
               ]
-            },
-            {
-              "title": "Part II EU-type examination (based on module B) - Q1",
-              "content": "the **technical design and development** of the product with digital elements, and",
-              "type": "paragraph",
-              "responses": []
-            },
-            {
-              "title": "Part II EU-type examination (based on module B) - Q2",
-              "content": "the **vulnerability handling processes** you have put in place?",
-              "type": "paragraph",
-              "responses": []
             },
             {
               "title": "Meeting the essential cybersecurity requirements",
-              "content": "Can you demonstrate that your product meets the **essential cybersecurity requirements** in:",
+              "content": "Can you demonstrate that your product meets the **essential cybersecurity requirements** in:\n- **Part I of Annex I** (product requirements), and (check questions)\n- **Part II of Annex I** (vulnerability handling process requirements)? (check questions)",
               "type": "mchoices",
               "responses": [
                 {
@@ -313,22 +257,10 @@
                   "type": "choice"
                 }
               ]
-            },
-            {
-              "title": "Part II EU-type examination (based on module B) - Q3",
-              "content": "**Part I of Annex I** (product requirements), and (check questions)",
-              "type": "paragraph",
-              "responses": []
-            },
-            {
-              "title": "Part II EU-type examination (based on module B) - Q4",
-              "content": "**Part II of Annex I** (vulnerability handling process requirements)? (check questions)",
-              "type": "paragraph",
-              "responses": []
             },
             {
               "title": "Assessment of Technical Design and Specimens",
-              "content": "Are you aware that the EU-type examination include:",
+              "content": "Are you aware that the EU-type examination include:\n- review of your **technical documentation** and supporting evidence\n- examination of **specimens** representing critical parts (combining production type and design type)?",
               "type": "mchoices",
               "responses": [
                 {
@@ -345,18 +277,6 @@
                   "type": "choice"
                 }
               ]
-            },
-            {
-              "title": "Part II EU-type examination (based on module B) - Q5",
-              "content": "review of your **technical documentation** and supporting evidence",
-              "type": "paragraph",
-              "responses": []
-            },
-            {
-              "title": "Part II EU-type examination (based on module B) - Q6",
-              "content": "examination of **specimens** representing critical parts (combining production type and design type)?",
-              "type": "paragraph",
-              "responses": []
             },
             {
               "title": "Submitting the Application",
@@ -392,55 +312,19 @@
             },
             {
               "title": "Technical documentation",
-              "content": "The **technical documentation**  (check questions) enabling assessment against Annex I requirements, including:",
-              "type": "paragraph",
-              "responses": []
-            },
-            {
-              "title": "Part II EU-type examination (based on module B) - Q7",
-              "content": "design, manufacturing, and operation details",
-              "type": "paragraph",
-              "responses": []
-            },
-            {
-              "title": "Part II EU-type examination (based on module B) - Q8",
-              "content": "risk analysis and assessment",
-              "type": "paragraph",
-              "responses": []
-            },
-            {
-              "title": "Part II EU-type examination (based on module B) - Q9",
-              "content": "all elements required by **Annex VII**, where applicable?",
+              "content": "The **technical documentation**  (check questions) enabling assessment against Annex I requirements, including:\n- design, manufacturing, and operation details\n- risk analysis and assessment\n- all elements required by **Annex VII**, where applicable?",
               "type": "paragraph",
               "responses": []
             },
             {
               "title": "Supporting evidence",
-              "content": "**Supporting evidence** demonstrating adequacy of the design and vulnerability handling processes, including:",
-              "type": "paragraph",
-              "responses": []
-            },
-            {
-              "title": "Part II EU-type examination (based on module B) - Q10",
-              "content": "references to applied/partially applied harmonised standards",
-              "type": "paragraph",
-              "responses": []
-            },
-            {
-              "title": "Part II EU-type examination (based on module B) - Q11",
-              "content": "results of tests (internal or external), where necessary?",
+              "content": "**Supporting evidence** demonstrating adequacy of the design and vulnerability handling processes, including:\n- references to applied/partially applied harmonised standards\n- results of tests (internal or external), where necessary?",
               "type": "paragraph",
               "responses": []
             },
             {
               "title": "Agreement for location of tests",
-              "content": "Agreed with you on the **location** where examinations and tests will be carried out? ( regarding to points in 4)",
-              "type": "paragraph",
-              "responses": []
-            },
-            {
-              "title": "Part II EU-type examination (based on module B) - Q12",
-              "content": "The notified body is responsible for thoroughly evaluating whether the product’s technical design, development, and vulnerability handling processes meet the essential cybersecurity requirements of Annex I. This includes examining the manufacturer’s technical documentation and supporting evidence, verifying that product specimens conform to that documentation, and determining which parts follow relevant harmonised standards or technical specifications and which do not. The notified body must also conduct or commission all necessary tests to confirm that, where harmonised standards have been applied, they were applied correctly, and where they were not applied, the manufacturer’s alternative solutions still satisfy the corresponding essential cybersecurity requirements.",
+              "content": "Agreed with you on the **location** where examinations and tests will be carried out? ( regarding to points in 4)\n- The notified body is responsible for thoroughly evaluating whether the product’s technical design, development, and vulnerability handling processes meet the essential cybersecurity requirements of Annex I. This includes examining the manufacturer’s technical documentation and supporting evidence, verifying that product specimens conform to that documentation, and determining which parts follow relevant harmonised standards or technical specifications and which do not. The notified body must also conduct or commission all necessary tests to confirm that, where harmonised standards have been applied, they were applied correctly, and where they were not applied, the manufacturer’s alternative solutions still satisfy the corresponding essential cybersecurity requirements.",
               "type": "paragraph",
               "responses": []
             },
@@ -465,50 +349,8 @@
               ]
             },
             {
-              "title": "Part II EU-type examination (based on module B) - Q13",
-              "content": "**Issuing the EU-type examination certificate**  Are you aware that if requirements are met, does the notified body issue an EU-type examination certificate containing:",
-              "type": "paragraph",
-              "responses": []
-            },
-            {
-              "title": "Part II EU-type examination (based on module B) - Q14",
-              "content": "manufacturer name and address",
-              "type": "paragraph",
-              "responses": []
-            },
-            {
-              "title": "Part II EU-type examination (based on module B) - Q15",
-              "content": "examination conclusions",
-              "type": "paragraph",
-              "responses": []
-            },
-            {
-              "title": "Part II EU-type examination (based on module B) - Q16",
-              "content": "validity conditions",
-              "type": "paragraph",
-              "responses": []
-            },
-            {
-              "title": "Part II EU-type examination (based on module B) - Q17",
-              "content": "identification of the approved type and vulnerability handling processes",
-              "type": "paragraph",
-              "responses": []
-            },
-            {
-              "title": "Part II EU-type examination (based on module B) - Q18",
-              "content": "any annexes with relevant details?",
-              "type": "paragraph",
-              "responses": []
-            },
-            {
-              "title": "Part II EU-type examination (based on module B) - Q19",
-              "content": "The certificate and its annexes shall contain all relevant information to allow the conformity of manufactured or developed products with digital elements with the examined type and vulnerability handling processes to be evaluated and to allow for in-service control.",
-              "type": "paragraph",
-              "responses": []
-            },
-            {
-              "title": "Part II EU-type examination (based on module B) - Q20",
-              "content": "Where the type and the vulnerability handling processes do not satisfy the applicable essential cybersecurity requirements set out in Annex I, the notified body shall refuse to issue an EU-type examination certificate and shall inform the applicant accordingly, giving detailed reasons for its refusal.",
+              "title": "Part II EU-type examination (based on module B) - Q1",
+              "content": "**Issuing the EU-type examination certificate**  Are you aware that if requirements are met, does the notified body issue an EU-type examination certificate containing:\n- manufacturer name and address\n- examination conclusions\n- validity conditions\n- identification of the approved type and vulnerability handling processes\n- any annexes with relevant details?\n- The certificate and its annexes shall contain all relevant information to allow the conformity of manufactured or developed products with digital elements with the examined type and vulnerability handling processes to be evaluated and to allow for in-service control.\n- Where the type and the vulnerability handling processes do not satisfy the applicable essential cybersecurity requirements set out in Annex I, the notified body shall refuse to issue an EU-type examination certificate and shall inform the applicant accordingly, giving detailed reasons for its refusal.",
               "type": "paragraph",
               "responses": []
             },
@@ -520,7 +362,7 @@
             },
             {
               "title": "Manufacturer’s Duty to Report Modifications",
-              "content": "Do you inform the notified body of **any modifications** to the approved type or to vulnerability handling processes that may affect:",
+              "content": "Do you inform the notified body of **any modifications** to the approved type or to vulnerability handling processes that may affect:\n- conformity with Annex I requirements, or\n- the validity of the certificate?",
               "type": "mchoices",
               "responses": [
                 {
@@ -537,18 +379,6 @@
                   "type": "choice"
                 }
               ]
-            },
-            {
-              "title": "Part II EU-type examination (based on module B) - Q21",
-              "content": "conformity with Annex I requirements, or",
-              "type": "paragraph",
-              "responses": []
-            },
-            {
-              "title": "Part II EU-type examination (based on module B) - Q22",
-              "content": "the validity of the certificate?",
-              "type": "paragraph",
-              "responses": []
             },
             {
               "title": "Requirement for Additional Approval (“Additions”)",
@@ -592,7 +422,7 @@
             },
             {
               "title": "Tech documentation and certificates",
-              "content": "Do you keep:",
+              "content": "Do you keep:\n- the EU-type examination certificate, annexes, additions, and\n- technical documentation available to national authorities for **10 years after market placement**, or for the **support period**, whichever is longer?\n- The notified body must keep national notifying authorities informed about all EU-type examination certificates it issues or withdraws, including any additions, and must regularly or upon request provide lists of certificates that have been refused, suspended, or restricted. It must also inform other notified bodies about certificates and additions that were refused, withdrawn, suspended, or restricted, and, when requested, share information on those it has issued. Upon request, the Commission, Member States, and other notified bodies may obtain copies of certificates and their additions, and the Commission or Member States may also request the associated technical documentation and test results. The notified body is required to retain the certificate, its annexes and additions, and the full technical file submitted by the manufacturer until the certificate’s validity expires.",
               "type": "mchoices",
               "responses": [
                 {
@@ -611,38 +441,8 @@
               ]
             },
             {
-              "title": "Part II EU-type examination (based on module B) - Q23",
-              "content": "the EU-type examination certificate, annexes, additions, and",
-              "type": "paragraph",
-              "responses": []
-            },
-            {
-              "title": "Part II EU-type examination (based on module B) - Q24",
-              "content": "technical documentation available to national authorities for **10 years after market placement**, or for the **support period**, whichever is longer?",
-              "type": "paragraph",
-              "responses": []
-            },
-            {
-              "title": "Part II EU-type examination (based on module B) - Q25",
-              "content": "The notified body must keep national notifying authorities informed about all EU-type examination certificates it issues or withdraws, including any additions, and must regularly or upon request provide lists of certificates that have been refused, suspended, or restricted. It must also inform other notified bodies about certificates and additions that were refused, withdrawn, suspended, or restricted, and, when requested, share information on those it has issued. Upon request, the Commission, Member States, and other notified bodies may obtain copies of certificates and their additions, and the Commission or Member States may also request the associated technical documentation and test results. The notified body is required to retain the certificate, its annexes and additions, and the full technical file submitted by the manufacturer until the certificate’s validity expires.",
-              "type": "paragraph",
-              "responses": []
-            },
-            {
-              "title": "Part II EU-type examination (based on module B) - Q26",
-              "content": "**Role of the Authorised Representative** If you use an authorised representative, have you mandated them to:",
-              "type": "paragraph",
-              "responses": []
-            },
-            {
-              "title": "Part II EU-type examination (based on module B) - Q27",
-              "content": "lodge the EU-type examination application (point 3)?",
-              "type": "paragraph",
-              "responses": []
-            },
-            {
-              "title": "Part II EU-type examination (based on module B) - Q28",
-              "content": "fulfil obligations under **Requirement for Additional Approval** and **Tech documentation and certificates**?",
+              "title": "Part II EU-type examination (based on module B) - Q2",
+              "content": "**Role of the Authorised Representative** If you use an authorised representative, have you mandated them to:\n- lodge the EU-type examination application (point 3)?\n- fulfil obligations under **Requirement for Additional Approval** and **Tech documentation and certificates**?",
               "type": "paragraph",
               "responses": []
             }
@@ -673,7 +473,7 @@
             },
             {
               "title": "Part III Conformity to type based on internal production control (based on module C) - Q1",
-              "content": "Do your products satisfy all the **essential cybersecurity requirements** in:",
+              "content": "Do your products satisfy all the **essential cybersecurity requirements** in:\n- **Part I of Annex I** (product requirements), and (check questions)\n- **Part II of Annex I** (manufacturer process requirements)? (check questions)",
               "type": "mchoices",
               "responses": [
                 {
@@ -690,22 +490,10 @@
                   "type": "choice"
                 }
               ]
-            },
-            {
-              "title": "Part III Conformity to type based on internal production control (based on module C) - Q2",
-              "content": "**Part I of Annex I** (product requirements), and (check questions)",
-              "type": "paragraph",
-              "responses": []
-            },
-            {
-              "title": "Part III Conformity to type based on internal production control (based on module C) - Q3",
-              "content": "**Part II of Annex I** (manufacturer process requirements)? (check questions)",
-              "type": "paragraph",
-              "responses": []
             },
             {
               "title": "Conformity of production",
-              "content": "Have you taken all necessary measures to ensure that **production and production monitoring** keep the manufactured products fully conformant with:",
+              "content": "Have you taken all necessary measures to ensure that **production and production monitoring** keep the manufactured products fully conformant with:\n- the **approved type** described in the EU-type examination certificate, and\n- the **essential cybersecurity requirements** of Annex I?",
               "type": "mchoices",
               "responses": [
                 {
@@ -722,18 +510,6 @@
                   "type": "choice"
                 }
               ]
-            },
-            {
-              "title": "Part III Conformity to type based on internal production control (based on module C) - Q4",
-              "content": "the **approved type** described in the EU-type examination certificate, and",
-              "type": "paragraph",
-              "responses": []
-            },
-            {
-              "title": "Part III Conformity to type based on internal production control (based on module C) - Q5",
-              "content": "the **essential cybersecurity requirements** of Annex I?",
-              "type": "paragraph",
-              "responses": []
             },
             {
               "title": "Ensuring vulnerability handling obligations",
@@ -817,65 +593,7 @@
             },
             {
               "title": "Availability of DoC",
-              "content": "Do you keep the Declaration of Conformity **available to national authorities** for:",
-              "type": "mchoices",
-              "responses": [
-                {
-                  "title": "Yes",
-                  "type": "choice"
-                },
-                {
-                  "title": "No",
-                  "type": "choice"
-                },
-                {
-                  "title": "In Progress",
-                  "description": "Work is underway but not yet completed.",
-                  "type": "choice"
-                }
-              ]
-            },
-            {
-              "title": "Part III Conformity to type based on internal production control (based on module C) - Q6",
-              "content": "at least **10 years** after the product is placed on the market, or",
-              "type": "paragraph",
-              "responses": []
-            },
-            {
-              "title": "Part III Conformity to type based on internal production control (based on module C) - Q7",
-              "content": "for the **support period**, whichever is longer?",
-              "type": "paragraph",
-              "responses": []
-            },
-            {
-              "title": "Request from Authorities",
-              "content": "Can you provide a **copy of the Declaration of Conformity** to authorities upon request?",
-              "type": "mchoices",
-              "responses": [
-                {
-                  "title": "Yes",
-                  "type": "choice"
-                },
-                {
-                  "title": "No",
-                  "type": "choice"
-                },
-                {
-                  "title": "In Progress",
-                  "description": "Work is underway but not yet completed.",
-                  "type": "choice"
-                }
-              ]
-            },
-            {
-              "title": "Authorized representative fulfiling manufacturer obligations",
-              "content": "If you have appointed an authorised representative, does the mandate **explicitly specify** that they may fulfil the manufacturer’s obligations underCE marking & the questions above?",
-              "type": "paragraph",
-              "responses": []
-            },
-            {
-              "title": "Manufacturer responsibility regarding authorized representative",
-              "content": "Do you ensure that the authorised representative acts **on your behalf and under your responsibility** when carrying out these obligations?",
+              "content": "Do you keep the Declaration of Conformity **available to national authorities** for:\n- at least **10 years** after the product is placed on the market, or\n- for the **support period**, whichever is longer?\n- **Request from Authorities**: Can you provide a **copy of the Declaration of Conformity** to authorities upon request?\n- **Authorized representative fulfiling manufacturer obligations**: If you have appointed an authorised representative, does the mandate **explicitly specify** that they may fulfil the manufacturer’s obligations underCE marking & the questions above?\n- **Manufacturer responsibility regarding authorized representative**: Do you ensure that the authorised representative acts **on your behalf and under your responsibility** when carrying out these obligations?",
               "type": "mchoices",
               "responses": [
                 {
@@ -920,25 +638,7 @@
             },
             {
               "title": "Quality System Operation & Scope",
-              "content": "*Do you operate an approved quality system covering:",
-              "type": "paragraph",
-              "responses": []
-            },
-            {
-              "title": "Part IV Conformity bsaed on full quality assurance (Based on module H) - Q1",
-              "content": "design and development,",
-              "type": "paragraph",
-              "responses": []
-            },
-            {
-              "title": "Part IV Conformity bsaed on full quality assurance (Based on module H) - Q2",
-              "content": "final product inspection and testing, and",
-              "type": "paragraph",
-              "responses": []
-            },
-            {
-              "title": "Part IV Conformity bsaed on full quality assurance (Based on module H) - Q3",
-              "content": "vulnerability handling, and do you maintain its effectiveness throughout the support period?",
+              "content": "*Do you operate an approved quality system covering:\n- design and development,\n- final product inspection and testing, and\n- vulnerability handling, and do you maintain its effectiveness throughout the support period?",
               "type": "paragraph",
               "responses": []
             },
@@ -964,91 +664,19 @@
             },
             {
               "title": "Application for Quality System Assessment",
-              "content": "**Are you aware that an application for quality system assessment to a notified body includes:**",
+              "content": "**Are you aware that an application for quality system assessment to a notified body includes:**\n- manufacturer/representative name & address,\n- technical documentation for at least one representative product model at least the elements set out in Annex VII (check questions) ,\n- full quality system documentation,\n- a declaration confirming the application was not lodged elsewhere?",
               "type": "paragraph",
               "responses": []
             },
             {
-              "title": "Part IV Conformity bsaed on full quality assurance (Based on module H) - Q4",
-              "content": "manufacturer/representative name & address,",
-              "type": "paragraph",
-              "responses": []
-            },
-            {
-              "title": "Part IV Conformity bsaed on full quality assurance (Based on module H) - Q5",
-              "content": "technical documentation for at least one representative product model at least the elements set out in Annex VII (check questions) ,",
-              "type": "paragraph",
-              "responses": []
-            },
-            {
-              "title": "Part IV Conformity bsaed on full quality assurance (Based on module H) - Q6",
-              "content": "full quality system documentation,",
-              "type": "paragraph",
-              "responses": []
-            },
-            {
-              "title": "Part IV Conformity bsaed on full quality assurance (Based on module H) - Q7",
-              "content": "a declaration confirming the application was not lodged elsewhere?",
-              "type": "paragraph",
-              "responses": []
-            },
-            {
-              "title": "Part IV Conformity bsaed on full quality assurance (Based on module H) - Q8",
-              "content": "**Does your quality system documentation clearly describe:**",
-              "type": "paragraph",
-              "responses": []
-            },
-            {
-              "title": "Part IV Conformity bsaed on full quality assurance (Based on module H) - Q9",
-              "content": "quality objectives, responsibilities and powers of management (with regard to design, development, product quality and vulnerability handling), and organisational structure?",
-              "type": "paragraph",
-              "responses": []
-            },
-            {
-              "title": "Part IV Conformity bsaed on full quality assurance (Based on module H) - Q10",
-              "content": "technical design & development specifications and relevant applied harmonised standards or alternatives if harmonised standards are not fully used)?",
-              "type": "paragraph",
-              "responses": []
-            },
-            {
-              "title": "Part IV Conformity bsaed on full quality assurance (Based on module H) - Q11",
-              "content": "exactly the same as above for procedural specifications for Annex I Part II",
-              "type": "paragraph",
-              "responses": []
-            },
-            {
-              "title": "Part IV Conformity bsaed on full quality assurance (Based on module H) - Q12",
-              "content": "design and development control along with design and dev verification techniques, processes and actions for a specific product category",
-              "type": "paragraph",
-              "responses": []
-            },
-            {
-              "title": "Part IV Conformity bsaed on full quality assurance (Based on module H) - Q13",
-              "content": "production & quality control processes that will be used",
-              "type": "paragraph",
-              "responses": []
-            },
-            {
-              "title": "Part IV Conformity bsaed on full quality assurance (Based on module H) - Q14",
-              "content": "test/examination procedures and their frequency that are carried out during and after production?",
-              "type": "paragraph",
-              "responses": []
-            },
-            {
-              "title": "Part IV Conformity bsaed on full quality assurance (Based on module H) - Q15",
-              "content": "quality records maintained (test results, calibration data, personnel qualifications)?",
-              "type": "paragraph",
-              "responses": []
-            },
-            {
-              "title": "Part IV Conformity bsaed on full quality assurance (Based on module H) - Q16",
-              "content": "monitoring methods ensuring product quality and system effectiveness?",
+              "title": "Part IV Conformity bsaed on full quality assurance (Based on module H) - Q1",
+              "content": "**Does your quality system documentation clearly describe:**\n- quality objectives, responsibilities and powers of management (with regard to design, development, product quality and vulnerability handling), and organisational structure?\n- technical design & development specifications and relevant applied harmonised standards or alternatives if harmonised standards are not fully used)?\n- exactly the same as above for procedural specifications for Annex I Part II\n- design and development control along with design and dev verification techniques, processes and actions for a specific product category\n- production & quality control processes that will be used\n- test/examination procedures and their frequency that are carried out during and after production?\n- quality records maintained (test results, calibration data, personnel qualifications)?\n- monitoring methods ensuring product quality and system effectiveness?",
               "type": "paragraph",
               "responses": []
             },
             {
               "title": "Notified Body Assessment Process*",
-              "content": "Are you aware that the notified body will assess your quality system using its experienced member in the relevant product field , including:",
+              "content": "Are you aware that the notified body will assess your quality system using its experienced member in the relevant product field , including:\n- reviewing your technical documentation referred in the **Application for Quality System Assessment** question meaning bullet 2,\n- visiting your premises (if any),\n- evaluating your ability to identify and meet CRA requirements,\n- confirming compliance with harmonised standards (where used)?",
               "type": "mchoices",
               "responses": [
                 {
@@ -1065,30 +693,6 @@
                   "type": "choice"
                 }
               ]
-            },
-            {
-              "title": "Part IV Conformity bsaed on full quality assurance (Based on module H) - Q17",
-              "content": "reviewing your technical documentation referred in the **Application for Quality System Assessment** question meaning bullet 2,",
-              "type": "paragraph",
-              "responses": []
-            },
-            {
-              "title": "Part IV Conformity bsaed on full quality assurance (Based on module H) - Q18",
-              "content": "visiting your premises (if any),",
-              "type": "paragraph",
-              "responses": []
-            },
-            {
-              "title": "Part IV Conformity bsaed on full quality assurance (Based on module H) - Q19",
-              "content": "evaluating your ability to identify and meet CRA requirements,",
-              "type": "paragraph",
-              "responses": []
-            },
-            {
-              "title": "Part IV Conformity bsaed on full quality assurance (Based on module H) - Q20",
-              "content": "confirming compliance with harmonised standards (where used)?",
-              "type": "paragraph",
-              "responses": []
             },
             {
               "title": "Decision notification",
@@ -1138,7 +742,7 @@
             },
             {
               "title": "Surveillance Access & Cooperation",
-              "content": "Do you provide the notified body with full access during surveillance audits, including to:",
+              "content": "Do you provide the notified body with full access during surveillance audits, including to:\n- design, development, production, testing, and storage sites,\n- all quality system documentation\n- the quality records as provided for by the design part of the quality system, such as results of analyses, calculations and tests;\n- the quality records as provided for by the manufacturing part of the quality system, such as inspection reports and test data, calibration data and qualification reports on the personnel concerned.\n- the notified body will perform periodic audits",
               "type": "mchoices",
               "responses": [
                 {
@@ -1155,36 +759,6 @@
                   "type": "choice"
                 }
               ]
-            },
-            {
-              "title": "Part IV Conformity bsaed on full quality assurance (Based on module H) - Q21",
-              "content": "design, development, production, testing, and storage sites,",
-              "type": "paragraph",
-              "responses": []
-            },
-            {
-              "title": "Part IV Conformity bsaed on full quality assurance (Based on module H) - Q22",
-              "content": "all quality system documentation",
-              "type": "paragraph",
-              "responses": []
-            },
-            {
-              "title": "Part IV Conformity bsaed on full quality assurance (Based on module H) - Q23",
-              "content": "the quality records as provided for by the design part of the quality system, such as results of analyses, calculations and tests;",
-              "type": "paragraph",
-              "responses": []
-            },
-            {
-              "title": "Part IV Conformity bsaed on full quality assurance (Based on module H) - Q24",
-              "content": "the quality records as provided for by the manufacturing part of the quality system, such as inspection reports and test data, calibration data and qualification reports on the personnel concerned.",
-              "type": "paragraph",
-              "responses": []
-            },
-            {
-              "title": "Part IV Conformity bsaed on full quality assurance (Based on module H) - Q25",
-              "content": "the notified body will perform periodic audits",
-              "type": "paragraph",
-              "responses": []
             },
             {
               "title": "CE Marking & Identification Number",
@@ -1208,7 +782,7 @@
             },
             {
               "title": "Declaration of Conformity Retention",
-              "content": "Do you draw up a written declaration of conformity for each product model and retain it for at least 10 years or the full support period (whichever is longer)?",
+              "content": "Do you draw up a written declaration of conformity for each product model and retain it for at least 10 years or the full support period (whichever is longer)?\n- The DoC needs to identify the product model\n- A copy must be made available to the authorities upon request",
               "type": "mchoices",
               "responses": [
                 {
@@ -1225,22 +799,10 @@
                   "type": "choice"
                 }
               ]
-            },
-            {
-              "title": "Part IV Conformity bsaed on full quality assurance (Based on module H) - Q26",
-              "content": "The DoC needs to identify the product model",
-              "type": "paragraph",
-              "responses": []
-            },
-            {
-              "title": "Part IV Conformity bsaed on full quality assurance (Based on module H) - Q27",
-              "content": "A copy must be made available to the authorities upon request",
-              "type": "paragraph",
-              "responses": []
             },
             {
               "title": "Long-Term Documentation Retention",
-              "content": "Do you retain, for at least 10 years or the support period:",
+              "content": "Do you retain, for at least 10 years or the support period:\n- technical documentation referred to **Notified Body of Choice**, **Application of Quality Assessment**,\n- quality system documentation mentioned in **Application of Quality Assessment**,\n- approved changes to the quality system mentioned in **Notification of Quality system Changes**,\n- notified body decisions and audit reports mentioned in **Notification of Quality System Changes** and **Survellaince Access and Cooperation** ?",
               "type": "mchoices",
               "responses": [
                 {
@@ -1259,56 +821,8 @@
               ]
             },
             {
-              "title": "Part IV Conformity bsaed on full quality assurance (Based on module H) - Q28",
-              "content": "technical documentation referred to **Notified Body of Choice**, **Application of Quality Assessment**,",
-              "type": "paragraph",
-              "responses": []
-            },
-            {
-              "title": "Part IV Conformity bsaed on full quality assurance (Based on module H) - Q29",
-              "content": "quality system documentation mentioned in **Application of Quality Assessment**,",
-              "type": "paragraph",
-              "responses": []
-            },
-            {
-              "title": "Part IV Conformity bsaed on full quality assurance (Based on module H) - Q30",
-              "content": "approved changes to the quality system mentioned in **Notification of Quality system Changes**,",
-              "type": "paragraph",
-              "responses": []
-            },
-            {
-              "title": "Part IV Conformity bsaed on full quality assurance (Based on module H) - Q31",
-              "content": "notified body decisions and audit reports mentioned in **Notification of Quality System Changes** and **Survellaince Access and Cooperation** ?",
-              "type": "paragraph",
-              "responses": []
-            },
-            {
               "title": "Authorised Representative Responsibilities",
-              "content": "If using an authorised representative, are they mandated to fulfil obligations related to:",
-              "type": "paragraph",
-              "responses": []
-            },
-            {
-              "title": "Part IV Conformity bsaed on full quality assurance (Based on module H) - Q32",
-              "content": "the quality system application mentioned in **Application for Quality System Assessment**,",
-              "type": "paragraph",
-              "responses": []
-            },
-            {
-              "title": "Part IV Conformity bsaed on full quality assurance (Based on module H) - Q33",
-              "content": "notifying quality system changes mentioned in **Notification of Quality System Changes** ****,",
-              "type": "paragraph",
-              "responses": []
-            },
-            {
-              "title": "Part IV Conformity bsaed on full quality assurance (Based on module H) - Q34",
-              "content": "CE marking & DoC obligations in **CE Marking and Identification Number** and **Declaration of Conformity Retention**,",
-              "type": "paragraph",
-              "responses": []
-            },
-            {
-              "title": "Part IV Conformity bsaed on full quality assurance (Based on module H) - Q35",
-              "content": "documentation retention mentioned in **Long-Term Documentation Retention**?",
+              "content": "If using an authorised representative, are they mandated to fulfil obligations related to:\n- the quality system application mentioned in **Application for Quality System Assessment**,\n- notifying quality system changes mentioned in **Notification of Quality System Changes** ****,\n- CE marking & DoC obligations in **CE Marking and Identification Number** and **Declaration of Conformity Retention**,\n- documentation retention mentioned in **Long-Term Documentation Retention**?",
               "type": "paragraph",
               "responses": []
             }

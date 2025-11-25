@@ -25,43 +25,13 @@
         },
         {
           "title": "Placement on Packaging / EU Declaration (If Product Cannot Bear It)",
-          "content": "If the nature of the product prevents affixing the CE marking directly, is it instead affixed to:",
-          "type": "paragraph",
-          "responses": []
-        },
-        {
-          "title": "Questions - Rules and Conditions for affixing the CE marking - Article 30 - Q1",
-          "content": "the **packaging**,",
-          "type": "paragraph",
-          "responses": []
-        },
-        {
-          "title": "Questions - Rules and Conditions for affixing the CE marking - Article 30 - Q2",
-          "content": "and/or the **EU Declaration of Conformity** accompanying the product?",
+          "content": "If the nature of the product prevents affixing the CE marking directly, is it instead affixed to:\n- the **packaging**,\n- and/or the **EU Declaration of Conformity** accompanying the product?",
           "type": "paragraph",
           "responses": []
         },
         {
           "title": "Affixing on Software Products",
-          "content": "For software-only products, is the CE marking affixed:",
-          "type": "paragraph",
-          "responses": []
-        },
-        {
-          "title": "Questions - Rules and Conditions for affixing the CE marking - Article 30 - Q3",
-          "content": "either to the **EU Declaration of Conformity**,",
-          "type": "paragraph",
-          "responses": []
-        },
-        {
-          "title": "Questions - Rules and Conditions for affixing the CE marking - Article 30 - Q4",
-          "content": "or to the **notice section of the website** listed in the Declaration,",
-          "type": "paragraph",
-          "responses": []
-        },
-        {
-          "title": "Questions - Rules and Conditions for affixing the CE marking - Article 30 - Q5",
-          "content": "ensuring it is **easily and directly accessible** to consumers?",
+          "content": "For software-only products, is the CE marking affixed:\n- either to the **EU Declaration of Conformity**,\n- or to the **notice section of the website** listed in the Declaration,\n- ensuring it is **easily and directly accessible** to consumers?",
           "type": "paragraph",
           "responses": []
         },
@@ -127,49 +97,9 @@
         },
         {
           "title": "Identification Number of the Notified Body (If Applicable)",
-          "content": "If a notified body is involved in conformity assessment:",
+          "content": "If a notified body is involved in conformity assessment:\n- Is the **identification number** of the notified body placed next to the CE marking?\n- Is the identification number affixed by the notified body, the manufacturer, or the authorised representative as required?",
           "type": "paragraph",
           "responses": []
-        },
-        {
-          "title": "Questions - Rules and Conditions for affixing the CE marking - Article 30 - Q6",
-          "content": "Is the **identification number** of the notified body placed next to the CE marking?",
-          "type": "mchoices",
-          "responses": [
-            {
-              "title": "Yes",
-              "type": "choice"
-            },
-            {
-              "title": "No",
-              "type": "choice"
-            },
-            {
-              "title": "In Progress",
-              "description": "Work is underway but not yet completed.",
-              "type": "choice"
-            }
-          ]
-        },
-        {
-          "title": "Questions - Rules and Conditions for affixing the CE marking - Article 30 - Q7",
-          "content": "Is the identification number affixed by the notified body, the manufacturer, or the authorised representative as required?",
-          "type": "mchoices",
-          "responses": [
-            {
-              "title": "Yes",
-              "type": "choice"
-            },
-            {
-              "title": "No",
-              "type": "choice"
-            },
-            {
-              "title": "In Progress",
-              "description": "Work is underway but not yet completed.",
-              "type": "choice"
-            }
-          ]
         },
         {
           "title": "Correct Use and Enforcement of CE Marking",
@@ -193,29 +123,9 @@
         },
         {
           "title": "CE Marking Under Multiple Union Legislations",
-          "content": "Where the product is also subject to other EU legislation requiring CE marking:",
+          "content": "Where the product is also subject to other EU legislation requiring CE marking:\n- Does the CE marking indicate **compliance with all applicable Union legislation**, including the CRA?",
           "type": "paragraph",
           "responses": []
-        },
-        {
-          "title": "Questions - Rules and Conditions for affixing the CE marking - Article 30 - Q8",
-          "content": "Does the CE marking indicate **compliance with all applicable Union legislation**, including the CRA?",
-          "type": "mchoices",
-          "responses": [
-            {
-              "title": "Yes",
-              "type": "choice"
-            },
-            {
-              "title": "No",
-              "type": "choice"
-            },
-            {
-              "title": "In Progress",
-              "description": "Work is underway but not yet completed.",
-              "type": "choice"
-            }
-          ]
         },
         {
           "title": "Implementing Acts on Labels, Icons, Cybersecurity Indicators",
@@ -239,7 +149,7 @@
         },
         {
           "title": "Cooperation with Commission and ADCO",
-          "content": "Are you aware about implementing acts developed through Commission consultations with stakeholders and ADCO regarding cybersecurity labeling?",
+          "content": "Are you aware about implementing acts developed through Commission consultations with stakeholders and ADCO regarding cybersecurity labeling?\n- The Commission may, by means of implementing acts, lay down technical specifications for labels, pictograms or any other marks related to the security of the products with digital elements, their support periods and mechanisms to promote their use and to increase public awareness about the security of products with digital elements.",
           "type": "mchoices",
           "responses": [
             {
@@ -256,12 +166,6 @@
               "type": "choice"
             }
           ]
-        },
-        {
-          "title": "Questions - Rules and Conditions for affixing the CE marking - Article 30 - Q9",
-          "content": "The Commission may, by means of implementing acts, lay down technical specifications for labels, pictograms or any other marks related to the security of the products with digital elements, their support periods and mechanisms to promote their use and to increase public awareness about the security of products with digital elements.",
-          "type": "paragraph",
-          "responses": []
         }
       ]
     }
