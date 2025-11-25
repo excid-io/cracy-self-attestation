@@ -1,4 +1,4 @@
-## Questions - Presumption of conformity - Article 27
+# Questions - Presumption of conformity - Article 27
 -  **Use of Harmonised Standards**:  Are you aware that your product and processes that comply with the relevant harmonised standards (or parts of them) published in the Official Journal of the EU, are presumed conform with Annex I requirements?
 -  **Awareness of Commission Requests for Standards**: Are you aware that the Commission may request European standardisation organisations to develop harmonised standards for Annex I requirements, and that these standards may later affect how you demonstrate conformity?
 -  **Use of Common Specifications (If No Harmonised Standard Exists)**: If harmonised standards are unavailable, have you checked whether the Commission has issued implementing acts that establish common specifications that you must follow to obtain presumption of conformity?
