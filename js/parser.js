@@ -90,10 +90,12 @@ export function parseQuestionsFromMarkdown(mdText, setId)
  *   ]
  * }
  */
-export function parseQuestionsFromModelJson(model, setId) {
+export function parseQuestionsFromModelJson(model, setId)
+{
     const questions = [];
 
-    if (!model || !Array.isArray(model.sections)) {
+    if (!model || !Array.isArray(model.sections))
+    {
         return { questions, topTitle: null };
     }
 
@@ -101,36 +103,73 @@ export function parseQuestionsFromModelJson(model, setId) {
     const topTitle = rootSections[0]?.title || null;
     let counter = 0;
 
-    /**
-     * path = array of ancestor titles, e.g.
-     * []                                           (before root)
-     * ["Questions - Voluntary Reporting - ..."]    (root)
-     * ["Questions - ...", "Early Warning Reporting"]             (level 2)
-     * ["Questions - ...", "Part I", "Section A"]                 (level 3)
-     */
-    function walkNode(node, path) {
+    function splitContentIntoMainAndDetails(content)
+    {
+        if (!content) return { text: "", details: [] };
+
+        const lines = content.split(/\r?\n/);
+        if (lines.length === 1)
+        {
+            return { text: content.trim(), details: [] };
+        }
+
+        let main = null;
+        const details = [];
+
+        for (const raw of lines)
+        {
+            const t = raw.trim();
+            if (!t) continue;
+
+            if (main === null)
+            {
+                main = t;
+                continue;
+            }
+
+            const m = t.match(/^-\s*(.*)$/);
+            if (m)
+            {
+                details.push(m[1].trim());
+            }
+            else
+            {
+                details.push(t);
+            }
+        }
+
+        return { text: main || "", details };
+    }
+
+    function walkNode(node, path)
+    {
         const thisTitle = node.title || null;
         const newPath = thisTitle ? [...path, thisTitle] : path;
 
         const depth = newPath.length;
-        const level2 = depth >= 2 ? newPath[1] : null; // first after root
-        const level3 = depth >= 3 ? newPath[2] : null; // second after root
+        const level2 = depth >= 2 ? newPath[1] : null;
+        const level3 = depth >= 3 ? newPath[2] : null;
 
-        if (Array.isArray(node.questions)) {
-            node.questions.forEach((q) => {
+        if (Array.isArray(node.questions))
+        {
+            node.questions.forEach((q) =>
+            {
+                const split = splitContentIntoMainAndDetails(q.content || "");
+
                 questions.push({
                     id: q.id || `${setId}-${counter++}`,
                     section: level3 || level2 || thisTitle || "",
                     sectionLevel2: level2,
                     sectionLevel3: level3,
                     title: q.title || "",
-                    text: q.content || "",
-                    details: []
+                    text: split.text,
+                    details: split.details,
                 });
             });
         }
 
-        if (Array.isArray(node.subsections)) {
+        if (Array.isArray(node.subsections))
+        {
             node.subsections.forEach((sub) => walkNode(sub, newPath));
         }
     }

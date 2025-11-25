@@ -4,6 +4,11 @@ export const QUESTION_SETS = [
     name: "Technical Documentation – Annex VII",
     file: "./questions/machine-readable/technical_documentation_annex_6.json"
   },
+  {
+    id: "reporting-obligations",
+    name: "Reporting Obligations of Manufacturerers – Article 14",
+    file: "./questions/machine-readable/reporting_obligations_of_manufacturers_article_14.json"
+  },
   //{
   //  id: "conformity-assessment-procedures",
   //  name: "Conformity Assessment Procedures – Annex VIII",
