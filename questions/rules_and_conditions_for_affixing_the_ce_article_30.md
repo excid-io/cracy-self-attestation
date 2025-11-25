@@ -1,0 +1,21 @@
+# Questions - Rules and Conditions for affixing the CE marking - Article 30
+-  **Visibility, Legibility, and Indelibility**: Is the CE marking affixed **visibly, legibly, and indelibly** to the product with digital elements?
+-  **Placement on Packaging / EU Declaration (If Product Cannot Bear It)**: If the nature of the product prevents affixing the CE marking directly, is it instead affixed to:
+    - the **packaging**,
+    - and/or the **EU Declaration of Conformity** accompanying the product?
+-  **Affixing on Software Products**: For software-only products, is the CE marking affixed:
+    - either to the **EU Declaration of Conformity**,
+    - or to the **notice section of the website** listed in the Declaration,
+    - ensuring it is **easily and directly accessible** to consumers?
+-  **Minimum Height Requirement**: Is the CE marking at least **5 mm in height**, unless the small size of the product justifies a smaller marking that still remains visible and legible?
+- **Timing (Before Market Placement)**: Is the CE marking affixed **before** the product with digital elements is placed on the market?
+-  **Additional Marks or Cybersecurity Pictograms**: Do you ensure that any additional marks, cybersecurity pictograms, or special symbols (if required by implementing acts under paragraph 6) **do not interfere with the CE marking**?
+- **Identification Number of the Notified Body (If Applicable)**: If a notified body is involved in conformity assessment:
+    - Is the **identification number** of the notified body placed next to the CE marking?
+    - Is the identification number affixed by the notified body, the manufacturer, or the authorised representative as required?
+- **Correct Use and Enforcement of CE Marking**: Are you aware that Member States might enforce rules preventing misuses of the markings?
+-  **CE Marking Under Multiple Union Legislations**: Where the product is also subject to other EU legislation requiring CE marking:
+    - Does the CE marking indicate **compliance with all applicable Union legislation**, including the CRA?
+- **Implementing Acts on Labels, Icons, Cybersecurity Indicators**: Are you prepared to comply with future **technical specifications for labels, pictograms, or marks** related to cybersecurity that the Commission may adopt?
+-  **Cooperation with Commission and ADCO**:  Are you aware about implementing acts developed through Commission consultations with stakeholders and ADCO regarding cybersecurity labeling?
+	- The Commission may, by means of implementing acts, lay down technical specifications for labels, pictograms or any other marks related to the security of the products with digital elements, their support periods and mechanisms to promote their use and to increase public awareness about the security of products with digital elements.
