@@ -2,822 +2,824 @@
   "sections": [
     {
       "title": "Questions - Design, Development & Cybersecurity Risk Management - Article 13",
-      "questions": []
-    },
-    {
-      "title": "Design and Compliance",
-      "questions": [
+      "questions": [],
+      "subsections": [
         {
-          "title": "Design and Compliance - Q1",
-          "content": "Has the product with digital elements (PDE) been **designed, developed, and produced** in compliance with the **essential cybersecurity requirements** outlined in Annex I, Part I?",
-          "type": "mchoices",
-          "responses": [
+          "title": "Design and Compliance",
+          "questions": [
             {
-              "title": "Yes",
-              "type": "choice"
-            },
-            {
-              "title": "No",
-              "type": "choice"
-            },
-            {
-              "title": "In Progress",
-              "description": "Work is underway but not yet completed.",
-              "type": "choice"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "title": "Cybersecurity Risk Assessment",
-      "questions": [
-        {
-          "title": "Cybersecurity Risk Assessment - Q1",
-          "content": "Have you **assessed cybersecurity risks** across all lifecycle phases (from design to maintenance)?",
-          "type": "mchoices",
-          "responses": [
-            {
-              "title": "Yes",
-              "type": "choice"
-            },
-            {
-              "title": "No",
-              "type": "choice"
-            },
-            {
-              "title": "In Progress",
-              "description": "Work is underway but not yet completed.",
-              "type": "choice"
+              "title": "Design and Compliance - Q1",
+              "content": "Has the product with digital elements (PDE) been **designed, developed, and produced** in compliance with the **essential cybersecurity requirements** outlined in Annex I, Part I?",
+              "type": "mchoices",
+              "responses": [
+                {
+                  "title": "Yes",
+                  "type": "choice"
+                },
+                {
+                  "title": "No",
+                  "type": "choice"
+                },
+                {
+                  "title": "In Progress",
+                  "description": "Work is underway but not yet completed.",
+                  "type": "choice"
+                }
+              ]
             }
           ]
         },
         {
-          "title": "Cybersecurity Risk Assessment - Q2",
-          "content": "Does this assessment ensure that risks are **minimized and incidents are prevented**?",
-          "type": "mchoices",
-          "responses": [
+          "title": "Cybersecurity Risk Assessment",
+          "questions": [
             {
-              "title": "Yes",
-              "type": "choice"
+              "title": "Cybersecurity Risk Assessment - Q1",
+              "content": "Have you **assessed cybersecurity risks** across all lifecycle phases (from design to maintenance)?",
+              "type": "mchoices",
+              "responses": [
+                {
+                  "title": "Yes",
+                  "type": "choice"
+                },
+                {
+                  "title": "No",
+                  "type": "choice"
+                },
+                {
+                  "title": "In Progress",
+                  "description": "Work is underway but not yet completed.",
+                  "type": "choice"
+                }
+              ]
             },
             {
-              "title": "No",
-              "type": "choice"
-            },
-            {
-              "title": "In Progress",
-              "description": "Work is underway but not yet completed.",
-              "type": "choice"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "title": "Risk Assessment Documentation",
-      "questions": [
-        {
-          "title": "Risk Assessment Documentation - Q1",
-          "content": "Is the **cybersecurity risk assessment documented and regularly updated** throughout the support period?",
-          "type": "mchoices",
-          "responses": [
-            {
-              "title": "Yes",
-              "type": "choice"
-            },
-            {
-              "title": "No",
-              "type": "choice"
-            },
-            {
-              "title": "In Progress",
-              "description": "Work is underway but not yet completed.",
-              "type": "choice"
-            }
-          ]
-        },
-        {
-          "title": "Risk Assessment Documentation - Q2",
-          "content": "Does it include intended and foreseeable use, operational conditions, and expected duration?",
-          "type": "mchoices",
-          "responses": [
-            {
-              "title": "Yes",
-              "type": "choice"
-            },
-            {
-              "title": "No",
-              "type": "choice"
-            },
-            {
-              "title": "In Progress",
-              "description": "Work is underway but not yet completed.",
-              "type": "choice"
+              "title": "Cybersecurity Risk Assessment - Q2",
+              "content": "Does this assessment ensure that risks are **minimized and incidents are prevented**?",
+              "type": "mchoices",
+              "responses": [
+                {
+                  "title": "Yes",
+                  "type": "choice"
+                },
+                {
+                  "title": "No",
+                  "type": "choice"
+                },
+                {
+                  "title": "In Progress",
+                  "description": "Work is underway but not yet completed.",
+                  "type": "choice"
+                }
+              ]
             }
           ]
         },
         {
-          "title": "Risk Assessment Documentation - Q3",
-          "content": "Does it describe how **Annex I cybersecurity and vulnerability-handling measures** are implemented?",
-          "type": "mchoices",
-          "responses": [
+          "title": "Risk Assessment Documentation",
+          "questions": [
             {
-              "title": "Yes",
-              "type": "choice"
+              "title": "Risk Assessment Documentation - Q1",
+              "content": "Is the **cybersecurity risk assessment documented and regularly updated** throughout the support period?",
+              "type": "mchoices",
+              "responses": [
+                {
+                  "title": "Yes",
+                  "type": "choice"
+                },
+                {
+                  "title": "No",
+                  "type": "choice"
+                },
+                {
+                  "title": "In Progress",
+                  "description": "Work is underway but not yet completed.",
+                  "type": "choice"
+                }
+              ]
             },
             {
-              "title": "No",
-              "type": "choice"
+              "title": "Risk Assessment Documentation - Q2",
+              "content": "Does it include intended and foreseeable use, operational conditions, and expected duration?",
+              "type": "mchoices",
+              "responses": [
+                {
+                  "title": "Yes",
+                  "type": "choice"
+                },
+                {
+                  "title": "No",
+                  "type": "choice"
+                },
+                {
+                  "title": "In Progress",
+                  "description": "Work is underway but not yet completed.",
+                  "type": "choice"
+                }
+              ]
             },
             {
-              "title": "In Progress",
-              "description": "Work is underway but not yet completed.",
-              "type": "choice"
+              "title": "Risk Assessment Documentation - Q3",
+              "content": "Does it describe how **Annex I cybersecurity and vulnerability-handling measures** are implemented?",
+              "type": "mchoices",
+              "responses": [
+                {
+                  "title": "Yes",
+                  "type": "choice"
+                },
+                {
+                  "title": "No",
+                  "type": "choice"
+                },
+                {
+                  "title": "In Progress",
+                  "description": "Work is underway but not yet completed.",
+                  "type": "choice"
+                }
+              ]
+            },
+            {
+              "title": "Risk Assessment Documentation - Q4",
+              "content": "Have you provided a **clear justification** for any cybersecurity requirements deemed not applicable?",
+              "type": "mchoices",
+              "responses": [
+                {
+                  "title": "Yes",
+                  "type": "choice"
+                },
+                {
+                  "title": "No",
+                  "type": "choice"
+                },
+                {
+                  "title": "In Progress",
+                  "description": "Work is underway but not yet completed.",
+                  "type": "choice"
+                }
+              ]
             }
           ]
         },
         {
-          "title": "Risk Assessment Documentation - Q4",
-          "content": "Have you provided a **clear justification** for any cybersecurity requirements deemed not applicable?",
-          "type": "mchoices",
-          "responses": [
+          "title": "Inclusion in Technical Documentation",
+          "questions": [
             {
-              "title": "Yes",
-              "type": "choice"
-            },
-            {
-              "title": "No",
-              "type": "choice"
-            },
-            {
-              "title": "In Progress",
-              "description": "Work is underway but not yet completed.",
-              "type": "choice"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "title": "Inclusion in Technical Documentation",
-      "questions": [
-        {
-          "title": "Inclusion in Technical Documentation - Q1",
-          "content": "Is the **risk assessment included** in the **technical documentation**, as required by Article 31 and Annex VII?",
-          "type": "mchoices",
-          "responses": [
-            {
-              "title": "Yes",
-              "type": "choice"
-            },
-            {
-              "title": "No",
-              "type": "choice"
-            },
-            {
-              "title": "In Progress",
-              "description": "Work is underway but not yet completed.",
-              "type": "choice"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "title": "Integration of Third-Party Components",
-      "questions": [
-        {
-          "title": "Integration of Third-Party Components - Q1",
-          "content": "Do you exercise **due diligence** when integrating third-party or open-source components to ensure they do not compromise cybersecurity?",
-          "type": "mchoices",
-          "responses": [
-            {
-              "title": "Yes",
-              "type": "choice"
-            },
-            {
-              "title": "No",
-              "type": "choice"
-            },
-            {
-              "title": "In Progress",
-              "description": "Work is underway but not yet completed.",
-              "type": "choice"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "title": "Vulnerability Reporting & Cooperation",
-      "questions": [
-        {
-          "title": "Vulnerability Reporting & Cooperation - Q1",
-          "content": "When vulnerabilities are found in components, do you **report them to the component maintainer** or responsible party?",
-          "type": "paragraph",
-          "responses": []
-        },
-        {
-          "title": "Vulnerability Reporting & Cooperation - Q2",
-          "content": "Do you **remediate** vulnerabilities appropriately and **share fixes or code** with maintainers when relevant?",
-          "type": "mchoices",
-          "responses": [
-            {
-              "title": "Yes",
-              "type": "choice"
-            },
-            {
-              "title": "No",
-              "type": "choice"
-            },
-            {
-              "title": "In Progress",
-              "description": "Work is underway but not yet completed.",
-              "type": "choice"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "title": "Systematic Documentation",
-      "questions": [
-        {
-          "title": "Systematic Documentation - Q1",
-          "content": "Do you **systematically document** all cybersecurity aspects, including discovered vulnerabilities, risk analyses, and updates?",
-          "type": "mchoices",
-          "responses": [
-            {
-              "title": "Yes",
-              "type": "choice"
-            },
-            {
-              "title": "No",
-              "type": "choice"
-            },
-            {
-              "title": "In Progress",
-              "description": "Work is underway but not yet completed.",
-              "type": "choice"
+              "title": "Inclusion in Technical Documentation - Q1",
+              "content": "Is the **risk assessment included** in the **technical documentation**, as required by Article 31 and Annex VII?",
+              "type": "mchoices",
+              "responses": [
+                {
+                  "title": "Yes",
+                  "type": "choice"
+                },
+                {
+                  "title": "No",
+                  "type": "choice"
+                },
+                {
+                  "title": "In Progress",
+                  "description": "Work is underway but not yet completed.",
+                  "type": "choice"
+                }
+              ]
             }
           ]
         },
         {
-          "title": "Systematic Documentation - Q2",
-          "content": "Is this documentation **proportionate** to the product’s risk level and kept current?",
-          "type": "mchoices",
-          "responses": [
+          "title": "Integration of Third-Party Components",
+          "questions": [
             {
-              "title": "Yes",
-              "type": "choice"
-            },
-            {
-              "title": "No",
-              "type": "choice"
-            },
-            {
-              "title": "In Progress",
-              "description": "Work is underway but not yet completed.",
-              "type": "choice"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "title": "Vulnerability Handling & Support Period",
-      "questions": [
-        {
-          "title": "Vulnerability Handling & Support Period - Q1",
-          "content": "Are vulnerabilities **handled effectively throughout the support period**?",
-          "type": "mchoices",
-          "responses": [
-            {
-              "title": "Yes",
-              "type": "choice"
-            },
-            {
-              "title": "No",
-              "type": "choice"
-            },
-            {
-              "title": "In Progress",
-              "description": "Work is underway but not yet completed.",
-              "type": "choice"
+              "title": "Integration of Third-Party Components - Q1",
+              "content": "Do you exercise **due diligence** when integrating third-party or open-source components to ensure they do not compromise cybersecurity?",
+              "type": "mchoices",
+              "responses": [
+                {
+                  "title": "Yes",
+                  "type": "choice"
+                },
+                {
+                  "title": "No",
+                  "type": "choice"
+                },
+                {
+                  "title": "In Progress",
+                  "description": "Work is underway but not yet completed.",
+                  "type": "choice"
+                }
+              ]
             }
           ]
         },
         {
-          "title": "Vulnerability Handling & Support Period - Q2",
-          "content": "Have you determined and justified the **support period duration** (minimum 5 years)?",
-          "type": "mchoices",
-          "responses": [
+          "title": "Vulnerability Reporting & Cooperation",
+          "questions": [
             {
-              "title": "Yes",
-              "type": "choice"
+              "title": "Vulnerability Reporting & Cooperation - Q1",
+              "content": "When vulnerabilities are found in components, do you **report them to the component maintainer** or responsible party?",
+              "type": "paragraph",
+              "responses": []
             },
             {
-              "title": "No",
-              "type": "choice"
-            },
-            {
-              "title": "In Progress",
-              "description": "Work is underway but not yet completed.",
-              "type": "choice"
+              "title": "Vulnerability Reporting & Cooperation - Q2",
+              "content": "Do you **remediate** vulnerabilities appropriately and **share fixes or code** with maintainers when relevant?",
+              "type": "mchoices",
+              "responses": [
+                {
+                  "title": "Yes",
+                  "type": "choice"
+                },
+                {
+                  "title": "No",
+                  "type": "choice"
+                },
+                {
+                  "title": "In Progress",
+                  "description": "Work is underway but not yet completed.",
+                  "type": "choice"
+                }
+              ]
             }
           ]
         },
         {
-          "title": "Vulnerability Handling & Support Period - Q3",
-          "content": "Do you maintain formal **policies and procedures**, including a **Coordinated Vulnerability Disclosure (CVD)** policy?",
-          "type": "mchoices",
-          "responses": [
+          "title": "Systematic Documentation",
+          "questions": [
             {
-              "title": "Yes",
-              "type": "choice"
+              "title": "Systematic Documentation - Q1",
+              "content": "Do you **systematically document** all cybersecurity aspects, including discovered vulnerabilities, risk analyses, and updates?",
+              "type": "mchoices",
+              "responses": [
+                {
+                  "title": "Yes",
+                  "type": "choice"
+                },
+                {
+                  "title": "No",
+                  "type": "choice"
+                },
+                {
+                  "title": "In Progress",
+                  "description": "Work is underway but not yet completed.",
+                  "type": "choice"
+                }
+              ]
             },
             {
-              "title": "No",
-              "type": "choice"
-            },
-            {
-              "title": "In Progress",
-              "description": "Work is underway but not yet completed.",
-              "type": "choice"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "title": "Availability of Security Updates",
-      "questions": [
-        {
-          "title": "Availability of Security Updates - Q1",
-          "content": "Are all **security updates** made available for **at least 10 years** or for the full support period, whichever is longer?",
-          "type": "mchoices",
-          "responses": [
-            {
-              "title": "Yes",
-              "type": "choice"
-            },
-            {
-              "title": "No",
-              "type": "choice"
-            },
-            {
-              "title": "In Progress",
-              "description": "Work is underway but not yet completed.",
-              "type": "choice"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "title": "Substantially Modified Software Versions",
-      "questions": [
-        {
-          "title": "Substantially Modified Software Versions - Q1",
-          "content": "If a substantially modified software version is released, do you ensure previous users can **upgrade to the latest version** free of charge and without additional compatibility costs?",
-          "type": "paragraph",
-          "responses": []
-        }
-      ]
-    },
-    {
-      "title": "Public Software Archives",
-      "questions": [
-        {
-          "title": "Public Software Archives - Q1",
-          "content": "If you maintain **public archives of older software versions**, do you **clearly inform users** of the **security risks** of using unsupported versions?",
-          "type": "paragraph",
-          "responses": []
-        }
-      ]
-    },
-    {
-      "title": "Conformity Assessment & CE Marking",
-      "questions": [
-        {
-          "title": "Conformity Assessment & CE Marking - Q1",
-          "content": "Before placing the product on the market, have you completed all steps of **technical documentation, conformity assessment**, issued an **EU Declaration of Conformity**, and **affixed the CE marking**?",
-          "type": "paragraph",
-          "responses": []
-        }
-      ]
-    },
-    {
-      "title": "Retention of Documentation",
-      "questions": [
-        {
-          "title": "Retention of Documentation - Q1",
-          "content": "Do you **retain all technical documentation and EU Declarations of Conformity** for at least **10 years** or the entire **support period**, whichever is longer?",
-          "type": "mchoices",
-          "responses": [
-            {
-              "title": "Yes",
-              "type": "choice"
-            },
-            {
-              "title": "No",
-              "type": "choice"
-            },
-            {
-              "title": "In Progress",
-              "description": "Work is underway but not yet completed.",
-              "type": "choice"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "title": "Ongoing Compliance for Series Production",
-      "questions": [
-        {
-          "title": "Ongoing Compliance for Series Production - Q1",
-          "content": "Do you maintain **ongoing conformity** for series-produced products, accounting for changes in design, production, or standards?",
-          "type": "mchoices",
-          "responses": [
-            {
-              "title": "Yes",
-              "type": "choice"
-            },
-            {
-              "title": "No",
-              "type": "choice"
-            },
-            {
-              "title": "In Progress",
-              "description": "Work is underway but not yet completed.",
-              "type": "choice"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "title": "Product Identification",
-      "questions": [
-        {
-          "title": "Product Identification - Q1",
-          "content": "Does each product carry a **type, batch, or serial number**, or equivalent traceable identifier on the product, its packaging, or accompanying documents?",
-          "type": "mchoices",
-          "responses": [
-            {
-              "title": "Yes",
-              "type": "choice"
-            },
-            {
-              "title": "No",
-              "type": "choice"
-            },
-            {
-              "title": "In Progress",
-              "description": "Work is underway but not yet completed.",
-              "type": "choice"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "title": "Manufacturer Contact Details",
-      "questions": [
-        {
-          "title": "Manufacturer Contact Details - Q1",
-          "content": "Have you provided the **manufacturer’s name, trade name, postal address, digital contact information, and website** (if available) on the product, packaging, or documentation?",
-          "type": "mchoices",
-          "responses": [
-            {
-              "title": "Yes",
-              "type": "choice"
-            },
-            {
-              "title": "No",
-              "type": "choice"
-            },
-            {
-              "title": "In Progress",
-              "description": "Work is underway but not yet completed.",
-              "type": "choice"
+              "title": "Systematic Documentation - Q2",
+              "content": "Is this documentation **proportionate** to the product’s risk level and kept current?",
+              "type": "mchoices",
+              "responses": [
+                {
+                  "title": "Yes",
+                  "type": "choice"
+                },
+                {
+                  "title": "No",
+                  "type": "choice"
+                },
+                {
+                  "title": "In Progress",
+                  "description": "Work is underway but not yet completed.",
+                  "type": "choice"
+                }
+              ]
             }
           ]
         },
         {
-          "title": "Manufacturer Contact Details - Q2",
-          "content": "Are these details presented in a **language easily understood** by both users and authorities?",
-          "type": "mchoices",
-          "responses": [
+          "title": "Vulnerability Handling & Support Period",
+          "questions": [
             {
-              "title": "Yes",
-              "type": "choice"
+              "title": "Vulnerability Handling & Support Period - Q1",
+              "content": "Are vulnerabilities **handled effectively throughout the support period**?",
+              "type": "mchoices",
+              "responses": [
+                {
+                  "title": "Yes",
+                  "type": "choice"
+                },
+                {
+                  "title": "No",
+                  "type": "choice"
+                },
+                {
+                  "title": "In Progress",
+                  "description": "Work is underway but not yet completed.",
+                  "type": "choice"
+                }
+              ]
             },
             {
-              "title": "No",
-              "type": "choice"
+              "title": "Vulnerability Handling & Support Period - Q2",
+              "content": "Have you determined and justified the **support period duration** (minimum 5 years)?",
+              "type": "mchoices",
+              "responses": [
+                {
+                  "title": "Yes",
+                  "type": "choice"
+                },
+                {
+                  "title": "No",
+                  "type": "choice"
+                },
+                {
+                  "title": "In Progress",
+                  "description": "Work is underway but not yet completed.",
+                  "type": "choice"
+                }
+              ]
             },
             {
-              "title": "In Progress",
-              "description": "Work is underway but not yet completed.",
-              "type": "choice"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "title": "Single Point of Contact (SPOC)",
-      "questions": [
-        {
-          "title": "Single Point of Contact (SPOC) - Q1",
-          "content": "Have you designated a **Single Point of Contact (SPOC)** for users to report vulnerabilities and communicate directly?",
-          "type": "mchoices",
-          "responses": [
-            {
-              "title": "Yes",
-              "type": "choice"
-            },
-            {
-              "title": "No",
-              "type": "choice"
-            },
-            {
-              "title": "In Progress",
-              "description": "Work is underway but not yet completed.",
-              "type": "choice"
-            }
-          ]
-        },
-        {
-          "title": "Single Point of Contact (SPOC) - Q2",
-          "content": "Is the SPOC **clearly identifiable**, supports **multiple communication channels**, and does **not rely solely on automation**?",
-          "type": "mchoices",
-          "responses": [
-            {
-              "title": "Yes",
-              "type": "choice"
-            },
-            {
-              "title": "No",
-              "type": "choice"
-            },
-            {
-              "title": "In Progress",
-              "description": "Work is underway but not yet completed.",
-              "type": "choice"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "title": "User Information & Instructions (Annex II)",
-      "questions": [
-        {
-          "title": "User Information & Instructions (Annex II) - Q1",
-          "content": "Have you provided **user information and instructions** (Annex II) in **paper or electronic form**, written in a **clear, understandable language**?",
-          "type": "mchoices",
-          "responses": [
-            {
-              "title": "Yes",
-              "type": "choice"
-            },
-            {
-              "title": "No",
-              "type": "choice"
-            },
-            {
-              "title": "In Progress",
-              "description": "Work is underway but not yet completed.",
-              "type": "choice"
+              "title": "Vulnerability Handling & Support Period - Q3",
+              "content": "Do you maintain formal **policies and procedures**, including a **Coordinated Vulnerability Disclosure (CVD)** policy?",
+              "type": "mchoices",
+              "responses": [
+                {
+                  "title": "Yes",
+                  "type": "choice"
+                },
+                {
+                  "title": "No",
+                  "type": "choice"
+                },
+                {
+                  "title": "In Progress",
+                  "description": "Work is underway but not yet completed.",
+                  "type": "choice"
+                }
+              ]
             }
           ]
         },
         {
-          "title": "User Information & Instructions (Annex II) - Q2",
-          "content": "Do these instructions enable **secure installation, operation, and use** of the product?",
-          "type": "mchoices",
-          "responses": [
+          "title": "Availability of Security Updates",
+          "questions": [
             {
-              "title": "Yes",
-              "type": "choice"
-            },
-            {
-              "title": "No",
-              "type": "choice"
-            },
-            {
-              "title": "In Progress",
-              "description": "Work is underway but not yet completed.",
-              "type": "choice"
+              "title": "Availability of Security Updates - Q1",
+              "content": "Are all **security updates** made available for **at least 10 years** or for the full support period, whichever is longer?",
+              "type": "mchoices",
+              "responses": [
+                {
+                  "title": "Yes",
+                  "type": "choice"
+                },
+                {
+                  "title": "No",
+                  "type": "choice"
+                },
+                {
+                  "title": "In Progress",
+                  "description": "Work is underway but not yet completed.",
+                  "type": "choice"
+                }
+              ]
             }
           ]
         },
         {
-          "title": "User Information & Instructions (Annex II) - Q3",
-          "content": "Are they **accessible and retained for at least 10 years** (or for the support period), even when hosted online?",
-          "type": "mchoices",
-          "responses": [
+          "title": "Substantially Modified Software Versions",
+          "questions": [
             {
-              "title": "Yes",
-              "type": "choice"
-            },
-            {
-              "title": "No",
-              "type": "choice"
-            },
-            {
-              "title": "In Progress",
-              "description": "Work is underway but not yet completed.",
-              "type": "choice"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "title": "Disclosure of Support Period",
-      "questions": [
-        {
-          "title": "Disclosure of Support Period - Q1",
-          "content": "Is the **end date of the support period** (month and year) **clearly communicated at the time of purchase**?",
-          "type": "mchoices",
-          "responses": [
-            {
-              "title": "Yes",
-              "type": "choice"
-            },
-            {
-              "title": "No",
-              "type": "choice"
-            },
-            {
-              "title": "In Progress",
-              "description": "Work is underway but not yet completed.",
-              "type": "choice"
+              "title": "Substantially Modified Software Versions - Q1",
+              "content": "If a substantially modified software version is released, do you ensure previous users can **upgrade to the latest version** free of charge and without additional compatibility costs?",
+              "type": "paragraph",
+              "responses": []
             }
           ]
         },
         {
-          "title": "Disclosure of Support Period - Q2",
-          "content": "Where feasible, is this date also displayed on the **product, packaging, or digitally**?",
-          "type": "paragraph",
-          "responses": []
+          "title": "Public Software Archives",
+          "questions": [
+            {
+              "title": "Public Software Archives - Q1",
+              "content": "If you maintain **public archives of older software versions**, do you **clearly inform users** of the **security risks** of using unsupported versions?",
+              "type": "paragraph",
+              "responses": []
+            }
+          ]
         },
         {
-          "title": "Disclosure of Support Period - Q3",
-          "content": "Do users receive a **notification** when the product’s support period ends (if technically feasible)?",
-          "type": "mchoices",
-          "responses": [
+          "title": "Conformity Assessment & CE Marking",
+          "questions": [
             {
-              "title": "Yes",
-              "type": "choice"
-            },
-            {
-              "title": "No",
-              "type": "choice"
-            },
-            {
-              "title": "In Progress",
-              "description": "Work is underway but not yet completed.",
-              "type": "choice"
+              "title": "Conformity Assessment & CE Marking - Q1",
+              "content": "Before placing the product on the market, have you completed all steps of **technical documentation, conformity assessment**, issued an **EU Declaration of Conformity**, and **affixed the CE marking**?",
+              "type": "paragraph",
+              "responses": []
             }
           ]
-        }
-      ]
-    },
-    {
-      "title": "EU Declaration of Conformity",
-      "questions": [
-        {
-          "title": "EU Declaration of Conformity - Q1",
-          "content": "Does each product include either a **full EU Declaration of Conformity** or a **simplified version** that provides a **direct internet link** to the full declaration?",
-          "type": "mchoices",
-          "responses": [
-            {
-              "title": "Yes",
-              "type": "choice"
-            },
-            {
-              "title": "No",
-              "type": "choice"
-            },
-            {
-              "title": "In Progress",
-              "description": "Work is underway but not yet completed.",
-              "type": "choice"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "title": "Corrective Measures for Non-Conformity",
-      "questions": [
-        {
-          "title": "Corrective Measures for Non-Conformity - Q1",
-          "content": "If you **know or suspect** a product or its processes no longer meet CRA requirements, do you **immediately correct**, **withdraw**, or **recall** the affected product?",
-          "type": "paragraph",
-          "responses": []
-        }
-      ]
-    },
-    {
-      "title": "Cooperation with Market Authorities",
-      "questions": [
-        {
-          "title": "Cooperation with Market Authorities - Q1",
-          "content": "Upon a **reasoned request**, can you provide **all documentation and information** (in an understandable language) to demonstrate conformity?",
-          "type": "paragraph",
-          "responses": []
         },
         {
-          "title": "Cooperation with Market Authorities - Q2",
-          "content": "Do you **cooperate fully with authorities** to remove or mitigate any identified cybersecurity risks?",
-          "type": "mchoices",
-          "responses": [
+          "title": "Retention of Documentation",
+          "questions": [
             {
-              "title": "Yes",
-              "type": "choice"
-            },
-            {
-              "title": "No",
-              "type": "choice"
-            },
-            {
-              "title": "In Progress",
-              "description": "Work is underway but not yet completed.",
-              "type": "choice"
+              "title": "Retention of Documentation - Q1",
+              "content": "Do you **retain all technical documentation and EU Declarations of Conformity** for at least **10 years** or the entire **support period**, whichever is longer?",
+              "type": "mchoices",
+              "responses": [
+                {
+                  "title": "Yes",
+                  "type": "choice"
+                },
+                {
+                  "title": "No",
+                  "type": "choice"
+                },
+                {
+                  "title": "In Progress",
+                  "description": "Work is underway but not yet completed.",
+                  "type": "choice"
+                }
+              ]
             }
           ]
-        }
-      ]
-    },
-    {
-      "title": "Cessation of Operations",
-      "questions": [
-        {
-          "title": "Cessation of Operations - Q1",
-          "content": "If you plan to **cease operations**, do you **inform authorities and users in advance**, explaining the cessation and its effects on product support?",
-          "type": "paragraph",
-          "responses": []
-        }
-      ]
-    },
-    {
-      "title": "Software Bill of Materials (SBOM) Format",
-      "questions": [
-        {
-          "title": "Software Bill of Materials (SBOM) Format - Q1",
-          "content": "Are you prepared to provide a **Software Bill of Materials (SBOM)** that follows the **standard format and structure** defined by the European Commission?",
-          "type": "mchoices",
-          "responses": [
-            {
-              "title": "Yes",
-              "type": "choice"
-            },
-            {
-              "title": "No",
-              "type": "choice"
-            },
-            {
-              "title": "In Progress",
-              "description": "Work is underway but not yet completed.",
-              "type": "choice"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "title": "Union-Wide Dependency Assessment",
-      "questions": [
-        {
-          "title": "Union-Wide Dependency Assessment - Q1",
-          "content": "If requested by **ADCO or authorities**, can you provide **SBOMs** for inclusion in a Union-wide dependency assessment?",
-          "type": "paragraph",
-          "responses": []
         },
         {
-          "title": "Union-Wide Dependency Assessment - Q2",
-          "content": "Are you aware that only **anonymized and aggregated SBOM data** will be shared by authorities with the Cooperation Group under **NIS2**?",
-          "type": "mchoices",
-          "responses": [
+          "title": "Ongoing Compliance for Series Production",
+          "questions": [
             {
-              "title": "Yes",
-              "type": "choice"
+              "title": "Ongoing Compliance for Series Production - Q1",
+              "content": "Do you maintain **ongoing conformity** for series-produced products, accounting for changes in design, production, or standards?",
+              "type": "mchoices",
+              "responses": [
+                {
+                  "title": "Yes",
+                  "type": "choice"
+                },
+                {
+                  "title": "No",
+                  "type": "choice"
+                },
+                {
+                  "title": "In Progress",
+                  "description": "Work is underway but not yet completed.",
+                  "type": "choice"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Product Identification",
+          "questions": [
+            {
+              "title": "Product Identification - Q1",
+              "content": "Does each product carry a **type, batch, or serial number**, or equivalent traceable identifier on the product, its packaging, or accompanying documents?",
+              "type": "mchoices",
+              "responses": [
+                {
+                  "title": "Yes",
+                  "type": "choice"
+                },
+                {
+                  "title": "No",
+                  "type": "choice"
+                },
+                {
+                  "title": "In Progress",
+                  "description": "Work is underway but not yet completed.",
+                  "type": "choice"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Manufacturer Contact Details",
+          "questions": [
+            {
+              "title": "Manufacturer Contact Details - Q1",
+              "content": "Have you provided the **manufacturer’s name, trade name, postal address, digital contact information, and website** (if available) on the product, packaging, or documentation?",
+              "type": "mchoices",
+              "responses": [
+                {
+                  "title": "Yes",
+                  "type": "choice"
+                },
+                {
+                  "title": "No",
+                  "type": "choice"
+                },
+                {
+                  "title": "In Progress",
+                  "description": "Work is underway but not yet completed.",
+                  "type": "choice"
+                }
+              ]
             },
             {
-              "title": "No",
-              "type": "choice"
+              "title": "Manufacturer Contact Details - Q2",
+              "content": "Are these details presented in a **language easily understood** by both users and authorities?",
+              "type": "mchoices",
+              "responses": [
+                {
+                  "title": "Yes",
+                  "type": "choice"
+                },
+                {
+                  "title": "No",
+                  "type": "choice"
+                },
+                {
+                  "title": "In Progress",
+                  "description": "Work is underway but not yet completed.",
+                  "type": "choice"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Single Point of Contact (SPOC)",
+          "questions": [
+            {
+              "title": "Single Point of Contact (SPOC) - Q1",
+              "content": "Have you designated a **Single Point of Contact (SPOC)** for users to report vulnerabilities and communicate directly?",
+              "type": "mchoices",
+              "responses": [
+                {
+                  "title": "Yes",
+                  "type": "choice"
+                },
+                {
+                  "title": "No",
+                  "type": "choice"
+                },
+                {
+                  "title": "In Progress",
+                  "description": "Work is underway but not yet completed.",
+                  "type": "choice"
+                }
+              ]
             },
             {
-              "title": "In Progress",
-              "description": "Work is underway but not yet completed.",
-              "type": "choice"
+              "title": "Single Point of Contact (SPOC) - Q2",
+              "content": "Is the SPOC **clearly identifiable**, supports **multiple communication channels**, and does **not rely solely on automation**?",
+              "type": "mchoices",
+              "responses": [
+                {
+                  "title": "Yes",
+                  "type": "choice"
+                },
+                {
+                  "title": "No",
+                  "type": "choice"
+                },
+                {
+                  "title": "In Progress",
+                  "description": "Work is underway but not yet completed.",
+                  "type": "choice"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "User Information & Instructions (Annex II)",
+          "questions": [
+            {
+              "title": "User Information & Instructions (Annex II) - Q1",
+              "content": "Have you provided **user information and instructions** (Annex II) in **paper or electronic form**, written in a **clear, understandable language**?",
+              "type": "mchoices",
+              "responses": [
+                {
+                  "title": "Yes",
+                  "type": "choice"
+                },
+                {
+                  "title": "No",
+                  "type": "choice"
+                },
+                {
+                  "title": "In Progress",
+                  "description": "Work is underway but not yet completed.",
+                  "type": "choice"
+                }
+              ]
+            },
+            {
+              "title": "User Information & Instructions (Annex II) - Q2",
+              "content": "Do these instructions enable **secure installation, operation, and use** of the product?",
+              "type": "mchoices",
+              "responses": [
+                {
+                  "title": "Yes",
+                  "type": "choice"
+                },
+                {
+                  "title": "No",
+                  "type": "choice"
+                },
+                {
+                  "title": "In Progress",
+                  "description": "Work is underway but not yet completed.",
+                  "type": "choice"
+                }
+              ]
+            },
+            {
+              "title": "User Information & Instructions (Annex II) - Q3",
+              "content": "Are they **accessible and retained for at least 10 years** (or for the support period), even when hosted online?",
+              "type": "mchoices",
+              "responses": [
+                {
+                  "title": "Yes",
+                  "type": "choice"
+                },
+                {
+                  "title": "No",
+                  "type": "choice"
+                },
+                {
+                  "title": "In Progress",
+                  "description": "Work is underway but not yet completed.",
+                  "type": "choice"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Disclosure of Support Period",
+          "questions": [
+            {
+              "title": "Disclosure of Support Period - Q1",
+              "content": "Is the **end date of the support period** (month and year) **clearly communicated at the time of purchase**?",
+              "type": "mchoices",
+              "responses": [
+                {
+                  "title": "Yes",
+                  "type": "choice"
+                },
+                {
+                  "title": "No",
+                  "type": "choice"
+                },
+                {
+                  "title": "In Progress",
+                  "description": "Work is underway but not yet completed.",
+                  "type": "choice"
+                }
+              ]
+            },
+            {
+              "title": "Disclosure of Support Period - Q2",
+              "content": "Where feasible, is this date also displayed on the **product, packaging, or digitally**?",
+              "type": "paragraph",
+              "responses": []
+            },
+            {
+              "title": "Disclosure of Support Period - Q3",
+              "content": "Do users receive a **notification** when the product’s support period ends (if technically feasible)?",
+              "type": "mchoices",
+              "responses": [
+                {
+                  "title": "Yes",
+                  "type": "choice"
+                },
+                {
+                  "title": "No",
+                  "type": "choice"
+                },
+                {
+                  "title": "In Progress",
+                  "description": "Work is underway but not yet completed.",
+                  "type": "choice"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "EU Declaration of Conformity",
+          "questions": [
+            {
+              "title": "EU Declaration of Conformity - Q1",
+              "content": "Does each product include either a **full EU Declaration of Conformity** or a **simplified version** that provides a **direct internet link** to the full declaration?",
+              "type": "mchoices",
+              "responses": [
+                {
+                  "title": "Yes",
+                  "type": "choice"
+                },
+                {
+                  "title": "No",
+                  "type": "choice"
+                },
+                {
+                  "title": "In Progress",
+                  "description": "Work is underway but not yet completed.",
+                  "type": "choice"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Corrective Measures for Non-Conformity",
+          "questions": [
+            {
+              "title": "Corrective Measures for Non-Conformity - Q1",
+              "content": "If you **know or suspect** a product or its processes no longer meet CRA requirements, do you **immediately correct**, **withdraw**, or **recall** the affected product?",
+              "type": "paragraph",
+              "responses": []
+            }
+          ]
+        },
+        {
+          "title": "Cooperation with Market Authorities",
+          "questions": [
+            {
+              "title": "Cooperation with Market Authorities - Q1",
+              "content": "Upon a **reasoned request**, can you provide **all documentation and information** (in an understandable language) to demonstrate conformity?",
+              "type": "paragraph",
+              "responses": []
+            },
+            {
+              "title": "Cooperation with Market Authorities - Q2",
+              "content": "Do you **cooperate fully with authorities** to remove or mitigate any identified cybersecurity risks?",
+              "type": "mchoices",
+              "responses": [
+                {
+                  "title": "Yes",
+                  "type": "choice"
+                },
+                {
+                  "title": "No",
+                  "type": "choice"
+                },
+                {
+                  "title": "In Progress",
+                  "description": "Work is underway but not yet completed.",
+                  "type": "choice"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Cessation of Operations",
+          "questions": [
+            {
+              "title": "Cessation of Operations - Q1",
+              "content": "If you plan to **cease operations**, do you **inform authorities and users in advance**, explaining the cessation and its effects on product support?",
+              "type": "paragraph",
+              "responses": []
+            }
+          ]
+        },
+        {
+          "title": "Software Bill of Materials (SBOM) Format",
+          "questions": [
+            {
+              "title": "Software Bill of Materials (SBOM) Format - Q1",
+              "content": "Are you prepared to provide a **Software Bill of Materials (SBOM)** that follows the **standard format and structure** defined by the European Commission?",
+              "type": "mchoices",
+              "responses": [
+                {
+                  "title": "Yes",
+                  "type": "choice"
+                },
+                {
+                  "title": "No",
+                  "type": "choice"
+                },
+                {
+                  "title": "In Progress",
+                  "description": "Work is underway but not yet completed.",
+                  "type": "choice"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Union-Wide Dependency Assessment",
+          "questions": [
+            {
+              "title": "Union-Wide Dependency Assessment - Q1",
+              "content": "If requested by **ADCO or authorities**, can you provide **SBOMs** for inclusion in a Union-wide dependency assessment?",
+              "type": "paragraph",
+              "responses": []
+            },
+            {
+              "title": "Union-Wide Dependency Assessment - Q2",
+              "content": "Are you aware that only **anonymized and aggregated SBOM data** will be shared by authorities with the Cooperation Group under **NIS2**?",
+              "type": "mchoices",
+              "responses": [
+                {
+                  "title": "Yes",
+                  "type": "choice"
+                },
+                {
+                  "title": "No",
+                  "type": "choice"
+                },
+                {
+                  "title": "In Progress",
+                  "description": "Work is underway but not yet completed.",
+                  "type": "choice"
+                }
+              ]
             }
           ]
         }

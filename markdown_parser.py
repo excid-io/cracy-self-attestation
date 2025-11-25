@@ -1,4 +1,29 @@
 #!/usr/bin/env python3
+"""
+Markdown → JSON converter with hierarchy:
+
+- # Heading        → top-level section
+- ## Heading       → subsection within current section
+- ### Heading      → sub-subsection within current subsection
+- Bullets (-, *)   → questions in the current scope:
+                     sub-subsection if present, else subsection,
+                     else section (Option D titles).
+
+Question title rules:
+- If bullet starts with "**Title**: Question text":
+    - question.title   = "Title"
+    - question.content = "Question text"
+- Otherwise (Option D):
+    - question.title   = "<Scope Title> - Q<index>"
+    - question.content = full bullet text
+
+Question type:
+- "mchoices" for yes/no-style questions (Do/Does/Is/Are/Have/Has/etc.)
+- "paragraph" otherwise
+
+mchoices questions get responses: Yes / No / In Progress
+"""
+
 import argparse
 import json
 import re
@@ -46,44 +71,61 @@ def parse_markdown(md_text: str):
     lines = md_text.splitlines()
 
     sections = []
-    current_section = None
-    pending_description = []
+    current_section = None        # level 1 (#)
+    current_subsection = None     # level 2 (##)
+    current_subsubsection = None  # level 3 (###)
+
+    pending_description = []      # buffered description lines for current scope
     collecting_question = False
-    question_lines = []  # accumulated lines for the current bullet/question
+    question_lines = []           # accumulated lines for the current bullet/question
+
+    def get_current_scope(create_default: bool = True):
+        """
+        Scope = where questions / descriptions should attach:
+        - current_subsubsection if present
+        - otherwise current_subsection
+        - otherwise current_section
+        - otherwise (if create_default) create a default top-level section
+        """
+        nonlocal current_section
+        if current_subsubsection is not None:
+            return current_subsubsection
+        if current_subsection is not None:
+            return current_subsection
+        if current_section is not None:
+            return current_section
+        if not create_default:
+            return None
+        # default top-level section if nothing defined yet
+        current_section = {
+            "title": "Default Section",
+            "description": "",
+            "questions": [],
+            "subsections": [],
+            "_q_index": 0,
+        }
+        sections.append(current_section)
+        return current_section
 
     def flush_description():
         nonlocal pending_description
-        if current_section and pending_description:
+        scope = get_current_scope(create_default=False)
+        if scope and pending_description:
             desc = " ".join(l.strip() for l in pending_description if l.strip())
             if desc:
-                current_section["description"] = desc
+                scope["description"] = desc
             pending_description = []
 
-    def ensure_section():
-        """Ensure there is a current section; create a default one if needed."""
-        nonlocal current_section
-        if current_section is None:
-            current_section = {
-                "title": "Default Section",
-                "description": "",
-                "questions": [],
-                "_q_index": 0,
-            }
-            sections.append(current_section)
-
-    def next_question_index() -> int:
-        """Increment and return the question index for the current section."""
-        ensure_section()
-        current_section["_q_index"] = current_section.get("_q_index", 0) + 1
-        return current_section["_q_index"]
+    def next_question_index(scope: dict) -> int:
+        scope["_q_index"] = scope.get("_q_index", 0) + 1
+        return scope["_q_index"]
 
     def finalize_question():
-        """Convert question_lines into a question entry."""
         nonlocal question_lines
         if not question_lines:
             return
 
-        ensure_section()
+        scope = get_current_scope()
         full_text = "\n".join(question_lines).strip()
 
         # Case 1: explicit "**Title**: Question text"
@@ -92,10 +134,10 @@ def parse_markdown(md_text: str):
             q_title = m.group(1).strip()
             q_content = m.group(2).strip() or full_text
         else:
-            # Case 2: no explicit title → use "<Section Title> - Q<index>"
-            q_idx = next_question_index()
-            section_title = current_section.get("title") or "Question"
-            q_title = f"{section_title} - Q{q_idx}"
+            # Case 2: no explicit title → use "<Scope Title> - Q<index>"
+            q_idx = next_question_index(scope)
+            scope_title = scope.get("title") or "Question"
+            q_title = f"{scope_title} - Q{q_idx}"
             q_content = full_text
 
         q_type = detect_question_type(q_content)
@@ -105,67 +147,140 @@ def parse_markdown(md_text: str):
             "type": q_type,
             "responses": build_responses(q_type),
         }
-        current_section["questions"].append(question)
+        scope["questions"].append(question)
         question_lines = []
 
     for line in lines:
         raw = line.rstrip("\n")
         stripped = raw.strip()
 
-        # Headings: treat # and ## as section titles
+        # HEADINGS
         if raw.startswith("#"):
+            # finish anything currently being collected
             finalize_question()
             flush_description()
 
             level = len(raw) - len(raw.lstrip("#"))
             title_raw = raw[level:].strip()
+            title_clean = clean_heading_title(title_raw)
 
-            if level <= 2:  # only top-level and second-level headings become sections
+            if level == 1:
+                # new top-level section
                 current_section = {
-                    "title": clean_heading_title(title_raw),
+                    "title": title_clean,
+                    "description": "",
+                    "questions": [],
+                    "subsections": [],
+                    "_q_index": 0,
+                }
+                sections.append(current_section)
+                current_subsection = None
+                current_subsubsection = None
+                pending_description = []
+
+            elif level == 2:
+                # subsection inside current_section
+                if current_section is None:
+                    current_section = {
+                        "title": "Default Section",
+                        "description": "",
+                        "questions": [],
+                        "subsections": [],
+                        "_q_index": 0,
+                    }
+                    sections.append(current_section)
+                current_subsection = {
+                    "title": title_clean,
+                    "description": "",
+                    "questions": [],
+                    "subsections": [],
+                    "_q_index": 0,
+                }
+                current_section.setdefault("subsections", []).append(current_subsection)
+                current_subsubsection = None
+                pending_description = []
+
+            elif level == 3:
+                # sub-subsection inside current_subsection (or section if no subsection)
+                if current_subsection is None:
+                    # if no subsection, attach directly under section
+                    parent = current_section
+                    if parent is None:
+                        parent = {
+                            "title": "Default Section",
+                            "description": "",
+                            "questions": [],
+                            "subsections": [],
+                            "_q_index": 0,
+                        }
+                        sections.append(parent)
+                        current_section = parent
+                    current_subsection = {
+                        "title": "Subsection",
+                        "description": "",
+                        "questions": [],
+                        "subsections": [],
+                        "_q_index": 0,
+                    }
+                    parent.setdefault("subsections", []).append(current_subsection)
+                current_subsubsection = {
+                    "title": title_clean,
                     "description": "",
                     "questions": [],
                     "_q_index": 0,
                 }
-                sections.append(current_section)
+                current_subsection.setdefault("subsections", []).append(current_subsubsection)
                 pending_description = []
-            # lower-level headings could be treated differently if needed
+
+            else:
+                # level 4+ → treat as descriptive text
+                if stripped:
+                    pending_description.append(title_clean)
+
             continue
 
-        # Bullet start: new question
+        # BULLET START = new question
         if stripped.startswith("- ") or stripped.startswith("* "):
             finalize_question()
             flush_description()
-
             collecting_question = True
-            # strip the bullet marker
             content = re.sub(r"^[-*]\s*", "", stripped)
             question_lines = [content]
             continue
 
-        # Continuation of current question (multi-line bullet text)
+        # CONTINUATION OF MULTI-LINE QUESTION
         if collecting_question:
-            # If we hit a completely blank line, keep it as separator
             if stripped == "":
                 question_lines.append("")
             else:
                 question_lines.append(stripped)
             continue
 
-        # Non-empty, non-bullet and non-heading: treat as section description
+        # DESCRIPTION TEXT FOR CURRENT SCOPE
         if stripped:
-            ensure_section()
             pending_description.append(stripped)
 
     # End-of-file cleanup
     finalize_question()
     flush_description()
 
-    # Remove helper fields and empty descriptions
+    # Remove helper fields and clean empty descriptions
     for sec in sections:
         sec.pop("_q_index", None)
         if not sec.get("description"):
             sec.pop("description", None)
+        for sub in sec.get("subsections", []):
+            sub.pop("_q_index", None)
+            if not sub.get("description"):
+                sub.pop("description", None)
+            for sub2 in sub.get("subsections", []):
+                sub2.pop("_q_index", None)
+                if not sub2.get("description"):
+                    sub2.pop("description", None)
+            if not sub.get("subsections"):
+                sub.pop("subsections", None)
+        if not sec.get("subsections"):
+            sec.pop("subsections", None)
 
     return {"sections": sections}
 
@@ -204,7 +319,10 @@ def main():
             data = convert_file(f)
             if output:
                 out_file = output / (f.stem + ".json")
-                out_file.write_text(json.dumps(data, indent=2, ensure_ascii=False), encoding="utf-8")
+                out_file.write_text(
+                    json.dumps(data, indent=2, ensure_ascii=False),
+                    encoding="utf-8",
+                )
                 print(f"Wrote {out_file}")
             else:
                 print(f"=== {f.name} ===")
