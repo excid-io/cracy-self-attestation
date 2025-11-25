@@ -1,0 +1,243 @@
+{
+  "sections": [
+    {
+      "title": "Questions - Technical Documentation - Article 31",
+      "questions": [
+        {
+          "title": "Completeness and Required Content",
+          "content": "Does your technical documentation include all relevant data and details demonstrating that:",
+          "type": "mchoices",
+          "responses": [
+            {
+              "title": "Yes",
+              "type": "choice"
+            },
+            {
+              "title": "No",
+              "type": "choice"
+            },
+            {
+              "title": "In Progress",
+              "description": "Work is underway but not yet completed.",
+              "type": "choice"
+            }
+          ]
+        },
+        {
+          "title": "Questions - Technical Documentation - Article 31 - Q1",
+          "content": "the product with digital elements complies with the **essential cybersecurity requirements** in Annex I (check questions in the Annex I) , and",
+          "type": "paragraph",
+          "responses": []
+        },
+        {
+          "title": "Questions - Technical Documentation - Article 31 - Q2",
+          "content": "the manufacturer’s processes also comply with those requirements?",
+          "type": "paragraph",
+          "responses": []
+        },
+        {
+          "title": "Questions - Technical Documentation - Article 31 - Q3",
+          "content": "Does your technical documentation include **all required elements** listed in **Annex VII** (check questions for Annex VII) ?",
+          "type": "mchoices",
+          "responses": [
+            {
+              "title": "Yes",
+              "type": "choice"
+            },
+            {
+              "title": "No",
+              "type": "choice"
+            },
+            {
+              "title": "In Progress",
+              "description": "Work is underway but not yet completed.",
+              "type": "choice"
+            }
+          ]
+        },
+        {
+          "title": "Preparation Before Market Placement",
+          "content": "Was the technical documentation **prepared before** the product with digital elements was placed on the market?",
+          "type": "mchoices",
+          "responses": [
+            {
+              "title": "Yes",
+              "type": "choice"
+            },
+            {
+              "title": "No",
+              "type": "choice"
+            },
+            {
+              "title": "In Progress",
+              "description": "Work is underway but not yet completed.",
+              "type": "choice"
+            }
+          ]
+        },
+        {
+          "title": "Updating During the Support Period",
+          "content": "Do you have a process to **continuously update** the technical documentation, where appropriate, **throughout the entire support period**?****",
+          "type": "mchoices",
+          "responses": [
+            {
+              "title": "Yes",
+              "type": "choice"
+            },
+            {
+              "title": "No",
+              "type": "choice"
+            },
+            {
+              "title": "In Progress",
+              "description": "Work is underway but not yet completed.",
+              "type": "choice"
+            }
+          ]
+        },
+        {
+          "title": "Products Covered by Multiple EU Legal Acts",
+          "content": "If your product falls under **multiple EU legal acts** requiring technical documentation (as per Article 12) (I don't understand this):",
+          "type": "paragraph",
+          "responses": []
+        },
+        {
+          "title": "Questions - Technical Documentation - Article 31 - Q4",
+          "content": "Have you prepared a **single set** of technical documentation that includes:",
+          "type": "mchoices",
+          "responses": [
+            {
+              "title": "Yes",
+              "type": "choice"
+            },
+            {
+              "title": "No",
+              "type": "choice"
+            },
+            {
+              "title": "In Progress",
+              "description": "Work is underway but not yet completed.",
+              "type": "choice"
+            }
+          ]
+        },
+        {
+          "title": "Questions - Technical Documentation - Article 31 - Q5",
+          "content": "all required information from **Annex VII**, and",
+          "type": "paragraph",
+          "responses": []
+        },
+        {
+          "title": "Questions - Technical Documentation - Article 31 - Q6",
+          "content": "all required information from the other applicable Union legal acts?",
+          "type": "paragraph",
+          "responses": []
+        },
+        {
+          "title": "Language Requirements",
+          "content": "Is the technical documentation—and any correspondence related to conformity assessment—available in:",
+          "type": "mchoices",
+          "responses": [
+            {
+              "title": "Yes",
+              "type": "choice"
+            },
+            {
+              "title": "No",
+              "type": "choice"
+            },
+            {
+              "title": "In Progress",
+              "description": "Work is underway but not yet completed.",
+              "type": "choice"
+            }
+          ]
+        },
+        {
+          "title": "Questions - Technical Documentation - Article 31 - Q7",
+          "content": "the **official language** of the Member State where the notified body is established, **or**",
+          "type": "paragraph",
+          "responses": []
+        },
+        {
+          "title": "Questions - Technical Documentation - Article 31 - Q8",
+          "content": "another language acceptable to that notified body?",
+          "type": "paragraph",
+          "responses": []
+        },
+        {
+          "title": "Future Delegated Acts",
+          "content": "Are you prepared to comply with future **delegated acts** that may add new required elements to the technical documentation in Annex VII?",
+          "type": "mchoices",
+          "responses": [
+            {
+              "title": "Yes",
+              "type": "choice"
+            },
+            {
+              "title": "No",
+              "type": "choice"
+            },
+            {
+              "title": "In Progress",
+              "description": "Work is underway but not yet completed.",
+              "type": "choice"
+            }
+          ]
+        },
+        {
+          "title": "Questions - Technical Documentation - Article 31 - Q9",
+          "content": "Do you have the capability to integrate updates related to:",
+          "type": "mchoices",
+          "responses": [
+            {
+              "title": "Yes",
+              "type": "choice"
+            },
+            {
+              "title": "No",
+              "type": "choice"
+            },
+            {
+              "title": "In Progress",
+              "description": "Work is underway but not yet completed.",
+              "type": "choice"
+            }
+          ]
+        },
+        {
+          "title": "Questions - Technical Documentation - Article 31 - Q10",
+          "content": "technological developments, and",
+          "type": "paragraph",
+          "responses": []
+        },
+        {
+          "title": "Questions - Technical Documentation - Article 31 - Q11",
+          "content": "evolving implementation practices under this Regulation?",
+          "type": "paragraph",
+          "responses": []
+        },
+        {
+          "title": "Proportionality and Administrative Burden",
+          "content": "Are you aware that the Commission must ensure proportionality for microenterprises and SMEs, and do you monitor Commission updates that may affect documentation obligations?\n\nQ11 – SME Fee Reductions\n\nIf you are a microenterprise, small enterprise, or start-up, have you checked whether reduced fees apply for the conformity assessment procedures you intend to use?",
+          "type": "mchoices",
+          "responses": [
+            {
+              "title": "Yes",
+              "type": "choice"
+            },
+            {
+              "title": "No",
+              "type": "choice"
+            },
+            {
+              "title": "In Progress",
+              "description": "Work is underway but not yet completed.",
+              "type": "choice"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

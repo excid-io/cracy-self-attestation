@@ -1,0 +1,189 @@
+{
+  "sections": [
+    {
+      "title": "Questions - EU Declaration of Conformity - Annex V",
+      "questions": [
+        {
+          "title": "Product Identification",
+          "content": "- Have you provided the **name, type, and any additional information** needed to uniquely identify the product with digital elements?",
+          "type": "paragraph",
+          "responses": []
+        },
+        {
+          "title": "Manufacturer / Authorised Representative Details",
+          "content": "Have you included the **name and address** of the manufacturer or the authorised representative?",
+          "type": "mchoices",
+          "responses": [
+            {
+              "title": "Yes",
+              "type": "choice"
+            },
+            {
+              "title": "No",
+              "type": "choice"
+            },
+            {
+              "title": "In Progress",
+              "description": "Work is underway but not yet completed.",
+              "type": "choice"
+            }
+          ]
+        },
+        {
+          "title": "Sole Responsibility Statement",
+          "content": "Does the declaration explicitly state that it is **issued under the sole responsibility of the provider**?",
+          "type": "mchoices",
+          "responses": [
+            {
+              "title": "Yes",
+              "type": "choice"
+            },
+            {
+              "title": "No",
+              "type": "choice"
+            },
+            {
+              "title": "In Progress",
+              "description": "Work is underway but not yet completed.",
+              "type": "choice"
+            }
+          ]
+        },
+        {
+          "title": "Object of the Declaration",
+          "content": "Have you clearly identified the **object of the declaration** (the specific product with digital elements), including any traceability information such as photographs if applicable?",
+          "type": "mchoices",
+          "responses": [
+            {
+              "title": "Yes",
+              "type": "choice"
+            },
+            {
+              "title": "No",
+              "type": "choice"
+            },
+            {
+              "title": "In Progress",
+              "description": "Work is underway but not yet completed.",
+              "type": "choice"
+            }
+          ]
+        },
+        {
+          "title": "Conformity Statement",
+          "content": "Does the declaration include a statement that the product **conforms with the relevant Union harmonisation legislation**?",
+          "type": "mchoices",
+          "responses": [
+            {
+              "title": "Yes",
+              "type": "choice"
+            },
+            {
+              "title": "No",
+              "type": "choice"
+            },
+            {
+              "title": "In Progress",
+              "description": "Work is underway but not yet completed.",
+              "type": "choice"
+            }
+          ]
+        },
+        {
+          "title": "Applied Harmonised Standards / Specifications",
+          "content": "Have you listed all **relevant harmonised standards**, common specifications, or cybersecurity certifications that support the conformity claim?",
+          "type": "mchoices",
+          "responses": [
+            {
+              "title": "Yes",
+              "type": "choice"
+            },
+            {
+              "title": "No",
+              "type": "choice"
+            },
+            {
+              "title": "In Progress",
+              "description": "Work is underway but not yet completed.",
+              "type": "choice"
+            }
+          ]
+        },
+        {
+          "title": "Notified Body Information (If Applicable)",
+          "content": "If a notified body was involved, have you included:",
+          "type": "paragraph",
+          "responses": []
+        },
+        {
+          "title": "Questions - EU Declaration of Conformity - Annex V - Q1",
+          "content": "The **name and number** of the notified body?",
+          "type": "paragraph",
+          "responses": []
+        },
+        {
+          "title": "Questions - EU Declaration of Conformity - Annex V - Q2",
+          "content": "A **description of the conformity assessment procedure** performed?",
+          "type": "paragraph",
+          "responses": []
+        },
+        {
+          "title": "Questions - EU Declaration of Conformity - Annex V - Q3",
+          "content": "The **identification of the certificate issued**?",
+          "type": "paragraph",
+          "responses": []
+        },
+        {
+          "title": "Additional Information & Signature",
+          "content": "Have you included:",
+          "type": "mchoices",
+          "responses": [
+            {
+              "title": "Yes",
+              "type": "choice"
+            },
+            {
+              "title": "No",
+              "type": "choice"
+            },
+            {
+              "title": "In Progress",
+              "description": "Work is underway but not yet completed.",
+              "type": "choice"
+            }
+          ]
+        },
+        {
+          "title": "Questions - EU Declaration of Conformity - Annex V - Q4",
+          "content": "Any required **additional information**?",
+          "type": "paragraph",
+          "responses": []
+        },
+        {
+          "title": "Questions - EU Declaration of Conformity - Annex V - Q5",
+          "content": "The **signature block** with:",
+          "type": "paragraph",
+          "responses": []
+        },
+        {
+          "title": "Questions - EU Declaration of Conformity - Annex V - Q6",
+          "content": "Name and function of the signatory",
+          "type": "paragraph",
+          "responses": []
+        },
+        {
+          "title": "Questions - EU Declaration of Conformity - Annex V - Q7",
+          "content": "Place and date of issue",
+          "type": "paragraph",
+          "responses": []
+        },
+        {
+          "title": "Questions - EU Declaration of Conformity - Annex V - Q8",
+          "content": "Signature made on behalf of the provider?",
+          "type": "paragraph",
+          "responses": []
+        }
+      ]
+    }
+  ]
+}
