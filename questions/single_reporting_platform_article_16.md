@@ -1,4 +1,4 @@
-# Single Reporting Platform - Article 16
+# Questions - Single Reporting Platform - Article 16
 ## Establishment and Operation of the Platform 
 - **Awareness of Single Reporting Platform**: Are you aware that all notifications under Articles 14 and 15  (point to the corresponding question section here) must be submitted via the single reporting platform established and operated by ENISA?
 -  **Electronic Notification Endpoints**: Do you understand that Member States and ENISA may set up their own electronic notification endpoints that connect to the single reporting platform?
