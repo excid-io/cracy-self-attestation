@@ -1,5 +1,5 @@
 import { QUESTION_SETS } from "./config.js";
-import { parseQuestionsFromMarkdown } from "./parser.js";
+import { parseQuestionsFromMarkdown, parseQuestionsFromModelJson } from "./parser.js";
 import { renderSetSelector, renderQuestions } from "./ui.js";
 import { buildMachineReadableModel, downloadModelAsFile } from "./export.js";
 
@@ -11,11 +11,13 @@ const exportButton = document.getElementById("exportButton");
 
 let currentQuestions = [];
 let currentSet = null;
+let currentTopTitle = null;
 
-async function loadMarkdownSet(set)
+async function loadQuestionSet(set)
 {
     currentSet = set;
     currentQuestions = [];
+    currentTopTitle = null;
 
     questionsContainer.innerHTML = "<p>Loading questions…</p>";
     progressFill.style.width = "0%";
@@ -29,24 +31,45 @@ async function loadMarkdownSet(set)
             throw new Error(`Failed to load ${set.file}`);
         }
 
-        const text = await res.text();
-        const questions = parseQuestionsFromMarkdown(text, set.id);
+        const raw = await res.text();
+        let questions;
+        let topTitle = null;
+
+        if (set.file.endsWith(".md"))
+        {
+            questions = parseQuestionsFromMarkdown(raw, set.id);
+            // for markdown we could also pull the first "# ..." as topTitle
+            // but for now we leave it null so behavior stays as before
+        }
+        else if (set.file.endsWith(".json"))
+        {
+            const model = JSON.parse(raw);
+            const parsed = parseQuestionsFromModelJson(model, set.id);
+            questions = parsed.questions;
+            topTitle = parsed.topTitle;
+        }
+        else
+        {
+            throw new Error(`Unsupported file type: ${set.file}`);
+        }
 
         currentQuestions = questions;
+        currentTopTitle = topTitle;
 
-        renderQuestions(
-        {
+        renderQuestions({
             container: questionsContainer,
-            questions: questions,
+            questions,
             setId: set.id,
             progressFillEl: progressFill,
-            progressTextEl: progressText
+            progressTextEl: progressText,
+            topTitle
         });
     }
     catch (err)
     {
         console.error(err);
-        questionsContainer.innerHTML = `<p style="color:#fca5a5;">Error loading ${set.file}: ${err.message}</p>`;
+        questionsContainer.innerHTML =
+            `<p style="color:#fca5a5;">Error loading ${set.file}: ${err.message}</p>`;
     }
 }
 
@@ -60,16 +83,16 @@ function handleExportClicked()
 
     const model = buildMachineReadableModel(currentQuestions, currentSet.id);
     const fileName = `${currentSet.id}_questions_with_answers.json`;
-
     downloadModelAsFile(model, fileName);
 }
 
-renderSetSelector(setSelect, QUESTION_SETS, loadMarkdownSet);
+// Use the new loader for both md and json sets
+renderSetSelector(setSelect, QUESTION_SETS, loadQuestionSet);
 
 if (QUESTION_SETS.length > 0)
 {
     setSelect.value = QUESTION_SETS[0].id;
-    loadMarkdownSet(QUESTION_SETS[0]);
+    loadQuestionSet(QUESTION_SETS[0]);
 }
 
 exportButton.addEventListener("click", handleExportClicked);

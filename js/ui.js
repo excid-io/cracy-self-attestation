@@ -40,37 +40,63 @@ function renderMarkdownInline(text)
     return html;
 }
 
-export function renderQuestions(params)
-{
+export function renderQuestions(params) {
     const container = params.container;
     const questions = params.questions;
     const setId = params.setId;
     const progressFillEl = params.progressFillEl;
     const progressTextEl = params.progressTextEl;
+    const topTitle = params.topTitle || null;
 
     container.innerHTML = "";
 
-    let currentSection = null;
+    // LEVEL 1 TITLE
+    if (topTitle) {
+        const topEl = document.createElement("div");
+        topEl.className = "section-title top-level-section-title";
+        topEl.textContent = topTitle;
+        container.appendChild(topEl);
+    }
 
-    questions.forEach((q) =>
-    {
-        //
-        // SECTION HEADER
-        //
-        if (q.section && q.section !== currentSection)
-        {
-            currentSection = q.section;
+    // Track last seen headings
+    let currentLevel2 = null;
+    let currentLevel3 = null;
 
-            const sectionEl = document.createElement("div");
-            sectionEl.className = "section-title";
-            sectionEl.textContent = currentSection;
+    questions.forEach((q) => {
+        // Determine levels:
+        // - JSON model: use sectionLevel2/3
+        // - Markdown sets: fall back to "section" as level 2
+        const level2 = q.sectionLevel2 !== undefined
+            ? q.sectionLevel2
+            : (q.section || null);
+        const level3 = q.sectionLevel3 !== undefined
+            ? q.sectionLevel3
+            : null;
 
-            container.appendChild(sectionEl);
+        // LEVEL 2 HEADING (e.g. "EARLY WARNING REPORTING")
+        if (level2 && level2 !== currentLevel2) {
+            currentLevel2 = level2;
+            currentLevel3 = null;
+
+            // Avoid duplicating the top title if it's the same string
+            if (!topTitle || level2 !== topTitle) {
+                const h2 = document.createElement("div");
+                h2.className = "section-title section-title-level2";
+                h2.textContent = level2;
+                container.appendChild(h2);
+            }
         }
 
-        //
-        // QUESTION CARD
-        //
+        // LEVEL 3 HEADING (e.g. a ### section inside Part I)
+        if (level3 && level3 !== currentLevel3) {
+            currentLevel3 = level3;
+
+            const h3 = document.createElement("div");
+            h3.className = "section-title section-title-level3";
+            h3.textContent = level3;
+            container.appendChild(h3);
+        }
+
         const card = document.createElement("div");
         card.className = "question-card";
 
@@ -248,7 +274,7 @@ export function renderQuestions(params)
         //
         // ASSEMBLE CARD
         //
-        card.appendChild(statusWrapper);   // <-- buttons live here (instead of checkboxWrapper)
+        card.appendChild(statusWrapper);
         card.appendChild(content);
 
         container.appendChild(card);

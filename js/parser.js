@@ -64,3 +64,78 @@ export function parseQuestionsFromMarkdown(mdText, setId)
 
     return questions;
 }
+
+/**
+ * Parse a machine-readable JSON model (as produced by buildMachineReadableModel)
+ * back into the same internal `questions` array shape the UI expects.
+ *
+ * model shape:
+ * {
+ *   "sections": [
+ *     {
+ *       "title": "...",
+ *       "description": "...",
+ *       "questions": [
+ *         {
+ *           "id": "...",
+ *           "title": "...",
+ *           "prompt": "...",
+ *           "type": "mchoices",
+ *           "responses": [...],
+ *           "status": "...",
+ *           "notes": "..."
+ *         }
+ *       ]
+ *     }
+ *   ]
+ * }
+ */
+export function parseQuestionsFromModelJson(model, setId) {
+    const questions = [];
+
+    if (!model || !Array.isArray(model.sections)) {
+        return { questions, topTitle: null };
+    }
+
+    const rootSections = model.sections;
+    const topTitle = rootSections[0]?.title || null;
+    let counter = 0;
+
+    /**
+     * path = array of ancestor titles, e.g.
+     * []                                           (before root)
+     * ["Questions - Voluntary Reporting - ..."]    (root)
+     * ["Questions - ...", "Early Warning Reporting"]             (level 2)
+     * ["Questions - ...", "Part I", "Section A"]                 (level 3)
+     */
+    function walkNode(node, path) {
+        const thisTitle = node.title || null;
+        const newPath = thisTitle ? [...path, thisTitle] : path;
+
+        const depth = newPath.length;
+        const level2 = depth >= 2 ? newPath[1] : null; // first after root
+        const level3 = depth >= 3 ? newPath[2] : null; // second after root
+
+        if (Array.isArray(node.questions)) {
+            node.questions.forEach((q) => {
+                questions.push({
+                    id: q.id || `${setId}-${counter++}`,
+                    section: level3 || level2 || thisTitle || "",
+                    sectionLevel2: level2,
+                    sectionLevel3: level3,
+                    title: q.title || "",
+                    text: q.content || "",
+                    details: []
+                });
+            });
+        }
+
+        if (Array.isArray(node.subsections)) {
+            node.subsections.forEach((sub) => walkNode(sub, newPath));
+        }
+    }
+
+    rootSections.forEach((sec) => walkNode(sec, []));
+
+    return { questions, topTitle };
+}
