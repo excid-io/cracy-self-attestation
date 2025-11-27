@@ -21,7 +21,7 @@
 - **Coordinated vulnerability disclosure (CVD) policy**: Have you established and enforced a **policy on coordinated vulnerability disclosure**, specifying how vulnerabilities are reported, validated, and addressed?
 - **Secure update distribution**: Have you implemented **secure mechanisms for distributing updates**, ensuring that security patches are delivered, verified, and applied in a **timely and safe** manner?
 - **Free and accessible security updates**: Are **security updates provided free of charge** and accompanied by **advisory messages** to inform users about the issue, its impact, and any recommended actions to take?
-- Have you included a copy of the EU DoC ( Declaration of Conformity ) ? 
+- **Copy of Declaration of Conformity**: Have you included a copy of the EU DoC ( Declaration of Conformity ) ? 
 	- **Product identification**: Have you included the **name, type, and any additional information** necessary to uniquely identify the product with digital elements?
 	- **Manufacturer details**: Does the declaration clearly state the **name and address** of the manufacturer or their **authorised representative**?
 	- **Provider responsibility**: Does the declaration contain a **statement confirming** that it is issued **under the sole responsibility of the provider**?

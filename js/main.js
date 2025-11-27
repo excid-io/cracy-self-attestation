@@ -96,3 +96,37 @@ if (QUESTION_SETS.length > 0)
 }
 
 exportButton.addEventListener("click", handleExportClicked);
+
+document.addEventListener("click", (ev) =>
+{
+    const link = ev.target.closest("a[data-set-id]");
+    if (!link) return;
+
+    ev.preventDefault();
+
+    const setId = link.getAttribute("data-set-id");
+    const targetQuestionId = link.getAttribute("data-target-question") || null;
+
+    const targetSet = QUESTION_SETS.find(s => s.id === setId);
+    if (!targetSet) 
+    {
+        console.warn("Unknown question set id in link:", setId);
+        return;
+    }
+
+    // Switch the dropdown visually
+    setSelect.value = setId;
+
+    // Load the new set, then optionally jump to a specific question
+    loadQuestionSet(targetSet).then(() =>
+    {
+        if (!targetQuestionId) return;
+
+        const el = document.getElementById(targetQuestionId);
+        if (!el) return;
+
+        el.scrollIntoView({ behavior: "smooth", block: "center" });
+        el.classList.add("flash-highlight");
+        setTimeout(() => el.classList.remove("flash-highlight"), 1300);
+    });
+});

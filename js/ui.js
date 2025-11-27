@@ -36,7 +36,20 @@ function renderMarkdownInline(text)
     // Italic: *text*
     html = html.replace(/\*(.+?)\*/g, "<em>$1</em>");
 
-    // Links: [label](#target) — label may already contain <strong>...</strong>
+    // Cross-set links: [label](set:some-set-id#optional-question-id)
+    html = html.replace(
+        /\[(.+?)\]\(set:([^)#]+)(#[^)]+)?\)/g,
+        (match, label, setId, hash) =>
+        {
+            const questionId = hash ? hash.substring(1) : "";
+            const extra = questionId
+                ? ` data-target-question="${questionId}"`
+                : "";
+            return `<a href="#" data-set-id="${setId}"${extra}>${label}</a>`;
+        }
+    );
+
+    // Internal links inside the same set: [label](#target)
     html = html.replace(/\[(.+?)\]\((#[^)]+)\)/g, '<a href="$2">$1</a>');
 
     return html;

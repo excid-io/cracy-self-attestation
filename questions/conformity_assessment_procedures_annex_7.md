@@ -6,19 +6,19 @@
 	- **Technical Documentation**, 
 	- **Design, Development, Production & Vulnerability Handling**, 
 	- **Monitoring Processes**, 
-	- **CE Marking**, 
+	- **CE Marking Part I**, 
 	- **Draw up an EU DoC**, 
 	- **DoC retention period**, 
 	- **Product identification** and 
 	- **Authority request**?
 
 -  **Responsibility Declaration**: Do you **declare, under your sole responsibility**, that your products with digital elements comply with all **essential cybersecurity requirements** in:
-    - **Part I of Annex I** (product requirements), and (check questions) 
-    - **Part II of Annex I** (process and vulnerability handling requirements)? (check questions )
+    - **Part I of Annex I** ( [check questions](set:essential-cybersecurity-requirements-annex-1) ) 
+    - **Part II of Annex I** ( [check questions](set:essential-cybersecurity-requirements-annex-1) )
 - **Technical Documentation**: Have you drawn up the **technical documentation** as required in **Annex VII**? (check questions)
 - **Design, Development, Production & Vulnerability Handling**: Have you taken all necessary measures to ensure that the **design, development, production**, and **vulnerability handling** processes comply with the essential cybersecurity requirements in **Parts I and II of Annex I**?  (check questions)
 - **Monitoring Processes**: Do you have monitoring processes in place to ensure that products developed or manufactured continue to meet those requirements?
-- **CE Marking**: Do you affix the **CE marking** to every individual product with digital elements that meets all applicable CRA requirements?
+- **CE Marking Part I**: Do you affix the **CE marking** to every individual product with digital elements that meets all applicable CRA requirements?
 - **Draw up an EU DoC**: Do you draw up a **written EU Declaration of Conformity** for each product in accordance with **Article 28**? ( check questions )
 - **DoC retention period**: Do you keep the EU Declaration of Conformity **together with the technical documentation** for:
 	- **10 years** after the product is placed on the market, **or**
@@ -26,7 +26,7 @@
 - **Product identification**: Does your EU Declaration of Conformity **identify the specific product** for which it was issued?
 - **Authority request**: Can you provide a copy of the EU Declaration of Conformity to the **relevant authorities upon request**?
 - **Authorized representative**: If you use an authorised representative, have you ensured that they are **mandated** to fulfil the obligations in this question set in the following questions: 
-	- **CE Marking**, 
+	- **CE Marking Part I**, 
 	- **Draw up an EU DoC**, 
 	- **DoC retention period** 
 	- and **Product identification** on your behalf?
@@ -91,7 +91,7 @@
 	- the **approved type** described in the EU-type examination certificate, and
 	- the **essential cybersecurity requirements** of Annex I?
 - **Ensuring vulnerability handling obligations**: Do your production processes ensure that you continue to meet the **vulnerability handling obligations** in Annex I, Part II?
--  **CE Marking**: Do you affix the **CE marking** to every individual product with digital elements that conforms to the approved type and satisfies the applicable CRA requirements?
+-  **CE Marking Part III**: Do you affix the **CE marking** to every individual product with digital elements that conforms to the approved type and satisfies the applicable CRA requirements?
 - **DoC for each Model** :Have you drawn up a **written Declaration of Conformity** for each product model?
 - **Model identificaiton in DoC**: Does the Declaration of Conformity clearly **identify the product model** it applies to?
 - **Availability of DoC**: Do you keep the Declaration of Conformity **available to national authorities** for:

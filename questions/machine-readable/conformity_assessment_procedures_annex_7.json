@@ -9,7 +9,7 @@
           "questions": [
             {
               "title": "Internal Control – Conformity Assessment",
-              "content": "Have you implemented an **internal control conformity assessment procedure** ensuring that you meet all obligations in this question set, for the following questions:\n- **Technical Documentation**,\n- **Design, Development, Production & Vulnerability Handling**,\n- **Monitoring Processes**,\n- **CE Marking**,\n- **Draw up an EU DoC**,\n- **DoC retention period**,\n- **Product identification** and\n- **Authority request**?",
+              "content": "Have you implemented an **internal control conformity assessment procedure** ensuring that you meet all obligations in this question set, for the following questions:\n- **Technical Documentation**,\n- **Design, Development, Production & Vulnerability Handling**,\n- **Monitoring Processes**,\n- **CE Marking Part I**,\n- **Draw up an EU DoC**,\n- **DoC retention period**,\n- **Product identification** and\n- **Authority request**?",
               "type": "mchoices",
               "responses": [
                 {
@@ -29,7 +29,7 @@
             },
             {
               "title": "Responsibility Declaration",
-              "content": "Do you **declare, under your sole responsibility**, that your products with digital elements comply with all **essential cybersecurity requirements** in:\n- **Part I of Annex I** (product requirements), and (check questions)\n- **Part II of Annex I** (process and vulnerability handling requirements)? (check questions )",
+              "content": "Do you **declare, under your sole responsibility**, that your products with digital elements comply with all **essential cybersecurity requirements** in:\n- **Part I of Annex I** ( [check questions](set:essential-cybersecurity-requirements-annex-1) )\n- **Part II of Annex I** ( [check questions](set:essential-cybersecurity-requirements-annex-1) )",
               "type": "mchoices",
               "responses": [
                 {
@@ -108,7 +108,7 @@
               ]
             },
             {
-              "title": "CE Marking",
+              "title": "CE Marking Part I",
               "content": "Do you affix the **CE marking** to every individual product with digital elements that meets all applicable CRA requirements?",
               "type": "mchoices",
               "responses": [
@@ -209,7 +209,7 @@
             },
             {
               "title": "Authorized representative",
-              "content": "If you use an authorised representative, have you ensured that they are **mandated** to fulfil the obligations in this question set in the following questions:\n- **CE Marking**,\n- **Draw up an EU DoC**,\n- **DoC retention period**\n- and **Product identification** on your behalf?",
+              "content": "If you use an authorised representative, have you ensured that they are **mandated** to fulfil the obligations in this question set in the following questions:\n- **CE Marking Part I**,\n- **Draw up an EU DoC**,\n- **DoC retention period**\n- and **Product identification** on your behalf?",
               "type": "paragraph",
               "responses": []
             },
@@ -595,7 +595,7 @@
               ]
             },
             {
-              "title": "CE Marking",
+              "title": "CE Marking Part III",
               "content": "Do you affix the **CE marking** to every individual product with digital elements that conforms to the approved type and satisfies the applicable CRA requirements?",
               "type": "mchoices",
               "responses": [
@@ -839,7 +839,7 @@
             },
             {
               "title": "CE Marking & Identification Number",
-              "content": "Do you affix the CE marking AND the notified body’s identification number (responsibility of notified body) to each PDE produced under full quality assurance, that satisfies Part I of Annex I?",
+              "content": "Do you affix the CE marking AND the notified body’s identification number (responsibility of notified body to give you the correct one) to each PDE produced under full quality assurance, that satisfies Part I of Annex I?",
               "type": "mchoices",
               "responses": [
                 {
