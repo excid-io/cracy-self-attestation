@@ -128,17 +128,59 @@ def parse_markdown(md_text: str):
         scope = get_current_scope()
         full_text = "\n".join(question_lines).strip()
 
+        # --- Step 1: normal title extraction (same as before) ---
+
         # Case 1: explicit "**Title**: Question text"
         m = re.match(r"^\*\*(.+?)\*\*\s*:\s*(.*)", full_text, flags=re.DOTALL)
         if m:
             q_title = m.group(1).strip()
-            q_content = m.group(2).strip() or full_text
+            raw_content = m.group(2).strip() or full_text
         else:
             # Case 2: no explicit title → use "<Scope Title> - Q<index>"
             q_idx = next_question_index(scope)
             scope_title = scope.get("title") or "Question"
             q_title = f"{scope_title} - Q{q_idx}"
-            q_content = full_text
+            raw_content = full_text
+
+        # --- Step 2: split raw_content into main content vs info: lines ---
+
+        content_lines = raw_content.splitlines()
+        main_line = None
+        other_lines = []
+        info_lines = []
+
+        for raw in content_lines:
+            t = raw.strip()
+            if not t:
+                # keep blank lines only after we have a main line
+                if main_line is not None:
+                    other_lines.append("")
+                continue
+
+            # Match either "info: ..." or "- info: ..."
+            info_match = re.match(r"^(-\s*)?info:\s*(.*)$", t, flags=re.IGNORECASE)
+            if info_match:
+                info_text = (info_match.group(2) or "").strip()
+                if info_text:
+                    info_lines.append(info_text)
+                continue
+
+            if main_line is None:
+                main_line = t
+            else:
+                other_lines.append(t)
+
+        # Rebuild content without the info: lines
+        if main_line is None:
+            q_content = ""
+        elif other_lines:
+            q_content = "\n".join([main_line] + other_lines)
+        else:
+            q_content = main_line
+
+        q_info = "\n".join(info_lines).strip()
+
+        # --- Step 3: build final question object as before, plus "info" ---
 
         q_type = detect_question_type(q_content)
         question = {
@@ -147,8 +189,12 @@ def parse_markdown(md_text: str):
             "type": q_type,
             "responses": build_responses(q_type),
         }
+        if q_info:
+            question["info"] = q_info
+
         scope["questions"].append(question)
         question_lines = []
+
 
     for line in lines:
         raw = line.rstrip("\n")

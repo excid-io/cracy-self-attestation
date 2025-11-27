@@ -88,6 +88,8 @@ export function renderQuestions(params) {
     const progressTextEl = params.progressTextEl;
     const topTitle = params.topTitle || null;
 
+    ensureInfoPopupElements();
+
     container.innerHTML = "";
 
     // LEVEL 1 TITLE
@@ -149,7 +151,8 @@ export function renderQuestions(params) {
 
         const card = document.createElement("div");
         card.className = "question-card";
-        card.id = q.id; 
+        card.id = q.id;
+        card.style.position = "relative"; 
 
         //
         // CONTENT AREA
@@ -193,6 +196,27 @@ export function renderQuestions(params) {
         badge.appendChild(label);
 
         content.appendChild(badge);
+
+        //
+        // OPTIONAL INFO BUTTON (opens popup with q.info)
+        //
+        //entry.style.position = "relative";
+        if (q.info && q.info.trim().length > 0)
+        {
+            const infoBtn = document.createElement("button");
+            infoBtn.type = "button";
+            infoBtn.className = "info-button";
+            infoBtn.innerHTML = "💡";
+        
+            infoBtn.addEventListener("click", () =>
+            {
+                const linkedInfo = linkifyQuestionRefs(q.info || "", titleIndex, q.id);
+                const html = renderMarkdownInline(linkedInfo).replace(/\n/g, "<br/>");
+                openInfoPopup(q.title || "Info", html);
+            });
+        
+            content.appendChild(infoBtn);
+        }
 
         //
         // DETAILS (nested bullets or indented explanations)
@@ -411,28 +435,74 @@ document.addEventListener("click", (ev) => {
     const targetEl = document.getElementById(targetId);
     if (!targetEl) return;
 
-    //ev.preventDefault(); // stop default jump
-
-    //const scrollContainer = document.querySelector(".main") || document.documentElement;
-
-    //// Geometry relative to the scroll container
-    //const containerRect = scrollContainer.getBoundingClientRect();
-    //const targetRect = targetEl.getBoundingClientRect();
-
-    //const currentScroll = scrollContainer.scrollTop;
-    //const offsetInside = targetRect.top - containerRect.top;
-
-    //// How far from the top you want the card to appear
-    //const desiredOffsetFromTop = 120; // px (tweak to taste)
-
-    //const newScrollTop = currentScroll + offsetInside - desiredOffsetFromTop;
-
-    //scrollContainer.scrollTo({
-    //    top: newScrollTop,
-    //    behavior: "smooth",
-    //});
-
-    // Temporary highlight
     targetEl.classList.add("flash-highlight");
     setTimeout(() => targetEl.classList.remove("flash-highlight"), 1300);
+});
+
+
+// ===== INFO POPUP (for per-question explanatory text) =====
+
+function ensureInfoPopupElements()
+{
+    let overlay = document.getElementById("infoOverlay");
+    if (!overlay)
+    {
+        overlay = document.createElement("div");
+        overlay.id = "infoOverlay";
+        overlay.className = "info-overlay hidden";
+        document.body.appendChild(overlay);
+
+        overlay.addEventListener("click", closeInfoPopup);
+    }
+
+    let popup = document.getElementById("infoPopup");
+    if (!popup)
+    {
+        popup = document.createElement("div");
+        popup.id = "infoPopup";
+        popup.className = "info-popup hidden";
+        popup.innerHTML = `
+            <div class="info-popup-header">
+                <span id="infoPopupTitle"></span>
+                <button type="button" id="infoPopupClose" class="info-popup-close">&times;</button>
+            </div>
+            <div class="info-popup-body" id="infoPopupBody"></div>
+        `;
+        document.body.appendChild(popup);
+
+        const closeBtn = popup.querySelector("#infoPopupClose");
+        closeBtn.addEventListener("click", closeInfoPopup);
+    }
+}
+
+function openInfoPopup(title, htmlBody)
+{
+    ensureInfoPopupElements();
+    const overlay = document.getElementById("infoOverlay");
+    const popup = document.getElementById("infoPopup");
+    const titleEl = document.getElementById("infoPopupTitle");
+    const bodyEl = document.getElementById("infoPopupBody");
+
+    titleEl.textContent = title || "Info";
+    bodyEl.innerHTML = htmlBody;
+
+    overlay.classList.remove("hidden");
+    popup.classList.remove("hidden");
+}
+
+function closeInfoPopup()
+{
+    const overlay = document.getElementById("infoOverlay");
+    const popup = document.getElementById("infoPopup");
+    if (overlay) overlay.classList.add("hidden");
+    if (popup) popup.classList.add("hidden");
+}
+
+// Optional: close on Esc
+document.addEventListener("keydown", (ev) =>
+{
+    if (ev.key === "Escape")
+    {
+        closeInfoPopup();
+    }
 });

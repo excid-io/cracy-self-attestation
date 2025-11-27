@@ -26,12 +26,14 @@ export function parseQuestionsFromMarkdown(mdText, setId)
             const title = bulletQuestionMatch[1].trim();
             const text = bulletQuestionMatch[2].trim();
 
-            const question = {
+            const question = 
+            {
                 id: `${setId}-${questions.length}`,
                 section: currentSection,
                 title: title,
                 text: text,
-                details: []
+                details: [],
+                info: ""
             };
 
             questions.push(question);
@@ -46,7 +48,22 @@ export function parseQuestionsFromMarkdown(mdText, setId)
             const detailText = rawLine.replace(/^\s*-\s+/, "").trim();
             if (detailText.length > 0)
             {
-                lastQuestion.details.push(detailText);
+                // NEW: if this is an info: line, store it in q.info instead of q.details
+                const lower = detailText.toLowerCase();
+                if (lower.startsWith("info:"))
+                {
+                    const infoText = detailText.slice(5).trim();
+                    if (infoText)
+                    {
+                        lastQuestion.info = lastQuestion.info
+                            ? `${lastQuestion.info}\n${infoText}`
+                            : infoText;
+                    }
+                }
+                else
+                {
+                    lastQuestion.details.push(detailText);
+                }
             }
             continue;
         }
@@ -55,7 +72,22 @@ export function parseQuestionsFromMarkdown(mdText, setId)
         // e.g. the long explanation lines under "intended purpose"
         if (lastQuestion && rawLine.match(/^\s{2,}\S/))
         {
-            lastQuestion.details.push(trimmed);
+            // NEW: allow "info:" as indented paragraph too
+            const infoMatch = trimmed.match(/^info:\s*(.*)$/i);
+            if (infoMatch)
+            {
+                const infoText = infoMatch[1].trim();
+                if (infoText)
+                {
+                    lastQuestion.info = lastQuestion.info
+                        ? `${lastQuestion.info}\n${infoText}`
+                        : infoText;
+                }
+            }
+            else
+            {
+                lastQuestion.details.push(trimmed);
+            }
             continue;
         }
 
@@ -105,21 +137,35 @@ export function parseQuestionsFromModelJson(model, setId)
 
     function splitContentIntoMainAndDetails(content)
     {
-        if (!content) return { text: "", details: [] };
+        if (!content) return { text: "", details: [], info: "" };
 
         const lines = content.split(/\r?\n/);
         if (lines.length === 1)
         {
-            return { text: content.trim(), details: [] };
+            // Single-line content: no separate info or details
+            return { text: content.trim(), details: [], info: "" };
         }
 
         let main = null;
         const details = [];
+        const infoLines = [];
 
         for (const raw of lines)
         {
             const t = raw.trim();
             if (!t) continue;
+
+            // NEW: capture info: lines (and "- info:")
+            const infoMatch = t.match(/^(-\s*)?info:\s*(.*)$/i);
+            if (infoMatch)
+            {
+                const infoText = (infoMatch[2] || "").trim();
+                if (infoText)
+                {
+                    infoLines.push(infoText);
+                }
+                continue;
+            }
 
             if (main === null)
             {
@@ -138,7 +184,11 @@ export function parseQuestionsFromModelJson(model, setId)
             }
         }
 
-        return { text: main || "", details };
+        return {
+            text: main || "",
+            details,
+            info: infoLines.join("\n")
+        };
     }
 
     function walkNode(node, path)
@@ -152,8 +202,7 @@ export function parseQuestionsFromModelJson(model, setId)
 
         if (Array.isArray(node.questions))
         {
-            node.questions.forEach((q) =>
-            {
+            node.questions.forEach((q) => {
                 const split = splitContentIntoMainAndDetails(q.content || "");
 
                 questions.push({
@@ -164,8 +213,9 @@ export function parseQuestionsFromModelJson(model, setId)
                     title: q.title || "",
                     text: split.text,
                     details: split.details,
+                    info: (q.info && q.info.trim()) || split.info || ""
                 });
-            });
+        });
         }
 
         if (Array.isArray(node.subsections))

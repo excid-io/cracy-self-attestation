@@ -2,7 +2,16 @@
 
 ## Part I Conformity assessment procedure based on internal control (based on module A)
 
-- **Internal Control – Conformity Assessment**: Have you implemented an **internal control conformity assessment procedure** ensuring that you meet all obligations in points 2, 3, and 4 of this Part?
+- **Internal Control – Conformity Assessment**: Have you implemented an **internal control conformity assessment procedure** ensuring that you meet all obligations in this question set, for the following questions: 
+	- **Technical Documentation**, 
+	- **Design, Development, Production & Vulnerability Handling**, 
+	- **Monitoring Processes**, 
+	- **CE Marking**, 
+	- **Draw up an EU DoC**, 
+	- **DoC retention period**, 
+	- **Product identification** and 
+	- **Authority request**?
+
 -  **Responsibility Declaration**: Do you **declare, under your sole responsibility**, that your products with digital elements comply with all **essential cybersecurity requirements** in:
     - **Part I of Annex I** (product requirements), and (check questions) 
     - **Part II of Annex I** (process and vulnerability handling requirements)? (check questions )
@@ -16,8 +25,12 @@
 	- the **duration of the support period**, whichever is longer?
 - **Product identification**: Does your EU Declaration of Conformity **identify the specific product** for which it was issued?
 - **Authority request**: Can you provide a copy of the EU Declaration of Conformity to the **relevant authorities upon request**?
-- **Authorized representative**: If you use an authorised representative, have you ensured that they are **mandated** to fulfil the obligations in **CE Marking**, **Draw up an EU DoC**, **DoC Retention Period** on and **Product Identification** your behalf?
-  - **Manufacturer verifies representative responsibility**: Do you verify that the authorised representative acts **under your responsibility** and within the scope of the obligations defined in the mandate? ( I'm not sure I understand the two above which come through 5 correctly )
+- **Authorized representative**: If you use an authorised representative, have you ensured that they are **mandated** to fulfil the obligations in this question set in the following questions: 
+	- **CE Marking**, 
+	- **Draw up an EU DoC**, 
+	- **DoC retention period** 
+	- and **Product identification** on your behalf?
+- **Manufacturer verifies representative responsibility**: Do you verify that the authorised representative acts **under your responsibility** and within the scope of the obligations defined in the mandate? ( I'm not sure I understand the two above which come through 5 correctly )
 
 ## Part II EU-type examination (based on module B)
 -  **Purpose and Scope of EU-Type Examination**:  Are you aware that the EU-type examination will assess both:
@@ -29,9 +42,10 @@
 - **Assessment of Technical Design and Specimens**: Are you aware that the EU-type examination include:
     - review of your **technical documentation** and supporting evidence 
     - examination of **specimens** representing critical parts (combining production type and design type)?
-- **Submitting the Application**: Are you aware that you can lodge an application for EU-type examination with **one single notified body** of your choice?
 
-Does your application include:
+### Application for EU-type Examination
+- **Submitting the Application**: Are you aware that you can lodge an application for EU-type examination with **one single notified body** of your choice? Does your application include:
+
 - **Name and address of the applicant**: The **name and address** of the manufacturer, and if applicable, of the authorised representative?
 - **Declaration of non notification of another body**: A **written declaration** that the same application has **not been submitted** to any other notified body?
 - **Technical documentation**: The **technical documentation**  (check questions) enabling assessment against Annex I requirements, including: 
@@ -42,17 +56,19 @@ Does your application include:
 	- references to applied/partially applied harmonised standards
 	- results of tests (internal or external), where necessary?
 
-- **Agreement for location of tests**: Agreed with you on the **location** where examinations and tests will be carried out? ( regarding to points in 4)
-	- The notified body is responsible for thoroughly evaluating whether the product’s technical design, development, and vulnerability handling processes meet the essential cybersecurity requirements of Annex I. This includes examining the manufacturer’s technical documentation and supporting evidence, verifying that product specimens conform to that documentation, and determining which parts follow relevant harmonised standards or technical specifications and which do not. The notified body must also conduct or commission all necessary tests to confirm that, where harmonised standards have been applied, they were applied correctly, and where they were not applied, the manufacturer’s alternative solutions still satisfy the corresponding essential cybersecurity requirements.
-- **Releasing report after agreement**: Are you aware that the notified body will release the report (fully or partially) **only with your agreement**, except when required by notifying authorities? (regarding the above)
-- **Issuing the EU-type examination certificate**  Are you aware that if requirements are met, does the notified body issue an EU-type examination certificate containing:
+### Continuation of the Section
+
+- **Agreement for location of tests**: Has the Notified Body agreed with you on the **location** where examinations and tests will be carried out?
+	- info: The notified body is responsible for thoroughly evaluating whether the product’s technical design, development, and vulnerability handling processes meet the essential cybersecurity requirements of Annex I. This includes examining the manufacturer’s technical documentation and supporting evidence, verifying that product specimens conform to that documentation, and determining which parts follow relevant harmonised standards or technical specifications and which do not. The notified body must also conduct or commission all necessary tests to confirm that, where harmonised standards have been applied, they were applied correctly, and where they were not applied, the manufacturer’s alternative solutions still satisfy the corresponding essential cybersecurity requirements.
+- **Releasing report after agreement**: Are you aware that the notified body will release the report (fully or partially) **only with your agreement**, except when required by notifying authorities, regarding the above tests?
+- **Issuing the EU-type examination certificate**: Are you aware that if requirements are met, the notified body will issue an EU-type examination certificate containing:
 	- manufacturer name and address
 	- examination conclusions
 	- validity conditions
 	- identification of the approved type and vulnerability handling processes
 	- any annexes with relevant details?
-	- The certificate and its annexes shall contain all relevant information to allow the conformity of manufactured or developed products with digital elements with the examined type and vulnerability handling processes to be evaluated and to allow for in-service control.
-	- Where the type and the vulnerability handling processes do not satisfy the applicable essential cybersecurity requirements set out in Annex I, the notified body shall refuse to issue an EU-type examination certificate and shall inform the applicant accordingly, giving detailed reasons for its refusal.
+	- info: The certificate and its annexes shall contain all relevant information to allow the conformity of manufactured or developed products with digital elements with the examined type and vulnerability handling processes to be evaluated and to allow for in-service control.
+	- info: Where the type and the vulnerability handling processes do not satisfy the applicable essential cybersecurity requirements set out in Annex I, the notified body shall refuse to issue an EU-type examination certificate and shall inform the applicant accordingly, giving detailed reasons for its refusal.
 
 - **Monitoring of State-of-the-Art Changes**: The notified body monitor changes in the **state of the art** that might affect the compliance of your approved type or vulnerability handling processes? Are you aware that if such changes arise, it needs to inform you when **further investigation** is needed
 - **Manufacturer’s Duty to Report Modifications**: Do you inform the notified body of **any modifications** to the approved type or to vulnerability handling processes that may affect:
