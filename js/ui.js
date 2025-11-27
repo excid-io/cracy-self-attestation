@@ -24,7 +24,6 @@ export function renderSetSelector(selectEl, sets, onChange)
 
 function renderMarkdownInline(text)
 {
-    // Very small, unsafe-for-untrusted-input markdown renderer.
     // Escape HTML first
     let html = text
         .replace(/&/g, "&amp;")
@@ -37,7 +36,48 @@ function renderMarkdownInline(text)
     // Italic: *text*
     html = html.replace(/\*(.+?)\*/g, "<em>$1</em>");
 
+    // Links: [label](#target) — label may already contain <strong>...</strong>
+    html = html.replace(/\[(.+?)\]\((#[^)]+)\)/g, '<a href="$2">$1</a>');
+
     return html;
+}
+
+
+function escapeRegExp(str) 
+{
+    return str.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+}
+
+/**
+ * Replace occurrences of **Title** with markdown links
+ * [**Title**](#question-id) when Title matches a known question title.
+ */
+function linkifyQuestionRefs(markdownText, titleIndex, selfId) 
+{
+    if (!markdownText) return markdownText;
+
+    let result = markdownText;
+
+    titleIndex.forEach(
+        (id, title) => {
+            // Optionally skip linking to the same question (self reference)
+            if (id === selfId) return;
+
+            const pattern = new RegExp
+            (
+                `\\*\\*${escapeRegExp(title)}\\*\\*`,
+                "g"
+            );
+
+            result = result.replace
+            (
+                pattern,
+                `[**${title}**](#${id})`
+            );
+        }
+    );
+
+    return result;
 }
 
 export function renderQuestions(params) {
@@ -57,6 +97,16 @@ export function renderQuestions(params) {
         topEl.textContent = topTitle;
         container.appendChild(topEl);
     }
+
+    const titleIndex = new Map();
+    questions.forEach(
+        (q) => {
+            if (q.title) 
+            {
+                titleIndex.set(q.title.trim(), q.id);
+            }
+        }
+    );
 
     // Track last seen headings
     let currentLevel2 = null;
@@ -99,6 +149,7 @@ export function renderQuestions(params) {
 
         const card = document.createElement("div");
         card.className = "question-card";
+        card.id = q.id; 
 
         //
         // CONTENT AREA
@@ -112,13 +163,16 @@ export function renderQuestions(params) {
         const textEl = document.createElement("div");
         textEl.className = "question-text";
 
-        if (q.title)
+        // Linkify references in the main question text
+        const linkedText = linkifyQuestionRefs(q.text || "", titleIndex, q.id);
+
+        if (q.title) 
         {
-            textEl.innerHTML = `<strong>${renderMarkdownInline(q.title)}:</strong> ${renderMarkdownInline(q.text)}`;
-        }
-        else
+            textEl.innerHTML = `<strong>${renderMarkdownInline(q.title)}:</strong> ${renderMarkdownInline(linkedText)}`;
+        } 
+        else 
         {
-            textEl.innerHTML = renderMarkdownInline(q.text);
+            textEl.innerHTML = renderMarkdownInline(linkedText);
         }
 
         content.appendChild(textEl);
@@ -148,12 +202,14 @@ export function renderQuestions(params) {
             const detailsList = document.createElement("ul");
             detailsList.className = "question-details";
 
-            q.details.forEach((detailLine) =>
-            {
-                const li = document.createElement("li");
-                li.innerHTML = renderMarkdownInline(detailLine);
-                detailsList.appendChild(li);
-            });
+            q.details.forEach(
+                (detailLine) => {
+                    const li = document.createElement("li");
+                    const linkedDetail = linkifyQuestionRefs(detailLine || "", titleIndex, q.id);
+                    li.innerHTML = renderMarkdownInline(linkedDetail);
+                    detailsList.appendChild(li);
+                }
+            );
 
             content.appendChild(detailsList);
         }
@@ -346,3 +402,37 @@ export function updateProgress(container, progressFillEl, progressTextEl)
     progressTextEl.textContent =
         `${done} done | ${progress} in progress | ${notdone} not done`;
 }
+
+document.addEventListener("click", (ev) => {
+    const link = ev.target.closest("a[href^='#']");
+    if (!link) return;
+
+    const targetId = link.getAttribute("href").substring(1);
+    const targetEl = document.getElementById(targetId);
+    if (!targetEl) return;
+
+    //ev.preventDefault(); // stop default jump
+
+    //const scrollContainer = document.querySelector(".main") || document.documentElement;
+
+    //// Geometry relative to the scroll container
+    //const containerRect = scrollContainer.getBoundingClientRect();
+    //const targetRect = targetEl.getBoundingClientRect();
+
+    //const currentScroll = scrollContainer.scrollTop;
+    //const offsetInside = targetRect.top - containerRect.top;
+
+    //// How far from the top you want the card to appear
+    //const desiredOffsetFromTop = 120; // px (tweak to taste)
+
+    //const newScrollTop = currentScroll + offsetInside - desiredOffsetFromTop;
+
+    //scrollContainer.scrollTo({
+    //    top: newScrollTop,
+    //    behavior: "smooth",
+    //});
+
+    // Temporary highlight
+    targetEl.classList.add("flash-highlight");
+    setTimeout(() => targetEl.classList.remove("flash-highlight"), 1300);
+});
