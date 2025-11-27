@@ -57,7 +57,6 @@
 	- results of tests (internal or external), where necessary?
 
 ### Continuation of the Section
-
 - **Agreement for location of tests**: Has the Notified Body agreed with you on the **location** where examinations and tests will be carried out?
 	- info: The notified body is responsible for thoroughly evaluating whether the product’s technical design, development, and vulnerability handling processes meet the essential cybersecurity requirements of Annex I. This includes examining the manufacturer’s technical documentation and supporting evidence, verifying that product specimens conform to that documentation, and determining which parts follow relevant harmonised standards or technical specifications and which do not. The notified body must also conduct or commission all necessary tests to confirm that, where harmonised standards have been applied, they were applied correctly, and where they were not applied, the manufacturer’s alternative solutions still satisfy the corresponding essential cybersecurity requirements.
 - **Releasing report after agreement**: Are you aware that the notified body will release the report (fully or partially) **only with your agreement**, except when required by notifying authorities, regarding the above tests?
@@ -69,8 +68,7 @@
 	- any annexes with relevant details?
 	- info: The certificate and its annexes shall contain all relevant information to allow the conformity of manufactured or developed products with digital elements with the examined type and vulnerability handling processes to be evaluated and to allow for in-service control.
 	- info: Where the type and the vulnerability handling processes do not satisfy the applicable essential cybersecurity requirements set out in Annex I, the notified body shall refuse to issue an EU-type examination certificate and shall inform the applicant accordingly, giving detailed reasons for its refusal.
-
-- **Monitoring of State-of-the-Art Changes**: The notified body monitor changes in the **state of the art** that might affect the compliance of your approved type or vulnerability handling processes? Are you aware that if such changes arise, it needs to inform you when **further investigation** is needed
+- **Monitoring of State-of-the-Art Changes**: The notified body monitor changes in the **state of the art** that might affect the compliance of your approved type or vulnerability handling processes? Are you aware that if such changes arise, it needs to inform you when **further investigation** is needed?
 - **Manufacturer’s Duty to Report Modifications**: Do you inform the notified body of **any modifications** to the approved type or to vulnerability handling processes that may affect:
 	- conformity with Annex I requirements, or
 	- the validity of the certificate?
@@ -79,10 +77,10 @@
 - **Tech documentation and certificates**: Do you keep:
 	- the EU-type examination certificate, annexes, additions, and
 	- technical documentation available to national authorities for **10 years after market placement**, or for the **support period**, whichever is longer?
-	- The notified body must keep national notifying authorities informed about all EU-type examination certificates it issues or withdraws, including any additions, and must regularly or upon request provide lists of certificates that have been refused, suspended, or restricted. It must also inform other notified bodies about certificates and additions that were refused, withdrawn, suspended, or restricted, and, when requested, share information on those it has issued. Upon request, the Commission, Member States, and other notified bodies may obtain copies of certificates and their additions, and the Commission or Member States may also request the associated technical documentation and test results. The notified body is required to retain the certificate, its annexes and additions, and the full technical file submitted by the manufacturer until the certificate’s validity expires.
--  **Role of the Authorised Representative** If you use an authorised representative, have you mandated them to:
-	- lodge the EU-type examination application (point 3)?
-	- fulfil obligations under **Requirement for Additional Approval** and **Tech documentation and certificates**?
+	- info: The notified body must keep national notifying authorities informed about all EU-type examination certificates it issues or withdraws, including any additions, and must regularly or upon request provide lists of certificates that have been refused, suspended, or restricted. It must also inform other notified bodies about certificates and additions that were refused, withdrawn, suspended, or restricted, and, when requested, share information on those it has issued. Upon request, the Commission, Member States, and other notified bodies may obtain copies of certificates and their additions, and the Commission or Member States may also request the associated technical documentation and test results. The notified body is required to retain the certificate, its annexes and additions, and the full technical file submitted by the manufacturer until the certificate’s validity expires.
+-  **Role of the Authorised Representative**: If you use an authorised representative, have you mandated them to:
+	- lodge the EU-type examination application **Submitting the Application**?
+	- fulfil obligations under **Requirement for Additional Approval (“Additions”)** and **Tech documentation and certificates**?
 
 ## Part III Conformity to type based on internal production control (based on module C)
 -  **Obligations for internal production**: Have you ensured and declared that your products with digital elements conform to the **type approved in the EU-type examination certificate** for **internal production control**?
@@ -104,12 +102,16 @@
  - **Manufacturer responsibility regarding authorized representative**: Do you ensure that the authorised representative acts **on your behalf and under your responsibility** when carrying out these obligations?
 
 ## Part IV Conformity bsaed on full quality assurance (Based on module H)
-- **Full Quality Assurance Responsibility**: Have you ensured and declared (under your sole responsibility) that your PDEs comply with the essential cybersecurity requirements in Annex I, Parts I and II, under a full quality assurance procedure and fulfils the obligations with (todo fill this with 2 and 5) ? (check questions)
--  **Quality System Operation & Scope**: *Do you operate an approved quality system covering:
+- **Full Quality Assurance Responsibility**: Have you ensured and declared (under your sole responsibility) that your PDEs comply with the essential cybersecurity requirements in Annex I, Parts I and II, under a full quality assurance procedure and fulfils the obligations regarding: 
+	- **Quality System Operation & Scope** ,
+	- **CE Marking & Identification Number** , 
+	- **Declaration of Conformity Retention** ,
+- **Quality System Operation & Scope**: Do you operate an approved quality system covering:
 	- design and development,
-	- final product inspection and testing, and
-	- vulnerability handling, and do you maintain its effectiveness throughout the support period?
-- **Notified body of choice**: Are you aware that you can lodge and application to the notified body of your choice? 
+	- final product inspection and testing,
+	- vulnerability handling, and do you maintain its effectiveness throughout the support period and
+	- shall be subject to surveillance under offical authorities
+- **Notified body of choice**: Are you aware that you can lodge and application to the notified body of your choice for the quality system? 
 - **Application for Quality System Assessment**: **Are you aware that an application for quality system assessment to a notified body includes:**
 	- manufacturer/representative name & address,
 	- technical documentation for at least one representative product model at least the elements set out in Annex VII (check questions) ,
@@ -117,15 +119,15 @@
 	- a declaration confirming the application was not lodged elsewhere?
 - **Does your quality system documentation clearly describe:**
 	- quality objectives, responsibilities and powers of management (with regard to design, development, product quality and vulnerability handling), and organisational structure?
-	- technical design & development specifications and relevant applied harmonised standards or alternatives if harmonised standards are not fully used)?
+	- technical design & development specifications and relevant applied harmonised standards or alternatives if harmonised standards are not fully used?
 	- exactly the same as above for procedural specifications for Annex I Part II
-	- design and development control along with design and dev verification techniques, processes and actions for a specific product category
+	- design and development control along with design and development verification techniques, processes and actions for a specific product category
 	- production & quality control processes that will be used
 	- test/examination procedures and their frequency that are carried out during and after production?
 	- quality records maintained (test results, calibration data, personnel qualifications)?
 	- monitoring methods ensuring product quality and system effectiveness?
--  **Notified Body Assessment Process***: Are you aware that the notified body will assess your quality system using its experienced member in the relevant product field , including:
-	- reviewing your technical documentation referred in the **Application for Quality System Assessment** question meaning bullet 2,
+-  **Notified Body Assessment Process**: Are you aware that the notified body will assess your quality system using its experienced member in the relevant product field , including:
+	- reviewing your technical documentation referred in the **Application for Quality System Assessment**,
 	- visiting your premises (if any),
 	- evaluating your ability to identify and meet CRA requirements,
 	- confirming compliance with harmonised standards (where used)?
@@ -138,17 +140,17 @@
 	- the quality records as provided for by the design part of the quality system, such as results of analyses, calculations and tests;
 	- the quality records as provided for by the manufacturing part of the quality system, such as inspection reports and test data, calibration data and qualification reports on the personnel concerned.
 	- the notified body will perform periodic audits
-- **CE Marking & Identification Number**: Do you affix the CE marking AND the notified body’s identification number (responsibility of notified body) to each PDE produced under full quality assurance, that satisfies Part I of Annex I?
--  **Declaration of Conformity Retention**: Do you draw up a written declaration of conformity for each product model and retain it for at least 10 years or the full support period (whichever is longer)?
+- **CE Marking & Identification Number**: Do you affix the CE marking AND the notified body’s identification number (responsibility of notified body to give you the correct one) to each PDE produced under full quality assurance, that satisfies Part I of Annex I?
+- **Declaration of Conformity Retention**: Do you draw up a written declaration of conformity for each product model and retain it for at least 10 years or the full support period (whichever is longer)?
 	- The DoC needs to identify the product model
 	- A copy must be made available to the authorities upon request
 - **Long-Term Documentation Retention**: Do you retain, for at least 10 years or the support period:
-	- technical documentation referred to **Notified Body of Choice**, **Application of Quality Assessment**,
-	- quality system documentation mentioned in **Application of Quality Assessment**,
-	- approved changes to the quality system mentioned in **Notification of Quality system Changes**,
-	- notified body decisions and audit reports mentioned in **Notification of Quality System Changes** and **Survellaince Access and Cooperation** ?
+	- technical documentation referred to **Notified Body of Choice**, **Application for Quality System Assessment**,
+	- quality system documentation mentioned in **Application for Quality System Assessment**,
+	- approved changes to the quality system mentioned in **Notification of Quality System Changes**,
+	- notified body decisions and audit reports mentioned in **Notification of Quality System Changes** and **Surveillance Access & Cooperation** ?
 - **Authorised Representative Responsibilities**: If using an authorised representative, are they mandated to fulfil obligations related to:
 	- the quality system application mentioned in **Application for Quality System Assessment**,
-	- notifying quality system changes mentioned in **Notification of Quality System Changes** ****,
-	- CE marking & DoC obligations in **CE Marking and Identification Number** and **Declaration of Conformity Retention**,
+	- notifying quality system changes mentioned in **Notification of Quality System Changes**,
+	- CE marking & DoC obligations in **CE Marking & Identification Number** and **Declaration of Conformity Retention**,
 	- documentation retention mentioned in **Long-Term Documentation Retention**?

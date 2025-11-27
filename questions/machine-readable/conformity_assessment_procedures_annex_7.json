@@ -353,12 +353,6 @@
               "title": "Continuation of the Section",
               "questions": [
                 {
-                  "title": "Continuation of the Section - Q1",
-                  "content": "",
-                  "type": "paragraph",
-                  "responses": []
-                },
-                {
                   "title": "Agreement for location of tests",
                   "content": "Has the Notified Body agreed with you on the **location** where examinations and tests will be carried out?",
                   "type": "mchoices",
@@ -422,7 +416,7 @@
                 },
                 {
                   "title": "Monitoring of State-of-the-Art Changes",
-                  "content": "The notified body monitor changes in the **state of the art** that might affect the compliance of your approved type or vulnerability handling processes? Are you aware that if such changes arise, it needs to inform you when **further investigation** is needed",
+                  "content": "The notified body monitor changes in the **state of the art** that might affect the compliance of your approved type or vulnerability handling processes? Are you aware that if such changes arise, it needs to inform you when **further investigation** is needed?",
                   "type": "paragraph",
                   "responses": []
                 },
@@ -488,7 +482,7 @@
                 },
                 {
                   "title": "Tech documentation and certificates",
-                  "content": "Do you keep:\n- the EU-type examination certificate, annexes, additions, and\n- technical documentation available to national authorities for **10 years after market placement**, or for the **support period**, whichever is longer?\n- The notified body must keep national notifying authorities informed about all EU-type examination certificates it issues or withdraws, including any additions, and must regularly or upon request provide lists of certificates that have been refused, suspended, or restricted. It must also inform other notified bodies about certificates and additions that were refused, withdrawn, suspended, or restricted, and, when requested, share information on those it has issued. Upon request, the Commission, Member States, and other notified bodies may obtain copies of certificates and their additions, and the Commission or Member States may also request the associated technical documentation and test results. The notified body is required to retain the certificate, its annexes and additions, and the full technical file submitted by the manufacturer until the certificate’s validity expires.",
+                  "content": "Do you keep:\n- the EU-type examination certificate, annexes, additions, and\n- technical documentation available to national authorities for **10 years after market placement**, or for the **support period**, whichever is longer?",
                   "type": "mchoices",
                   "responses": [
                     {
@@ -504,11 +498,12 @@
                       "description": "Work is underway but not yet completed.",
                       "type": "choice"
                     }
-                  ]
+                  ],
+                  "info": "The notified body must keep national notifying authorities informed about all EU-type examination certificates it issues or withdraws, including any additions, and must regularly or upon request provide lists of certificates that have been refused, suspended, or restricted. It must also inform other notified bodies about certificates and additions that were refused, withdrawn, suspended, or restricted, and, when requested, share information on those it has issued. Upon request, the Commission, Member States, and other notified bodies may obtain copies of certificates and their additions, and the Commission or Member States may also request the associated technical documentation and test results. The notified body is required to retain the certificate, its annexes and additions, and the full technical file submitted by the manufacturer until the certificate’s validity expires."
                 },
                 {
-                  "title": "Continuation of the Section - Q2",
-                  "content": "**Role of the Authorised Representative** If you use an authorised representative, have you mandated them to:\n- lodge the EU-type examination application (point 3)?\n- fulfil obligations under **Requirement for Additional Approval** and **Tech documentation and certificates**?",
+                  "title": "Role of the Authorised Representative",
+                  "content": "If you use an authorised representative, have you mandated them to:\n- lodge the EU-type examination application **Submitting the Application**?\n- fulfil obligations under **Requirement for Additional Approval (“Additions”)** and **Tech documentation and certificates**?",
                   "type": "paragraph",
                   "responses": []
                 }
@@ -686,7 +681,7 @@
           "questions": [
             {
               "title": "Full Quality Assurance Responsibility",
-              "content": "Have you ensured and declared (under your sole responsibility) that your PDEs comply with the essential cybersecurity requirements in Annex I, Parts I and II, under a full quality assurance procedure and fulfils the obligations with (todo fill this with 2 and 5) ? (check questions)",
+              "content": "Have you ensured and declared (under your sole responsibility) that your PDEs comply with the essential cybersecurity requirements in Annex I, Parts I and II, under a full quality assurance procedure and fulfils the obligations regarding:\n- **Quality System Operation & Scope** ,\n- **CE Marking & Identification Number** ,\n- **Declaration of Conformity Retention** ,",
               "type": "mchoices",
               "responses": [
                 {
@@ -706,13 +701,27 @@
             },
             {
               "title": "Quality System Operation & Scope",
-              "content": "*Do you operate an approved quality system covering:\n- design and development,\n- final product inspection and testing, and\n- vulnerability handling, and do you maintain its effectiveness throughout the support period?",
-              "type": "paragraph",
-              "responses": []
+              "content": "Do you operate an approved quality system covering:\n- design and development,\n- final product inspection and testing,\n- vulnerability handling, and do you maintain its effectiveness throughout the support period and\n- shall be subject to surveillance under offical authorities",
+              "type": "mchoices",
+              "responses": [
+                {
+                  "title": "Yes",
+                  "type": "choice"
+                },
+                {
+                  "title": "No",
+                  "type": "choice"
+                },
+                {
+                  "title": "In Progress",
+                  "description": "Work is underway but not yet completed.",
+                  "type": "choice"
+                }
+              ]
             },
             {
               "title": "Notified body of choice",
-              "content": "Are you aware that you can lodge and application to the notified body of your choice?",
+              "content": "Are you aware that you can lodge and application to the notified body of your choice for the quality system?",
               "type": "mchoices",
               "responses": [
                 {
@@ -738,13 +747,13 @@
             },
             {
               "title": "Part IV Conformity bsaed on full quality assurance (Based on module H) - Q1",
-              "content": "**Does your quality system documentation clearly describe:**\n- quality objectives, responsibilities and powers of management (with regard to design, development, product quality and vulnerability handling), and organisational structure?\n- technical design & development specifications and relevant applied harmonised standards or alternatives if harmonised standards are not fully used)?\n- exactly the same as above for procedural specifications for Annex I Part II\n- design and development control along with design and dev verification techniques, processes and actions for a specific product category\n- production & quality control processes that will be used\n- test/examination procedures and their frequency that are carried out during and after production?\n- quality records maintained (test results, calibration data, personnel qualifications)?\n- monitoring methods ensuring product quality and system effectiveness?",
+              "content": "**Does your quality system documentation clearly describe:**\n- quality objectives, responsibilities and powers of management (with regard to design, development, product quality and vulnerability handling), and organisational structure?\n- technical design & development specifications and relevant applied harmonised standards or alternatives if harmonised standards are not fully used?\n- exactly the same as above for procedural specifications for Annex I Part II\n- design and development control along with design and development verification techniques, processes and actions for a specific product category\n- production & quality control processes that will be used\n- test/examination procedures and their frequency that are carried out during and after production?\n- quality records maintained (test results, calibration data, personnel qualifications)?\n- monitoring methods ensuring product quality and system effectiveness?",
               "type": "paragraph",
               "responses": []
             },
             {
-              "title": "Notified Body Assessment Process*",
-              "content": "Are you aware that the notified body will assess your quality system using its experienced member in the relevant product field , including:\n- reviewing your technical documentation referred in the **Application for Quality System Assessment** question meaning bullet 2,\n- visiting your premises (if any),\n- evaluating your ability to identify and meet CRA requirements,\n- confirming compliance with harmonised standards (where used)?",
+              "title": "Notified Body Assessment Process",
+              "content": "Are you aware that the notified body will assess your quality system using its experienced member in the relevant product field , including:\n- reviewing your technical documentation referred in the **Application for Quality System Assessment**,\n- visiting your premises (if any),\n- evaluating your ability to identify and meet CRA requirements,\n- confirming compliance with harmonised standards (where used)?",
               "type": "mchoices",
               "responses": [
                 {
@@ -870,7 +879,7 @@
             },
             {
               "title": "Long-Term Documentation Retention",
-              "content": "Do you retain, for at least 10 years or the support period:\n- technical documentation referred to **Notified Body of Choice**, **Application of Quality Assessment**,\n- quality system documentation mentioned in **Application of Quality Assessment**,\n- approved changes to the quality system mentioned in **Notification of Quality system Changes**,\n- notified body decisions and audit reports mentioned in **Notification of Quality System Changes** and **Survellaince Access and Cooperation** ?",
+              "content": "Do you retain, for at least 10 years or the support period:\n- technical documentation referred to **Notified Body of Choice**, **Application for Quality System Assessment**,\n- quality system documentation mentioned in **Application for Quality System Assessment**,\n- approved changes to the quality system mentioned in **Notification of Quality System Changes**,\n- notified body decisions and audit reports mentioned in **Notification of Quality System Changes** and **Surveillance Access & Cooperation** ?",
               "type": "mchoices",
               "responses": [
                 {
@@ -890,7 +899,7 @@
             },
             {
               "title": "Authorised Representative Responsibilities",
-              "content": "If using an authorised representative, are they mandated to fulfil obligations related to:\n- the quality system application mentioned in **Application for Quality System Assessment**,\n- notifying quality system changes mentioned in **Notification of Quality System Changes** ****,\n- CE marking & DoC obligations in **CE Marking and Identification Number** and **Declaration of Conformity Retention**,\n- documentation retention mentioned in **Long-Term Documentation Retention**?",
+              "content": "If using an authorised representative, are they mandated to fulfil obligations related to:\n- the quality system application mentioned in **Application for Quality System Assessment**,\n- notifying quality system changes mentioned in **Notification of Quality System Changes**,\n- CE marking & DoC obligations in **CE Marking & Identification Number** and **Declaration of Conformity Retention**,\n- documentation retention mentioned in **Long-Term Documentation Retention**?",
               "type": "paragraph",
               "responses": []
             }

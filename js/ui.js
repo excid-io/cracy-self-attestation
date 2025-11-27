@@ -211,7 +211,11 @@ export function renderQuestions(params) {
             infoBtn.addEventListener("click", () =>
             {
                 const linkedInfo = linkifyQuestionRefs(q.info || "", titleIndex, q.id);
-                const html = renderMarkdownInline(linkedInfo).replace(/\n/g, "<br/>");
+                const html = linkedInfo
+                .split("\n")
+                .map(p => `<p>${renderMarkdownInline(p)}</p>`)
+                .join("");
+                //const html = renderMarkdownInline(linkedInfo).replace(/\n/g, "<br/>");
                 openInfoPopup(q.title || "Info", html);
             });
         
