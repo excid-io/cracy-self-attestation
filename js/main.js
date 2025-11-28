@@ -62,7 +62,8 @@ async function loadQuestionSet(set)
             setId: set.id,
             progressFillEl: progressFill,
             progressTextEl: progressText,
-            topTitle
+            topTitle,
+            setDescription: set.description || ""
         });
     }
     catch (err)

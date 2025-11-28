@@ -420,3 +420,29 @@ select:focus {
     filter: drop-shadow(0 0 0px rgba(250, 204, 21, 0));
   }
 }
+
+.set-description {
+  background: rgba(15, 23, 42, 0.85);
+  border: 1px solid rgba(148, 163, 184, 0.4);
+  padding: 1rem 1.2rem;
+  border-radius: 0.9rem;
+  margin-bottom: 1.25rem;
+}
+
+.set-description-header {
+  font-size: 0.95rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: #e5e7eb;
+  margin-bottom: 0.5rem;
+  border-bottom: 1px solid rgba(148, 163, 184, 0.4);
+  padding-bottom: 0.25rem;
+}
+
+.set-description-body p {
+  margin: 0.4rem 0;
+  font-size: 0.85rem;
+  line-height: 1.45;
+  color: #cbd5e1;
+}

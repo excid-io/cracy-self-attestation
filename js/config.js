@@ -2,7 +2,19 @@ export const QUESTION_SETS = [
     {
         id: "deliverable-questions",
         name: "Deliverable Questions",
-        file: "./questions/machine-readable/deliverable_questions.json"
+        file: "./questions/machine-readable/deliverable_questions.json",
+		description: `
+		To ensure conformity make sure to understand and cover the requirements listed in all of the sections. 
+		Before marking any question as "Done" using the tick box, verify that **the underlying CRA requirement is fully satisfied and evidenced** 
+		within your organisation (documentation, processes, or design artefacts). 
+
+		You can answer with "Done", "In Progress" if the requirement is in progress to be satisfied or "Not Done". 
+
+		You can export your answers along with the questions, using the export button in the progress bar.
+
+		Regarding the Technical Documentation section and the Information and Instructions to the User section: 
+			- The documentation and instructions that you will create, should contain all the requirements mentioned below those sections
+		`
     },
   //  {
   //      id: "conformity-assessment-procedures-annex-7",

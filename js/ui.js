@@ -105,12 +105,36 @@ export function renderQuestions(params) {
 
     container.innerHTML = "";
 
-    // LEVEL 1 TITLE
-    if (topTitle) {
+    //LEVEL 1: TOP TITLE
+    if (topTitle) 
+    {
         const topEl = document.createElement("div");
         topEl.className = "section-title top-level-section-title";
         topEl.textContent = topTitle;
         container.appendChild(topEl);
+    }
+    
+    // NEW: Set-specific description with a header
+    if (params.setDescription && params.setDescription.trim().length > 0) 
+    {
+        const wrapper = document.createElement("div");
+        wrapper.className = "set-description";
+
+        const header = document.createElement("div");
+        header.className = "set-description-header";
+        header.textContent = "Description";
+
+        const body = document.createElement("div");
+        body.className = "set-description-body";
+        body.innerHTML = params.setDescription
+            .trim()
+            .split("\n")
+            .map(line => `<p>${line.trim()}</p>`)
+            .join("");
+
+        wrapper.appendChild(header);
+        wrapper.appendChild(body);
+        container.appendChild(wrapper);
     }
 
     const titleIndex = new Map();
