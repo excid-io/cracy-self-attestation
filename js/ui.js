@@ -128,8 +128,10 @@ export function renderQuestions(params) {
         body.className = "set-description-body";
         body.innerHTML = params.setDescription
             .trim()
-            .split("\n")
-            .map(line => `<p>${line.trim()}</p>`)
+            .split(/\r?\n/)
+            .map(line => line.trim())
+            .filter(line => line.length > 0)
+            .map(line => `<p>${renderMarkdownInline(line)}</p>`)
             .join("");
 
         wrapper.appendChild(header);
