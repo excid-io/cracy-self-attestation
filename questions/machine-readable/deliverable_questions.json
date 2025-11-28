@@ -1,0 +1,655 @@
+{
+  "sections": [
+    {
+      "title": "Deriverable Questions",
+      "questions": [],
+      "subsections": [
+        {
+          "title": "Compliance Checklist for Manufacturers",
+          "questions": [
+            {
+              "title": "Identify Role",
+              "content": "Have you clearly identified your role (manufacturer, authorised representative, importer, or distributor)?\n- Have you assigned a responsible person for the DoC and technical documentation?\n- Have you verified that subcontractors provide the necessary information?",
+              "type": "mchoices",
+              "responses": [
+                {
+                  "title": "Yes",
+                  "type": "choice"
+                },
+                {
+                  "title": "No",
+                  "type": "choice"
+                },
+                {
+                  "title": "In Progress",
+                  "description": "Work is underway but not yet completed.",
+                  "type": "choice"
+                }
+              ]
+            },
+            {
+              "title": "Draft DoC",
+              "content": "Have you drafted the Declaration of Conformity (DoC) using the Annex V ( [check questions](set:eu-declaration-of-conformity-annex-5) ) model?\n- Have you signed the DoC?\n- Have you checked whether the PDE is subject to other Union legislation?\n- If yes, have you prepared a single combined DoC?\n- Is the DoC available in a language accepted by the Member State where the PDE is placed on the market?\n- Is the DoC written in clear, readable language?",
+              "type": "mchoices",
+              "responses": [
+                {
+                  "title": "Yes",
+                  "type": "choice"
+                },
+                {
+                  "title": "No",
+                  "type": "choice"
+                },
+                {
+                  "title": "In Progress",
+                  "description": "Work is underway but not yet completed.",
+                  "type": "choice"
+                }
+              ]
+            },
+            {
+              "title": "Build Technical Documentation",
+              "content": "Have you prepared complete technical documentation/file for the PDE?\n- Is the technical file stored in a language understandable to market surveillance authorities?\n- Have you ensured secure storage of the technical documentation?\n- Have you set up secure internal access management for the documentation?",
+              "type": "mchoices",
+              "responses": [
+                {
+                  "title": "Yes",
+                  "type": "choice"
+                },
+                {
+                  "title": "No",
+                  "type": "choice"
+                },
+                {
+                  "title": "In Progress",
+                  "description": "Work is underway but not yet completed.",
+                  "type": "choice"
+                }
+              ]
+            },
+            {
+              "title": "Provide Access and Transparency",
+              "content": "Have you established a process to provide authorities with technical documentation upon request?\n- Have you prepared the required user information and instructions?\n- Have you verified that the information and instructions are clear to an average test group?\n- Do you supply a full or simplified DoC with the product, with a direct URL or QR code linking to the full version?\n- Can you provide information in all languages of destination market?",
+              "type": "mchoices",
+              "responses": [
+                {
+                  "title": "Yes",
+                  "type": "choice"
+                },
+                {
+                  "title": "No",
+                  "type": "choice"
+                },
+                {
+                  "title": "In Progress",
+                  "description": "Work is underway but not yet completed.",
+                  "type": "choice"
+                }
+              ]
+            },
+            {
+              "title": "Maintain and Distribute DoC",
+              "content": "Do you have processes in place to maintain and distribute the Declaration of Conformity (DoC)?\n- Do you regularly review and update the DoC?\n- Do you keep version control of the DoC?\n- Do you share the current DoC version with importers and distributors?\n- Do you maintain traceability records for DoC versions?\n- Can you provide the DoC promptly to market surveillance authorities upon request?",
+              "type": "mchoices",
+              "responses": [
+                {
+                  "title": "Yes",
+                  "type": "choice"
+                },
+                {
+                  "title": "No",
+                  "type": "choice"
+                },
+                {
+                  "title": "In Progress",
+                  "description": "Work is underway but not yet completed.",
+                  "type": "choice"
+                }
+              ]
+            },
+            {
+              "title": "Keep Technical Documentation Up to Date",
+              "content": "Do you ensure the technical documentation is kept up to date?\n- Do you maintain a procedure for updates after significant hardware, firmware, or process changes?\n- Do you reflect all versions placed on the market and explain the changes between them?\n- Do you ensure traceability between product versions, tests, and risk assessments?",
+              "type": "mchoices",
+              "responses": [
+                {
+                  "title": "Yes",
+                  "type": "choice"
+                },
+                {
+                  "title": "No",
+                  "type": "choice"
+                },
+                {
+                  "title": "In Progress",
+                  "description": "Work is underway but not yet completed.",
+                  "type": "choice"
+                }
+              ]
+            },
+            {
+              "title": "Review, Communicate and Record Compliance",
+              "content": "Do you regularly review, communicate, and record compliance?\n- Do you review the consistency between the DoC, technical documentation, and user information?\n- Do you communicate end-of-support information to users?\n- Do you maintain a compliance log (version history, responsible persons, review dates)?",
+              "type": "mchoices",
+              "responses": [
+                {
+                  "title": "Yes",
+                  "type": "choice"
+                },
+                {
+                  "title": "No",
+                  "type": "choice"
+                },
+                {
+                  "title": "In Progress",
+                  "description": "Work is underway but not yet completed.",
+                  "type": "choice"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Technical Documentation",
+          "questions": [
+            {
+              "title": "Intended Purpose & Intended Users",
+              "content": "What is the product’s intended purpose and who are its intended users?",
+              "type": "paragraph",
+              "responses": [],
+              "info": "‘intended purpose’ means the use for which a product with digital elements is intended by the manufacturer, including the specific context and conditions of use, as specified in the information supplied by the manufacturer in the instructions for use, promotional or sales materials and statements, as well as in the technical documentation;\nExample: Smart sensor for home use; connects via Wi-Fi; typical user: consumer.\nReference: Annex VII (1)(a)"
+            },
+            {
+              "title": "Visual & Images for Product",
+              "content": "What visuals or images can you provide to show the product and markings?",
+              "type": "paragraph",
+              "responses": [],
+              "info": "Example: Photo showing general hardware, CE mark, serial number, and model label.\nReference: Annex VII (1)(c)"
+            },
+            {
+              "title": "Key Conditions & Limitations",
+              "content": "What are the key conditions or limitations of use?",
+              "type": "paragraph",
+              "responses": [],
+              "info": "Example: Indoor use only; operating temperature 0–40 °C.\nReference: Annex VII (1)"
+            },
+            {
+              "title": "Software & Firmware Versions Used",
+              "content": "What software or firmware versions are used in the product?",
+              "type": "paragraph",
+              "responses": [],
+              "info": "Example: Firmware v2.1.0; App v3.0.2.\nReference: Annex VII (1)(b)"
+            },
+            {
+              "title": "Previous Software & Firmware Versions",
+              "content": "What previous software or firmware versions have been placed on the market?",
+              "type": "paragraph",
+              "responses": [],
+              "info": "Example: Firmware v1.1, sold until July 2027.\nReference: Annex VII (1)(b)"
+            },
+            {
+              "title": "Version Identification in the Field",
+              "content": "How can each version of the product be identified in the field?",
+              "type": "paragraph",
+              "responses": [],
+              "info": "Example: Version shown in device interface; model number on label.\nReference: Annex VII (1)(b)"
+            },
+            {
+              "title": "User Information & Instructions",
+              "content": "Is the user information and instructions provided?",
+              "type": "mchoices",
+              "responses": [
+                {
+                  "title": "Yes",
+                  "type": "choice"
+                },
+                {
+                  "title": "No",
+                  "type": "choice"
+                },
+                {
+                  "title": "In Progress",
+                  "description": "Work is underway but not yet completed.",
+                  "type": "choice"
+                }
+              ],
+              "info": "Example: User manual.\nReference: Annex VII (1)(d)"
+            },
+            {
+              "title": "Design, Development & Production for Security",
+              "content": "How was the product designed, developed, and produced to include security?",
+              "type": "paragraph",
+              "responses": [],
+              "info": "Example: Description of secure design approach, architecture overview.\nReference: Annex VII (2)(a)"
+            },
+            {
+              "title": "Vulnerability Handling Process",
+              "content": "How do you handle vulnerabilities (intake, triage, remediation)?",
+              "type": "paragraph",
+              "responses": [],
+              "info": "Example: Coordinated vulnerability disclosure policy and process flow.\nReference: Annex VII (2)(b)"
+            },
+            {
+              "title": "Component & Data Flow Documentation",
+              "content": "How are components and data flows documented?",
+              "type": "paragraph",
+              "responses": [],
+              "info": "Example: SBOM, HBOM.\nReference: Annex VII (2)(b)"
+            },
+            {
+              "title": "Security Update Process",
+              "content": "How are security updates tested, signed, and distributed?",
+              "type": "paragraph",
+              "responses": [],
+              "info": "Example: Signed updates verified through digital signature checks.\nReference: Annex VII (2)(b)"
+            },
+            {
+              "title": "Secure Manufacturing & Provisioning Steps",
+              "content": "What secure manufacturing and provisioning steps are applied?",
+              "type": "paragraph",
+              "responses": [],
+              "info": "Example: Secure firmware installation, identity checks, integrity verification.\nReference: Annex VII (2)(c)"
+            },
+            {
+              "title": "Monitoring & Validation Activities",
+              "content": "What monitoring and validation activities are in place?",
+              "type": "paragraph",
+              "responses": [],
+              "info": "Example: Telemetry to detect update failures; incident tracking dashboard.\nReference: Annex VII (2)(c)"
+            },
+            {
+              "title": "Risk Assessment Method or Standard",
+              "content": "Which method or standard did you use for your risk assessment?",
+              "type": "paragraph",
+              "responses": [],
+              "info": "Example: ISO 27005, ENISA, or internal threat modelling.\nReference: Annex VII (3)"
+            },
+            {
+              "title": "Risks, Threats, Impacts & Treatments",
+              "content": "What are the main risks, threats, impacts, and treatments identified?",
+              "type": "paragraph",
+              "responses": [],
+              "info": "Example: Data breach from unsecured Wi-Fi Access Point; Impact: high; Mitigation: encryption.\nReference: Annex VII (3)"
+            },
+            {
+              "title": "Link Between Risks, Controls & Test Results",
+              "content": "How are risks linked to design controls and test results?",
+              "type": "paragraph",
+              "responses": [],
+              "info": "Example: Risk-control-test matrix; mapping table.\nReference: Annex VII (3)"
+            },
+            {
+              "title": "Residual Risks & Acceptance Rationale",
+              "content": "What residual risks remain and why are they acceptable?",
+              "type": "paragraph",
+              "responses": [],
+              "info": "Example: Denial-of-service risk accepted due to limited exposure.\nReference: Annex VII (3)"
+            },
+            {
+              "title": "Applicable Essential Requirements (Annex I)",
+              "content": "What essential requirements found in Annex I ( [check questions](set:essential-cybersecurity-requirements-annex-1) ) CRA apply to the product?",
+              "type": "paragraph",
+              "responses": [],
+              "info": "Example: -- does not apply due to no wireless connection.\nReference: Annex VII (3)"
+            },
+            {
+              "title": "Support Period Determination",
+              "content": "How was the product’s support period determined?",
+              "type": "paragraph",
+              "responses": [],
+              "info": "Example: Based on OS vendor support roadmap and internal policy.\nReference: Annex VII (4)"
+            },
+            {
+              "title": "Declared Support Period",
+              "content": "What is the declared support period (dates or duration)?",
+              "type": "paragraph",
+              "responses": [],
+              "info": "Example: Security updates provided until 31 December 2030.\nReference: Annex VII (4)"
+            },
+            {
+              "title": "Support Period Communication",
+              "content": "Where is the support period communicated to users?",
+              "type": "paragraph",
+              "responses": [],
+              "info": "Example: On website, packaging, or in product interface.\nReference: Annex VII (4)"
+            },
+            {
+              "title": "Support Period ↔ Risk Assessment Link",
+              "content": "How does the support period link to the risk assessment and update plan?",
+              "type": "paragraph",
+              "responses": [],
+              "info": "Example: Risk analysis shows update relevance through lifecycle.\nReference: Annex VII (4)"
+            },
+            {
+              "title": "Standards or Specifications Demonstrating Conformity",
+              "content": "What standards or specifications demonstrate conformity?",
+              "type": "paragraph",
+              "responses": [],
+              "info": "Example: ISO/IEC 27001.\nReference: Annex VII (5)"
+            },
+            {
+              "title": "Version Numbers & Publication Dates of Standards",
+              "content": "What are the version numbers and publication dates of those standards?",
+              "type": "paragraph",
+              "responses": [],
+              "info": "Example: ISO/IEC 27001:2022.\nReference: Annex VII (5)"
+            },
+            {
+              "title": "Certificates or Attestations Supporting Conformity",
+              "content": "What certificates or attestations support conformity?",
+              "type": "paragraph",
+              "responses": [],
+              "info": "Example: CE certificate, cybersecurity scheme statement.\nReference: Annex VII (5)"
+            },
+            {
+              "title": "Standards & Controls Cross-Reference",
+              "content": "How do the listed standards and controls  link to Annex I ([check questions](set:essential-cybersecurity-requirements-annex-1)) requirements?",
+              "type": "paragraph",
+              "responses": [],
+              "info": "Example: Cross-reference table between requirements and controls.\nReference: Annex VII (5)"
+            }
+          ]
+        },
+        {
+          "title": "Information and Instructions to the User",
+          "questions": [
+            {
+              "title": "Registered Name or Trademark",
+              "content": "What is your name, registered trade name or registered trademark?",
+              "type": "paragraph",
+              "responses": [],
+              "info": "Example: SmartHome Tech BV\nReference: Annex II, 1 CRA"
+            },
+            {
+              "title": "Postal Address",
+              "content": "What is your postal address?",
+              "type": "paragraph",
+              "responses": [],
+              "info": "Example: Rue de l’Innovation 12, 1000 Brussels (BE)\nReference: Annex II, 1 CRA"
+            },
+            {
+              "title": "Digital Contact",
+              "content": "What is your email address or other digital contact?",
+              "type": "paragraph",
+              "responses": [],
+              "info": "Example: support@smarthometech.eu\nReference: Annex II, 1 CRA"
+            },
+            {
+              "title": "Website Contact Point",
+              "content": "What is the website at which you can be contacted (if any)?",
+              "type": "paragraph",
+              "responses": [],
+              "info": "Example: www.smarthometech.be\nReference: Annex II, 1 CRA"
+            },
+            {
+              "title": "Authorised Representative or Importer",
+              "content": "If applicable, who is the authorised representative or importer?",
+              "type": "paragraph",
+              "responses": [],
+              "info": "Example: Importer BV\nReference: Annex II, 1 CRA"
+            },
+            {
+              "title": "Product Name",
+              "content": "What is the product name?",
+              "type": "paragraph",
+              "responses": [],
+              "info": "Example: SmartSensor S2\nReference: Annex II, 3 CRA"
+            },
+            {
+              "title": "Product Type",
+              "content": "What is the product type?",
+              "type": "paragraph",
+              "responses": [],
+              "info": "Example: Smart Sensor\nReference: Annex II, 3 CRA"
+            },
+            {
+              "title": "Additional Identification Info",
+              "content": "Is there any additional information enabling unique identification of the PDE?",
+              "type": "mchoices",
+              "responses": [
+                {
+                  "title": "Yes",
+                  "type": "choice"
+                },
+                {
+                  "title": "No",
+                  "type": "choice"
+                },
+                {
+                  "title": "In Progress",
+                  "description": "Work is underway but not yet completed.",
+                  "type": "choice"
+                }
+              ],
+              "info": "Example: Released in 2025\nReference: Annex II, 3 CRA"
+            },
+            {
+              "title": "Unique Identifier of the PDE",
+              "content": "What is the unique identifier of the PDE?",
+              "type": "paragraph",
+              "responses": [],
+              "info": "Example: SS2-EU-2025-001\nReference: Annex II, 3 CRA"
+            },
+            {
+              "title": "Location of Identifiers",
+              "content": "Where can the user find these unique identifiers on the physical product?",
+              "type": "paragraph",
+              "responses": [],
+              "info": "Example: The serial number is located on a label on the back of the device\nReference: Article 13 (16) CRA"
+            },
+            {
+              "title": "Physical Marking on Each Unit",
+              "content": "Which physical marking will you apply to each individual PDE unit to make it uniquely identifiable?",
+              "type": "paragraph",
+              "responses": [],
+              "info": "Example: Serial number, QR code, barcode\nReference: Annex II, 3 CRA"
+            },
+            {
+              "title": "Single Point of Contact (SPOC)",
+              "content": "What is your single point of contact?",
+              "type": "paragraph",
+              "responses": [],
+              "info": "Example: Report vulnerabilities to security@smarthometech.eu. CVD policy: www.smarthometech.be/security\nReference: Annex II, 2 CRA"
+            },
+            {
+              "title": "Primary Functions & Features",
+              "content": "What are the primary functions, features of the PDE?",
+              "type": "paragraph",
+              "responses": [],
+              "info": "Example: SmartSensor S2 measures temperature and humidity transmitting data via Wi-Fi to the manufacturer’s cloud\nReference: Annex II, 4 CRA"
+            },
+            {
+              "title": "Security-Relevant Features",
+              "content": "What are security-relevant features?",
+              "type": "paragraph",
+              "responses": [],
+              "info": "Example: Encrypted communications (TLS1.3), device authentication, automatic firmware upgrades\nReference: Annex II, 4 CRA"
+            },
+            {
+              "title": "Intended Applications of the PDE",
+              "content": "What are the intended applications of the PDE?",
+              "type": "paragraph",
+              "responses": [],
+              "info": "Example: Detect changes in climatological environment at home.\nExample: Available in the user manual and quick start guide.\nReference: Annex II, 4 CRA"
+            },
+            {
+              "title": "Security Environment Provided",
+              "content": "What is the security environment you provide in which this PDE operates?",
+              "type": "paragraph",
+              "responses": [],
+              "info": "Reference: Annex II, 4 CRA"
+            },
+            {
+              "title": "Target Environment",
+              "content": "What is the target environment for this PDE?",
+              "type": "paragraph",
+              "responses": [],
+              "info": "Example: Home environment only.\nReference: Annex II, 4 CRA"
+            },
+            {
+              "title": "Target Users",
+              "content": "Who are target users of this PDE?",
+              "type": "paragraph",
+              "responses": [],
+              "info": "Example: Consumer device / professional use.\nReference: Annex II, 4 CRA"
+            },
+            {
+              "title": "Foreseeable Circumstances Leading to Cybersecurity Risks",
+              "content": "What are known or foreseeable circumstances which may lead to significant cybersecurity risks?",
+              "type": "paragraph",
+              "responses": [],
+              "info": "Example: Using the product without changing the default password may expose it to unauthorised access.\nReference: Annex II, 5 CRA"
+            },
+            {
+              "title": "DoC Internet Address",
+              "content": "What is the internet address at which the EU declaration of conformity can be accessed? (Where applicable)",
+              "type": "paragraph",
+              "responses": [],
+              "info": "Example: www.smarthometech.eu/DoC/SS2\nReference: Annex II, 6 CRA"
+            },
+            {
+              "title": "Technical Support Offered",
+              "content": "What type of technical support is offered by the manufacturer?",
+              "type": "paragraph",
+              "responses": [],
+              "info": "Example: Security updates, Service Desk Delivery (24/7)\nReference: Annex II, 7 CRA"
+            },
+            {
+              "title": "End Date of Support Period",
+              "content": "What is the end date of the support period?",
+              "type": "paragraph",
+              "responses": [],
+              "info": "Example: Security updates provided automatically until 31 Dec 2030 via the SmartHome app.\nReference: Annex II, 7 CRA"
+            },
+            {
+              "title": "Location of Detailed Security Instructions",
+              "content": "Where can users find detailed security instructions?",
+              "type": "paragraph",
+              "responses": [],
+              "info": "Example: Provided with the PDE, and available online on www.smarthometech.be/DetailedInstructions/SS2\nReference: Annex II, 8 CRA"
+            },
+            {
+              "title": "Initial Setup Security Measures",
+              "content": "What measures must users take during the initial setup to ensure the product is used securely?",
+              "type": "paragraph",
+              "responses": [],
+              "info": "Example: Change default password; connect only to trusted Wi-Fi networks.\nReference: Annex II, 8(a) CRA"
+            },
+            {
+              "title": "Security Configurations / Default Settings",
+              "content": "What security configurations or default settings are applied by the manufacturer at first use?",
+              "type": "paragraph",
+              "responses": [],
+              "info": "Example: Automatic updates enabled; firewall on by default.\nReference: Derived from Annex II, 8(a) CRA"
+            },
+            {
+              "title": "User Actions Needed for Lifetime Security",
+              "content": "What user actions are needed over the product’s lifetime to keep it secure?",
+              "type": "paragraph",
+              "responses": [],
+              "info": "Example: Install firmware updates, review access permissions regularly, follow recommended actions shown by the product, it is recommended to allow automatic security updates.\nReference: Annex II, 8(a) CRA"
+            },
+            {
+              "title": "Automatic Installation of Security Updates",
+              "content": "Is automatic installation of security updates enabled by default?",
+              "type": "mchoices",
+              "responses": [
+                {
+                  "title": "Yes",
+                  "type": "choice"
+                },
+                {
+                  "title": "No",
+                  "type": "choice"
+                },
+                {
+                  "title": "In Progress",
+                  "description": "Work is underway but not yet completed.",
+                  "type": "choice"
+                }
+              ],
+              "info": "Example: Yes\nReference: Annex II, 8(c) CRA"
+            },
+            {
+              "title": "Disabling Automatic Security Updates",
+              "content": "How can automatic installation of security updates be turned off?",
+              "type": "paragraph",
+              "responses": [],
+              "info": "Example: Settings > Updates > Advanced Options > Toggle off automatic updates\nReference: Annex II, 8(c) CRA"
+            },
+            {
+              "title": "Changes Affecting Cybersecurity",
+              "content": "What types of changes or modifications (software, hardware, configuration) could affect the product’s cybersecurity?",
+              "type": "paragraph",
+              "responses": [],
+              "info": "Example: Installing third-party apps, sideloading apps, replacing the default operating system\nReference: Annex II, 8(b) CRA"
+            },
+            {
+              "title": "Notification of Security-Relevant Changes",
+              "content": "How are users or integrators informed that a change could affect data or system security?",
+              "type": "paragraph",
+              "responses": [],
+              "info": "Example: Release notes, warning prompts before updates\nReference: Annex II, 8(f) CRA"
+            },
+            {
+              "title": "Checking Security Status After Changes",
+              "content": "How can users check the security status of the product after a change?",
+              "type": "paragraph",
+              "responses": [],
+              "info": "Example: Version info in settings; security dashboard at www.smarthometech.be/security\nReference: Annex II, 8(f) CRA"
+            },
+            {
+              "title": "Installing Security-Relevant Updates",
+              "content": "How can users install security-relevant updates?",
+              "type": "paragraph",
+              "responses": [],
+              "info": "Example: Automatic over-the-air (OTA) updates; manual download option\nReference: Annex II, 8(c) CRA"
+            },
+            {
+              "title": "Verifying Successful Update Installation",
+              "content": "What steps must users follow to confirm successful installation of security updates?",
+              "type": "paragraph",
+              "responses": [],
+              "info": "Example: Check version number after installation in settings\nReference: Annex II, 8(c) CRA"
+            },
+            {
+              "title": "Secure Decommissioning or Disposal",
+              "content": "How can users securely decommission or dispose of a product?",
+              "type": "paragraph",
+              "responses": [],
+              "info": "Example: Perform a factory reset (Settings > System > Recovery > Reset to factory settings)\nReference: Annex II, 8(d) CRA"
+            },
+            {
+              "title": "Secure Data Deletion Before Disposal",
+              "content": "How can users delete their data before disposal?",
+              "type": "paragraph",
+              "responses": [],
+              "info": "Example: Use a companion app for data wipe\nReference: Annex II, 8(d) CRA"
+            },
+            {
+              "title": "Information for Integrators",
+              "content": "What information do integrators need to ensure continued cybersecurity?",
+              "type": "paragraph",
+              "responses": [],
+              "info": "Example: API authentication method, patch policy\nReference: Annex II, 8(f) CRA"
+            },
+            {
+              "title": "Documentation for Integrators",
+              "content": "What documentation do you provide to integrators?",
+              "type": "paragraph",
+              "responses": [],
+              "info": "Example: Integration manual\nReference: Annex II, 8(f) CRA"
+            },
+            {
+              "title": "Security Implications for Integration",
+              "content": "What are the security implications (if any) specific to integrating the PDE into another system?",
+              "type": "paragraph",
+              "responses": [],
+              "info": "Example: Integrated Smart Sensor will rely on network encryption and authentication settings\nReference: Annex II, 8(f) CRA; Deliverable 2.5"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
