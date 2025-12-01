@@ -4,16 +4,28 @@ export const QUESTION_SETS = [
         name: "Deliverable Questions",
         file: "./questions/machine-readable/deliverable_questions.json",
 		description: `
-		To ensure conformity make sure to understand and cover the requirements listed in all of the sections. 
-		Before marking any question as "Done" using the tick box, verify that **the underlying CRA requirement is fully satisfied and evidenced** 
-		within your organisation (documentation, processes, or design artefacts). 
+		Before you begin, please read this carefully:
+    To ensure conformity with the CRA, review and understand all requirements covered by the sections in this checklist.  
+    Each question corresponds to a **specific legal requirement**. Before marking any item as **Done**, confirm that the requirement is:
 
-		You can answer with "Done", "In Progress" if the requirement is in progress to be satisfied or "Not Done". 
+    - fully implemented within your organisation,  
+    - supported by verifiable evidence (documentation, processes, technical measures, or design artefacts), and  
+    - consistently applied across all relevant products and workflows.
 
-		You can export your answers along with the questions, using the export button in the progress bar.
+    You may mark each question as:
 
-		Regarding the Technical Documentation section and the Information and Instructions to the User section: 
-			- The documentation and instructions that you will create, should contain all the requirements mentioned below those sections
+    - **Done** – the requirement is fully satisfied and evidence is available.  
+    - **In Progress** – the requirement is being implemented but is not yet fully satisfied.  
+    - **Not Done** – the requirement is not implemented or lacks evidence.
+
+    Notes can be added to track where each requirement is documented or how it is being fulfilled.
+
+    You can export the entire checklist—including answers and notes—using the button in the progress bar.
+
+    **Regarding the Technical Documentation (Annex VI) and Information/Instructions to the User (Annex II):**  
+    All required elements listed under these sections must be included in your final documentation and user-facing materials. Use these sections as a completeness checklist.
+    Be sure to tick them as done once you include them.
+
 		`
     },
   //  {
