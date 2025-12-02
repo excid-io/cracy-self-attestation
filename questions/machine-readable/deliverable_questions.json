@@ -263,20 +263,44 @@
                       "title": "In Progress",
                       "description": "Work is underway but not yet completed.",
                       "type": "choice"
+                    },
+                    {
+                      "title": "Not Applicable",
+                      "type": "choice"
                     }
                   ],
-                  "info": "Example: Firmware v1.1, sold until July 2027.\nReference: Annex VII (1)(b)"
+                  "info": "Example: Firmware v1.1, sold until July 2027.\nReference: Annex VII (1)(b)",
+                  "allow_na": true
                 },
                 {
                   "title": "Version Identification in the Field",
-                  "content": "How can each version of the product be identified in the field?",
-                  "type": "paragraph",
-                  "responses": [],
-                  "info": "Example: Version shown in device interface; model number on label.\nReference: Annex VII (1)(b)"
+                  "content": "Does the “general description” of the technical documentation contain information about how can each version of the product be identified in the field?",
+                  "type": "mchoices",
+                  "responses": [
+                    {
+                      "title": "Yes",
+                      "type": "choice"
+                    },
+                    {
+                      "title": "No",
+                      "type": "choice"
+                    },
+                    {
+                      "title": "In Progress",
+                      "description": "Work is underway but not yet completed.",
+                      "type": "choice"
+                    },
+                    {
+                      "title": "Not Applicable",
+                      "type": "choice"
+                    }
+                  ],
+                  "info": "Example: Version shown in device interface; model number on label.\nReference: Annex VII (1)(b)",
+                  "allow_na": true
                 },
                 {
                   "title": "User Information & Instructions",
-                  "content": "Is the user information and instructions provided?",
+                  "content": "Does the “general description” of the technical documentation contain user information and instructions?",
                   "type": "mchoices",
                   "responses": [
                     {
@@ -294,139 +318,567 @@
                     }
                   ],
                   "info": "Example: User manual.\nReference: Annex VII (1)(d)"
-                },
+                }
+              ]
+            },
+            {
+              "title": "Description of the Design, Development and Production",
+              "description": "The Technical documentation of a product with digital elements shall contain a description of the design, development and production of the product with digital elements and vulnerability handling processes, including:\n- necessary information on the design and development of the product with digital elements, including, where applicable, drawings and schemes and a description of the system architecture explaining how software components build on or feed into each other and integrate into the overall processing;\n- necessary information and specifications of the vulnerability handling processes put in place by the manufacturer, including the software bill of materials, the coordinated vulnerability disclosure policy, evidence of the provision of a contact address for the reporting of the vulnerabilities and a description of the technical solutions chosen for the secure distribution of updates;",
+              "questions": [
                 {
                   "title": "Design, Development & Production for Security",
-                  "content": "How was the product designed, developed, and produced to include security?",
-                  "type": "paragraph",
-                  "responses": [],
+                  "content": "Does the “description of the design, development and production” contain how was the product designed, developed, and produced to include security?",
+                  "type": "mchoices",
+                  "responses": [
+                    {
+                      "title": "Yes",
+                      "type": "choice"
+                    },
+                    {
+                      "title": "No",
+                      "type": "choice"
+                    },
+                    {
+                      "title": "In Progress",
+                      "description": "Work is underway but not yet completed.",
+                      "type": "choice"
+                    }
+                  ],
                   "info": "Example: Description of secure design approach, architecture overview.\nReference: Annex VII (2)(a)"
                 },
                 {
                   "title": "Vulnerability Handling Process",
-                  "content": "How do you handle vulnerabilities (intake, triage, remediation)?",
-                  "type": "paragraph",
-                  "responses": [],
+                  "content": "Does the “description of the design, development and production” contain how do you handle vulnerabilities (intake, triage, remediation)?",
+                  "type": "mchoices",
+                  "responses": [
+                    {
+                      "title": "Yes",
+                      "type": "choice"
+                    },
+                    {
+                      "title": "No",
+                      "type": "choice"
+                    },
+                    {
+                      "title": "In Progress",
+                      "description": "Work is underway but not yet completed.",
+                      "type": "choice"
+                    }
+                  ],
                   "info": "Example: Coordinated vulnerability disclosure policy and process flow.\nReference: Annex VII (2)(b)"
                 },
                 {
                   "title": "Component & Data Flow Documentation",
-                  "content": "How are components and data flows documented?",
-                  "type": "paragraph",
-                  "responses": [],
-                  "info": "Example: SBOM, HBOM.\nReference: Annex VII (2)(b)"
+                  "content": "Does the “description of the design, development and production” contain how components and data flows are documented?",
+                  "type": "mchoices",
+                  "responses": [
+                    {
+                      "title": "Yes",
+                      "type": "choice"
+                    },
+                    {
+                      "title": "No",
+                      "type": "choice"
+                    },
+                    {
+                      "title": "In Progress",
+                      "description": "Work is underway but not yet completed.",
+                      "type": "choice"
+                    }
+                  ],
+                  "info": "Example: SBOM in the case of software, HBOM in the case of hardware.\nReference: Annex VII (2)(b)"
                 },
                 {
                   "title": "Security Update Process",
-                  "content": "How are security updates tested, signed, and distributed?",
-                  "type": "paragraph",
-                  "responses": [],
+                  "content": "Does the “description of the design, development and production” contain how security updates are tested, signed, and distributed??",
+                  "type": "mchoices",
+                  "responses": [
+                    {
+                      "title": "Yes",
+                      "type": "choice"
+                    },
+                    {
+                      "title": "No",
+                      "type": "choice"
+                    },
+                    {
+                      "title": "In Progress",
+                      "description": "Work is underway but not yet completed.",
+                      "type": "choice"
+                    }
+                  ],
                   "info": "Example: Signed updates verified through digital signature checks.\nReference: Annex VII (2)(b)"
                 },
                 {
                   "title": "Secure Manufacturing & Provisioning Steps",
-                  "content": "What secure manufacturing and provisioning steps are applied?",
-                  "type": "paragraph",
-                  "responses": [],
+                  "content": "Does the “description of the design, development and production” contain what secure manufacturing and provisioning steps are applied?",
+                  "type": "mchoices",
+                  "responses": [
+                    {
+                      "title": "Yes",
+                      "type": "choice"
+                    },
+                    {
+                      "title": "No",
+                      "type": "choice"
+                    },
+                    {
+                      "title": "In Progress",
+                      "description": "Work is underway but not yet completed.",
+                      "type": "choice"
+                    }
+                  ],
                   "info": "Example: Secure firmware installation, identity checks, integrity verification.\nReference: Annex VII (2)(c)"
                 },
                 {
                   "title": "Monitoring & Validation Activities",
-                  "content": "What monitoring and validation activities are in place?",
-                  "type": "paragraph",
-                  "responses": [],
+                  "content": "Does the “description of the design, development and production” contain what monitoring and validation activities are in place?",
+                  "type": "mchoices",
+                  "responses": [
+                    {
+                      "title": "Yes",
+                      "type": "choice"
+                    },
+                    {
+                      "title": "No",
+                      "type": "choice"
+                    },
+                    {
+                      "title": "In Progress",
+                      "description": "Work is underway but not yet completed.",
+                      "type": "choice"
+                    }
+                  ],
                   "info": "Example: Telemetry to detect update failures; incident tracking dashboard.\nReference: Annex VII (2)(c)"
-                },
+                }
+              ]
+            },
+            {
+              "title": "Assessment of the Cybersecurity Risks",
+              "description": "The technical documentation shall include an assessment of the cybersecurity risks against which the product with digital elements is designed, developed, produced, delivered, and maintained. The risk assessment should be based upon the reasonable foreseeable use (will add info section on the app) and the intended purpose (will add info section on the app) of the product. This assessment shall describe:\n- the operational environment, conditions of use, and assets requiring protection;\n- the cybersecurity risks identified throughout the product’s lifecycle;\n- how the essential cybersecurity requirements set out in Part I of Annex I (will add info section the app) apply to the product; and\n- how those requirements are implemented as informed by the cybersecurity risk assessment.\nIt shall also indicate how you apply Part I, point (1) of Annex I (will add info section on the app) and the vulnerability handling requirements set out in Part II of Annex I (will add info section on the app).",
+              "questions": [
                 {
                   "title": "Risk Assessment Method or Standard",
-                  "content": "Which method or standard did you use for your risk assessment?",
-                  "type": "paragraph",
-                  "responses": [],
+                  "content": "Does the “assessment of the cybersecurity risks” contain which method or standard was used for the risk assessment?",
+                  "type": "mchoices",
+                  "responses": [
+                    {
+                      "title": "Yes",
+                      "type": "choice"
+                    },
+                    {
+                      "title": "No",
+                      "type": "choice"
+                    },
+                    {
+                      "title": "In Progress",
+                      "description": "Work is underway but not yet completed.",
+                      "type": "choice"
+                    }
+                  ],
                   "info": "Example: ISO 27005, ENISA, or internal threat modelling.\nReference: Annex VII (3)"
                 },
                 {
                   "title": "Risks, Threats, Impacts & Treatments",
-                  "content": "What are the main risks, threats, impacts, and treatments identified?",
-                  "type": "paragraph",
-                  "responses": [],
+                  "content": "Does the “assessment of the cybersecurity risks” contain the main risks, threats, impacts, and treatments identified?",
+                  "type": "mchoices",
+                  "responses": [
+                    {
+                      "title": "Yes",
+                      "type": "choice"
+                    },
+                    {
+                      "title": "No",
+                      "type": "choice"
+                    },
+                    {
+                      "title": "In Progress",
+                      "description": "Work is underway but not yet completed.",
+                      "type": "choice"
+                    }
+                  ],
                   "info": "Example: Data breach from unsecured Wi-Fi Access Point; Impact: high; Mitigation: encryption.\nReference: Annex VII (3)"
                 },
                 {
                   "title": "Link Between Risks, Controls & Test Results",
-                  "content": "How are risks linked to design controls and test results?",
-                  "type": "paragraph",
-                  "responses": [],
+                  "content": "Does the “assessment of the cybersecurity risks” contain how design risks are linked to design controls and test results?",
+                  "type": "mchoices",
+                  "responses": [
+                    {
+                      "title": "Yes",
+                      "type": "choice"
+                    },
+                    {
+                      "title": "No",
+                      "type": "choice"
+                    },
+                    {
+                      "title": "In Progress",
+                      "description": "Work is underway but not yet completed.",
+                      "type": "choice"
+                    }
+                  ],
                   "info": "Example: Risk-control-test matrix; mapping table.\nReference: Annex VII (3)"
                 },
                 {
                   "title": "Residual Risks & Acceptance Rationale",
-                  "content": "What residual risks remain and why are they acceptable?",
-                  "type": "paragraph",
-                  "responses": [],
+                  "content": "Does the “assessment of the cybersecurity risks” contain which residual risks remain and why they are acceptable?",
+                  "type": "mchoices",
+                  "responses": [
+                    {
+                      "title": "Yes",
+                      "type": "choice"
+                    },
+                    {
+                      "title": "No",
+                      "type": "choice"
+                    },
+                    {
+                      "title": "In Progress",
+                      "description": "Work is underway but not yet completed.",
+                      "type": "choice"
+                    }
+                  ],
                   "info": "Example: Denial-of-service risk accepted due to limited exposure.\nReference: Annex VII (3)"
                 },
                 {
                   "title": "Applicable Essential Requirements (Annex I)",
-                  "content": "What essential requirements found in Annex I ( [check questions](set:essential-cybersecurity-requirements-annex-1) ) CRA apply to the product?",
-                  "type": "paragraph",
-                  "responses": [],
+                  "content": "Does the “assessment of the cybersecurity risks” contain which essential cybersecurity requirements from Annex I? ( [check questions](set:essential-cybersecurity-requirements-annex-1) ) CRA apply to the product?",
+                  "type": "mchoices",
+                  "responses": [
+                    {
+                      "title": "Yes",
+                      "type": "choice"
+                    },
+                    {
+                      "title": "No",
+                      "type": "choice"
+                    },
+                    {
+                      "title": "In Progress",
+                      "description": "Work is underway but not yet completed.",
+                      "type": "choice"
+                    }
+                  ],
                   "info": "Example: -- does not apply due to no wireless connection.\nReference: Annex VII (3)"
-                },
+                }
+              ]
+            },
+            {
+              "title": "Support Period",
+              "description": "The technical documentation shall include the information that the manufacturer used to determine the support period for the product with digital elements. This information must reflect how long the product is expected to be in use and the factors the manufacturer considered when deciding an appropriate support period. This section should describe:\n- the expected time the product will remain in normal use;\n- the intended purpose and reasonably foreseeable use of the product",
+              "questions": [
                 {
                   "title": "Support Period Determination",
-                  "content": "How was the product’s support period determined?",
-                  "type": "paragraph",
-                  "responses": [],
+                  "content": "Does the “information for the support period” contain how the product’s support period was determined?",
+                  "type": "mchoices",
+                  "responses": [
+                    {
+                      "title": "Yes",
+                      "type": "choice"
+                    },
+                    {
+                      "title": "No",
+                      "type": "choice"
+                    },
+                    {
+                      "title": "In Progress",
+                      "description": "Work is underway but not yet completed.",
+                      "type": "choice"
+                    }
+                  ],
                   "info": "Example: Based on OS vendor support roadmap and internal policy.\nReference: Annex VII (4)"
                 },
                 {
                   "title": "Declared Support Period",
-                  "content": "What is the declared support period (dates or duration)?",
-                  "type": "paragraph",
-                  "responses": [],
+                  "content": "Does the “information for the support period” contain the declared support period (dates or duration)?",
+                  "type": "mchoices",
+                  "responses": [
+                    {
+                      "title": "Yes",
+                      "type": "choice"
+                    },
+                    {
+                      "title": "No",
+                      "type": "choice"
+                    },
+                    {
+                      "title": "In Progress",
+                      "description": "Work is underway but not yet completed.",
+                      "type": "choice"
+                    }
+                  ],
                   "info": "Example: Security updates provided until 31 December 2030.\nReference: Annex VII (4)"
                 },
                 {
                   "title": "Support Period Communication",
-                  "content": "Where is the support period communicated to users?",
-                  "type": "paragraph",
-                  "responses": [],
+                  "content": "Does the “information for the support period” contain where the support period is communicated to users??",
+                  "type": "mchoices",
+                  "responses": [
+                    {
+                      "title": "Yes",
+                      "type": "choice"
+                    },
+                    {
+                      "title": "No",
+                      "type": "choice"
+                    },
+                    {
+                      "title": "In Progress",
+                      "description": "Work is underway but not yet completed.",
+                      "type": "choice"
+                    }
+                  ],
                   "info": "Example: On website, packaging, or in product interface.\nReference: Annex VII (4)"
                 },
                 {
                   "title": "Support Period ↔ Risk Assessment Link",
-                  "content": "How does the support period link to the risk assessment and update plan?",
-                  "type": "paragraph",
-                  "responses": [],
+                  "content": "Does the “information for the support period” contain how the support period links to the risk assessment and update plan??",
+                  "type": "mchoices",
+                  "responses": [
+                    {
+                      "title": "Yes",
+                      "type": "choice"
+                    },
+                    {
+                      "title": "No",
+                      "type": "choice"
+                    },
+                    {
+                      "title": "In Progress",
+                      "description": "Work is underway but not yet completed.",
+                      "type": "choice"
+                    }
+                  ],
                   "info": "Example: Risk analysis shows update relevance through lifecycle.\nReference: Annex VII (4)"
-                },
+                }
+              ]
+            },
+            {
+              "title": "Harmonised Standards",
+              "description": "The technical documentation shall include a list of the harmonised standards, common specifications, or European cybersecurity certification schemes that you applied to meet the essential cybersecurity requirements. This section should describe:\n- which harmonised standards were used (full or partial application);\n- which parts of a standard or specification were applied, if only certain sections were used;\n- which common specifications or European cybersecurity certification schemes were followed;\n- how these standards or solutions support compliance with Parts I and II of Annex I ( [check questions](set:essential-cybersecurity-requirements-annex-1) )(will add info section on the app).\nIf any standard or specification was only applied partially, the documentation must clearly identify which parts were used and how they contribute to meeting the essential cybersecurity requirements.",
+              "questions": [
                 {
                   "title": "Standards or Specifications Demonstrating Conformity",
-                  "content": "What standards or specifications demonstrate conformity?",
-                  "type": "paragraph",
-                  "responses": [],
+                  "content": "Does the “list of applied standards and specifications” contain which standards or specifications demonstrate conformity?",
+                  "type": "mchoices",
+                  "responses": [
+                    {
+                      "title": "Yes",
+                      "type": "choice"
+                    },
+                    {
+                      "title": "No",
+                      "type": "choice"
+                    },
+                    {
+                      "title": "In Progress",
+                      "description": "Work is underway but not yet completed.",
+                      "type": "choice"
+                    }
+                  ],
                   "info": "Example: ISO/IEC 27001.\nReference: Annex VII (5)"
                 },
                 {
                   "title": "Version Numbers & Publication Dates of Standards",
-                  "content": "What are the version numbers and publication dates of those standards?",
-                  "type": "paragraph",
-                  "responses": [],
+                  "content": "Does the “list of applied standards and specifications” contain the version numbers and publication dates of those standards?",
+                  "type": "mchoices",
+                  "responses": [
+                    {
+                      "title": "Yes",
+                      "type": "choice"
+                    },
+                    {
+                      "title": "No",
+                      "type": "choice"
+                    },
+                    {
+                      "title": "In Progress",
+                      "description": "Work is underway but not yet completed.",
+                      "type": "choice"
+                    }
+                  ],
                   "info": "Example: ISO/IEC 27001:2022.\nReference: Annex VII (5)"
                 },
                 {
                   "title": "Certificates or Attestations Supporting Conformity",
-                  "content": "What certificates or attestations support conformity?",
-                  "type": "paragraph",
-                  "responses": [],
+                  "content": "Does the “list of applied standards and specifications” contain which certificates or attestations support conformity?",
+                  "type": "mchoices",
+                  "responses": [
+                    {
+                      "title": "Yes",
+                      "type": "choice"
+                    },
+                    {
+                      "title": "No",
+                      "type": "choice"
+                    },
+                    {
+                      "title": "In Progress",
+                      "description": "Work is underway but not yet completed.",
+                      "type": "choice"
+                    }
+                  ],
                   "info": "Example: CE certificate, cybersecurity scheme statement.\nReference: Annex VII (5)"
                 },
                 {
                   "title": "Standards & Controls Cross-Reference",
-                  "content": "How do the listed standards and controls  link to Annex I ([check questions](set:essential-cybersecurity-requirements-annex-1)) requirements?",
-                  "type": "paragraph",
-                  "responses": [],
+                  "content": "Does the “list of applied standards and specifications” contain how the listed standards and controls link to Annex I requirements([check questions](set:essential-cybersecurity-requirements-annex-1))?",
+                  "type": "mchoices",
+                  "responses": [
+                    {
+                      "title": "Yes",
+                      "type": "choice"
+                    },
+                    {
+                      "title": "No",
+                      "type": "choice"
+                    },
+                    {
+                      "title": "In Progress",
+                      "description": "Work is underway but not yet completed.",
+                      "type": "choice"
+                    }
+                  ],
                   "info": "Example: Cross-reference table between requirements and controls.\nReference: Annex VII (5)"
+                }
+              ]
+            },
+            {
+              "title": "Reports of The Tests",
+              "description": "The technical documentation shall include the reports of the tests carried out to verify the conformity of the product with digital elements and the vulnerability handling processes with the essential cybersecurity requirements. These reports must show that the product and its associated processes meet the requirements set out in Parts I and II of Annex I ([check questions](set:essential-cybersecurity-requirements-annex-1)). This section should describe:\n- the tests performed on the product along with the methods, tools, and procedures used to verify conformity;\n- the tests performed on the vulnerability handling processes;\n- the evidence above should demonstrate that the essential cybersecurity requirements have been met from Annex I Parts I and II;  ([check questions](set:essential-cybersecurity-requirements-annex-1))",
+              "questions": [
+                {
+                  "title": "Tests Performed for Conformity",
+                  "content": "Does the “test reports for conformity” contain what tests were performed to verify compliance with Annex I?",
+                  "type": "mchoices",
+                  "responses": [
+                    {
+                      "title": "Yes",
+                      "type": "choice"
+                    },
+                    {
+                      "title": "No",
+                      "type": "choice"
+                    },
+                    {
+                      "title": "In Progress",
+                      "description": "Work is underway but not yet completed.",
+                      "type": "choice"
+                    }
+                  ],
+                  "info": "Example: penetration testing, code review, vulnerability scan.\nAnnex VII(6)"
+                },
+                {
+                  "title": "Test Execution Details",
+                  "content": "Does the “test reports for conformity” contain who performed the tests, when they were performed, and on which version?",
+                  "type": "mchoices",
+                  "responses": [
+                    {
+                      "title": "Yes",
+                      "type": "choice"
+                    },
+                    {
+                      "title": "No",
+                      "type": "choice"
+                    },
+                    {
+                      "title": "In Progress",
+                      "description": "Work is underway but not yet completed.",
+                      "type": "choice"
+                    }
+                  ],
+                  "info": "Example: CyberLab EU, March 2025, firmware v2.1.\nAnnex VII(6)"
+                },
+                {
+                  "title": "Test Configurations, Results & Outcomes",
+                  "content": "Does the “test reports for conformity” contain the test configurations, results, and outcomes?",
+                  "type": "mchoices",
+                  "responses": [
+                    {
+                      "title": "Yes",
+                      "type": "choice"
+                    },
+                    {
+                      "title": "No",
+                      "type": "choice"
+                    },
+                    {
+                      "title": "In Progress",
+                      "description": "Work is underway but not yet completed.",
+                      "type": "choice"
+                    }
+                  ],
+                  "info": "Example: pass/fail summary, test case references, reproducibility details.\nAnnex VII(6)"
+                },
+                {
+                  "title": "Remediation Actions & Residual Risks",
+                  "content": "Does the “test reports for conformity” contain what remediation actions were taken and what residual risks remain?",
+                  "type": "mchoices",
+                  "responses": [
+                    {
+                      "title": "Yes",
+                      "type": "choice"
+                    },
+                    {
+                      "title": "No",
+                      "type": "choice"
+                    },
+                    {
+                      "title": "In Progress",
+                      "description": "Work is underway but not yet completed.",
+                      "type": "choice"
+                    }
+                  ],
+                  "info": "Example: patch v2.1.1 mitigated buffer overflow issue.\nAnnex VII(6)"
+                },
+                {
+                  "title": "Version Control & Traceability of Test Reports",
+                  "content": "Does the “test reports for conformity” contain how the test reports are version-controlled and linked to product builds?",
+                  "type": "mchoices",
+                  "responses": [
+                    {
+                      "title": "Yes",
+                      "type": "choice"
+                    },
+                    {
+                      "title": "No",
+                      "type": "choice"
+                    },
+                    {
+                      "title": "In Progress",
+                      "description": "Work is underway but not yet completed.",
+                      "type": "choice"
+                    }
+                  ],
+                  "info": "Example: report versioned per release; signed approval by Quality Assurance lead.\nAnnex VII(6)"
+                }
+              ]
+            },
+            {
+              "title": "EU Declaration of Conformity",
+              "description": "The technical documentation shall include a copy of the EU Declaration of Conformity for the product with digital elements. This document confirms that the product complies with the relevant provisions of the regulation and any other applicable Union legislation. This section should include:\n- the complete and signed EU Declaration of Conformity;\nThe declaration must be the final version provided to users or authorities and must match the product and version documented elsewhere in the technical file.",
+              "questions": [
+                {
+                  "title": "Completed & Signed EU Declaration of Conformity",
+                  "content": "Does the “EU declaration of conformity” contain a completed and signed EU Declaration of Conformity?",
+                  "type": "mchoices",
+                  "responses": [
+                    {
+                      "title": "Yes",
+                      "type": "choice"
+                    },
+                    {
+                      "title": "No",
+                      "type": "choice"
+                    },
+                    {
+                      "title": "In Progress",
+                      "description": "Work is underway but not yet completed.",
+                      "type": "choice"
+                    }
+                  ],
+                  "info": "Point to the question set about the EU Declaration.\nAnnex VII(7)"
                 }
               ]
             }
