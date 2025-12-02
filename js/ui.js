@@ -10,16 +10,14 @@ function renderSectionDescriptionBlock(container, text)
 
     const body = document.createElement("div");
     body.className = "section-description-body";
-    body.innerHTML = text
-        .split(/\r?\n/)
-        .map(line => line.trim())
-        .filter(line => line.length > 0)
-        .map(line => `<p>${renderMarkdownInline(line)}</p>`)
-        .join("");
+
+    // NEW: full-ish markdown support for subsection descriptions
+    body.innerHTML = renderMarkdownBlocks(text);
 
     wrapper.appendChild(body);
     container.appendChild(wrapper);
 }
+
 
 export function renderSetSelector(selectEl, sets, onChange)
 {
@@ -74,6 +72,85 @@ function renderMarkdownInline(text)
     html = html.replace(/\[(.+?)\]\((#[^)]+)\)/g, '<a href="$2">$1</a>');
 
     return html;
+}
+
+function renderMarkdownBlocks(text)
+{
+    if (!text) return "";
+
+    const lines = text.split(/\r?\n/);
+    const out = [];
+    let inList = false;
+
+    function closeList()
+    {
+        if (inList)
+        {
+            out.push("</ul>");
+            inList = false;
+        }
+    }
+
+    for (const raw of lines)
+    {
+        const line = raw.replace(/\s+$/, ""); // trim right
+        const trimmed = line.trim();
+
+        // Blank line → separates blocks
+        if (!trimmed)
+        {
+            closeList();
+            continue;
+        }
+
+        // Headings: #, ##, ### ...
+        const headingMatch = trimmed.match(/^(#{1,6})\s+(.*)$/);
+        if (headingMatch)
+        {
+            closeList();
+            const level = headingMatch[1].length;
+            const content = headingMatch[2].trim();
+            out.push(
+                `<h${level}>${renderMarkdownInline(content)}</h${level}>`
+            );
+            continue;
+        }
+
+        // Blockquote: > text
+        const quoteMatch = trimmed.match(/^>\s+(.*)$/);
+        if (quoteMatch)
+        {
+            closeList();
+            const content = quoteMatch[1].trim();
+            out.push(
+                `<blockquote>${renderMarkdownInline(content)}</blockquote>`
+            );
+            continue;
+        }
+
+        // Unordered list item: - item or * item
+        const listMatch = trimmed.match(/^[-*]\s+(.*)$/);
+        if (listMatch)
+        {
+            const itemText = listMatch[1].trim();
+            if (!inList)
+            {
+                inList = true;
+                out.push("<ul>");
+            }
+            out.push(`<li>${renderMarkdownInline(itemText)}</li>`);
+            continue;
+        }
+
+        // Fallback: normal paragraph
+        closeList();
+        out.push(`<p>${renderMarkdownInline(trimmed)}</p>`);
+    }
+
+    // Close any open list at EOF
+    closeList();
+
+    return out.join("");
 }
 
 
@@ -146,26 +223,19 @@ export function renderQuestions(params) {
         }
     }
     
-    // NEW: Set-specific description with a header
     if (params.setDescription && params.setDescription.trim().length > 0) 
     {
         const wrapper = document.createElement("div");
         wrapper.className = "set-description";
-
+    
         const header = document.createElement("div");
         header.className = "set-description-header";
         header.textContent = "Description";
-
+    
         const body = document.createElement("div");
         body.className = "set-description-body";
-        body.innerHTML = params.setDescription
-            .trim()
-            .split(/\r?\n/)
-            .map(line => line.trim())
-            .filter(line => line.length > 0)
-            .map(line => `<p>${renderMarkdownInline(line)}</p>`)
-            .join("");
-
+        body.innerHTML = renderMarkdownBlocks(params.setDescription.trim());
+    
         wrapper.appendChild(header);
         wrapper.appendChild(body);
         container.appendChild(wrapper);

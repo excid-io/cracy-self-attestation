@@ -155,7 +155,7 @@
           "subsections": [
             {
               "title": "General Description",
-              "description": "The Technical documentation of a product with digital elements shall contain a general description of the product with digital elements, including:\n1. its intended purpose;\n2. versions of software affecting compliance with essential cybersecurity requirements;\n3. where the product with digital elements is a hardware product, photographs or illustrations showing external features, marking and internal layout;\n4. user information and instructions",
+              "description": "The Technical documentation of a product with digital elements shall contain a general description of the product with digital elements, including:\n- its intended purpose;\n- versions of software affecting compliance with essential cybersecurity requirements;\n- where the product with digital elements is a hardware product, photographs or illustrations showing external features, marking and internal layout;\n- user information and instructions",
               "questions": [
                 {
                   "title": "Intended Purpose & Intended Users",

@@ -35,10 +35,10 @@
 ## Technical Documentation
 ### General Description 
 put-description: The Technical documentation of a product with digital elements shall contain a general description of the product with digital elements, including:
-put-description: 1. its intended purpose;
-put-description: 2. versions of software affecting compliance with essential cybersecurity requirements;
-put-description: 3. where the product with digital elements is a hardware product, photographs or illustrations showing external features, marking and internal layout;
-put-description: 4. user information and instructions
+put-description: - its intended purpose;
+put-description: - versions of software affecting compliance with essential cybersecurity requirements;
+put-description: - where the product with digital elements is a hardware product, photographs or illustrations showing external features, marking and internal layout;
+put-description: - user information and instructions
 - **Intended Purpose & Intended Users**: Does the “general description” of the technical documentation contain the product’s intended purpose and who are its intended users?. 
     - info: ‘intended purpose’ means the use for which a product with digital elements is intended by the manufacturer, including the specific context and conditions of use, as specified in the information supplied by the manufacturer in the instructions for use, promotional or sales materials and statements, as well as in the technical documentation;
     - info: 

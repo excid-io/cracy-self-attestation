@@ -440,26 +440,44 @@ select:focus {
   padding-bottom: 0.25rem;
 }
 
-.set-description-body p {
-  margin: 0.4rem 0;
+.set-description-body {
   font-size: 0.85rem;
   line-height: 1.45;
   color: #cbd5e1;
 }
 
-.section-description {
-  margin: 0.25rem 0 0.75rem;
-  padding: 0.4rem 0.6rem;
-  border-left: 2px solid rgba(148, 163, 184, 0.5);
-  background: rgba(15, 23, 42, 0.6);
-  border-radius: 0.3rem;
+.set-description-body p {
+  margin: 0.4rem 0;
+}
+
+.set-description-body ul,
+.set-description-body ol {
+  margin: 0.4rem 0 0.4rem 1.2rem;
+  padding-left: 1rem;
+}
+
+.set-description-body li {
+  margin: 0.1rem 0;
+}
+
+.section-description-body {
+  font-size: 0.8rem;
+  line-height: 1.4;
+  color: #cbd5e1;
 }
 
 .section-description-body p {
   margin: 0.2rem 0;
-  font-size: 0.8rem;
-  line-height: 1.4;
-  color: #cbd5e1;
+}
+
+.section-description-body ul,
+.section-description-body ol {
+  margin: 0.2rem 0 0.2rem 1.2rem;
+  padding-left: 1rem;
+}
+
+.section-description-body li {
+  margin: 0.1rem 0;
 }
 
 .status-progress,
