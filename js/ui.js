@@ -1,5 +1,26 @@
 import { saveQuestionState, loadQuestionState } from "./storage.js";
 
+
+function renderSectionDescriptionBlock(container, text)
+{
+    if (!text || !text.trim()) return;
+
+    const wrapper = document.createElement("div");
+    wrapper.className = "section-description";
+
+    const body = document.createElement("div");
+    body.className = "section-description-body";
+    body.innerHTML = text
+        .split(/\r?\n/)
+        .map(line => line.trim())
+        .filter(line => line.length > 0)
+        .map(line => `<p>${renderMarkdownInline(line)}</p>`)
+        .join("");
+
+    wrapper.appendChild(body);
+    container.appendChild(wrapper);
+}
+
 export function renderSetSelector(selectEl, sets, onChange)
 {
     selectEl.innerHTML = "";
@@ -100,18 +121,29 @@ export function renderQuestions(params) {
     const progressFillEl = params.progressFillEl;
     const progressTextEl = params.progressTextEl;
     const topTitle = params.topTitle || null;
+    const sectionDescriptions = params.sectionDescriptions || null;
 
     ensureInfoPopupElements();
 
     container.innerHTML = "";
 
-    //LEVEL 1: TOP TITLE
+    // LEVEL 1: TOP TITLE
     if (topTitle) 
     {
         const topEl = document.createElement("div");
         topEl.className = "section-title top-level-section-title";
         topEl.textContent = topTitle;
         container.appendChild(topEl);
+
+        // Optional: description attached to the top-level section
+        if (sectionDescriptions)
+        {
+            const topDesc = sectionDescriptions[`level1:${topTitle}`];
+            if (topDesc)
+            {
+                renderSectionDescriptionBlock(container, topDesc);
+            }
+        }
     }
     
     // NEW: Set-specific description with a header
@@ -154,9 +186,6 @@ export function renderQuestions(params) {
     let currentLevel3 = null;
 
     questions.forEach((q) => {
-        // Determine levels:
-        // - JSON model: use sectionLevel2/3
-        // - Markdown sets: fall back to "section" as level 2
         const level2 = q.sectionLevel2 !== undefined
             ? q.sectionLevel2
             : (q.section || null);
@@ -164,21 +193,29 @@ export function renderQuestions(params) {
             ? q.sectionLevel3
             : null;
 
-        // LEVEL 2 HEADING (e.g. "EARLY WARNING REPORTING")
+        // LEVEL 2 HEADING
         if (level2 && level2 !== currentLevel2) {
             currentLevel2 = level2;
             currentLevel3 = null;
 
-            // Avoid duplicating the top title if it's the same string
             if (!topTitle || level2 !== topTitle) {
                 const h2 = document.createElement("div");
                 h2.className = "section-title section-title-level2";
                 h2.textContent = level2;
                 container.appendChild(h2);
             }
+
+            // Description for this level-2 section
+            if (sectionDescriptions) {
+                const key = `level2:${level2}`;
+                const desc = sectionDescriptions[key];
+                if (desc) {
+                    renderSectionDescriptionBlock(container, desc);
+                }
+            }
         }
 
-        // LEVEL 3 HEADING (e.g. a ### section inside Part I)
+        // LEVEL 3 HEADING
         if (level3 && level3 !== currentLevel3) {
             currentLevel3 = level3;
 
@@ -186,6 +223,15 @@ export function renderQuestions(params) {
             h3.className = "section-title section-title-level3";
             h3.textContent = level3;
             container.appendChild(h3);
+
+            // Description for this level-3 section (needs parent + child)
+            if (sectionDescriptions && currentLevel2) {
+                const key3 = `level3:${currentLevel2}>${level3}`;
+                const desc3 = sectionDescriptions[key3];
+                if (desc3) {
+                    renderSectionDescriptionBlock(container, desc3);
+                }
+            }
         }
 
         const card = document.createElement("div");
@@ -292,9 +338,7 @@ export function renderQuestions(params) {
 
         content.appendChild(notes);
 
-        //
         // STATUS CONTROLS (Done, In Progress, Not Done)
-        //
         const statusWrapper = document.createElement("div");
         statusWrapper.className = "status-controls";
 
@@ -314,9 +358,19 @@ export function renderQuestions(params) {
         notDoneBtn.className = "status-notdone";
         notDoneBtn.textContent = "Not Done";
 
+        // Not Applicable button (only if allowed)
+        let naBtn = null;
+        if (q.allow_na)
+        {
+            naBtn = document.createElement("button");
+            naBtn.className = "status-na";
+            naBtn.textContent = "Not Applicable";
+        }
+
         statusWrapper.appendChild(checkbox);
         statusWrapper.appendChild(progressBtn);
         statusWrapper.appendChild(notDoneBtn);
+        if (naBtn) statusWrapper.appendChild(naBtn);
 
         //
         // LOAD STORED STATE (status + notes)
@@ -381,6 +435,22 @@ export function renderQuestions(params) {
             updateProgress(container, progressFillEl, progressTextEl);
         });
 
+        if (naBtn)
+        {
+            naBtn.addEventListener("click", () =>
+            {
+                const state =
+                {
+                    status: "na",
+                    notes: notes.value.trim()
+                };
+            
+                saveQuestionState(setId, q.id, state);
+                applyStatus(card, badge, checkbox, "na");
+                updateProgress(container, progressFillEl, progressTextEl);
+            });
+        }
+
         notes.addEventListener("input", () =>
         {
             // Keep current status, just update notes
@@ -411,7 +481,7 @@ export function renderQuestions(params) {
 
 function applyStatus(card, badge, checkbox, status)
 {
-    card.classList.remove("answered", "inprogress", "notdone");
+    card.classList.remove("answered", "inprogress", "notdone", "na");
 
     const dot = badge.querySelector(".badge-dot");
     const label = badge.querySelector("span:nth-child(2)");
@@ -430,6 +500,13 @@ function applyStatus(card, badge, checkbox, status)
         dot.classList.remove("pending");
         label.textContent = "In progress";
     }
+    else if (status === "na")
+    {
+        card.classList.add("answered");
+        card.classList.add("na");
+        dot.classList.remove("pending");
+        label.textContent = "Not applicable";
+    }
     else
     {
         card.classList.add("notdone");
@@ -437,6 +514,8 @@ function applyStatus(card, badge, checkbox, status)
         label.textContent = "Not done";
     }
 }
+
+
 
 export function updateProgress(container, progressFillEl, progressTextEl)
 {

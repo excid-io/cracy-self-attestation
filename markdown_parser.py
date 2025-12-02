@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 """
-Markdown → JSON converter with hierarchy and proper handling of nested bullets:
+Markdown → JSON converter with hierarchy and proper handling of nested bullets.
+
+Features:
 
 - # Heading        → top-level section
 - ## Heading       → subsection within current section
@@ -8,12 +10,14 @@ Markdown → JSON converter with hierarchy and proper handling of nested bullets
 - Top-level bullets (-, *)   → questions in the current scope
 - Indented bullets           → extra lines in the current question's content
                                (NOT new questions)
+- put-description: text      → description line for the current scope
+                               (section / subsection / sub-subsection)
 
 Question title rules:
 - If bullet starts with "**Title**: Question text":
     - question.title   = "Title"
     - question.content = "Question text"
-- Otherwise (Option D):
+- Otherwise:
     - question.title   = "<Scope Title> - Q<index>"
     - question.content = full bullet text (including any nested bullets)
 
@@ -28,6 +32,7 @@ import argparse
 import json
 import re
 from pathlib import Path
+
 
 YES_NO_PREFIXES = (
     "do ", "does ", "have ", "has ", "is ", "are ",
@@ -79,6 +84,18 @@ def parse_markdown(md_text: str):
     collecting_question = False
     question_lines = []           # accumulated lines for the current bullet/question
 
+    def add_description_line(text: str):
+        """
+        Only collect lines prefixed with `put-description:`.
+        """
+        nonlocal pending_description
+        m = re.match(r"^\s*put-description:\s*(.*)$", text, flags=re.IGNORECASE)
+        if not m:
+            return
+        line = m.group(1).strip()
+        if line:
+            pending_description.append(line)
+
     def get_current_scope(create_default: bool = True):
         """
         Scope = where questions / descriptions should attach:
@@ -111,24 +128,24 @@ def parse_markdown(md_text: str):
         nonlocal pending_description
         scope = get_current_scope(create_default=False)
         if scope and pending_description:
-            desc = " ".join(l.strip() for l in pending_description if l.strip())
+            # keep as multiline with \n so UI can split
+            desc = "\n".join(l.strip() for l in pending_description if l.strip())
             if desc:
                 scope["description"] = desc
-            pending_description = []
+        pending_description = []
 
     def next_question_index(scope: dict) -> int:
         scope["_q_index"] = scope.get("_q_index", 0) + 1
         return scope["_q_index"]
 
     def finalize_question():
-        nonlocal question_lines
+        nonlocal question_lines, collecting_question
         if not question_lines:
+            collecting_question = False
             return
 
         scope = get_current_scope()
         full_text = "\n".join(question_lines).strip()
-
-        # --- Step 1: normal title extraction (same as before) ---
 
         # Case 1: explicit "**Title**: Question text"
         m = re.match(r"^\*\*(.+?)\*\*\s*:\s*(.*)", full_text, flags=re.DOTALL)
@@ -142,22 +159,28 @@ def parse_markdown(md_text: str):
             q_title = f"{scope_title} - Q{q_idx}"
             raw_content = full_text
 
-        # --- Step 2: split raw_content into main content vs info: lines ---
-
+        # --- Split content into main text, info lines, and NA flag ---
         content_lines = raw_content.splitlines()
         main_line = None
         other_lines = []
         info_lines = []
+        allow_na = False
 
         for raw in content_lines:
             t = raw.strip()
             if not t:
-                # keep blank lines only after we have a main line
                 if main_line is not None:
                     other_lines.append("")
                 continue
 
-            # Match either "info: ..." or "- info: ..."
+            # Detect "na:" (or "- na:") metadata lines
+            na_match = re.match(r"^(-\s*)?na:\s*(.*)$", t, flags=re.IGNORECASE)
+            if na_match:
+                allow_na = True
+                # do not include this line in content or info
+                continue
+
+            # Detect "info:" (or "- info:")
             info_match = re.match(r"^(-\s*)?info:\s*(.*)$", t, flags=re.IGNORECASE)
             if info_match:
                 info_text = (info_match.group(2) or "").strip()
@@ -170,7 +193,7 @@ def parse_markdown(md_text: str):
             else:
                 other_lines.append(t)
 
-        # Rebuild content without the info: lines
+        # Rebuild content without info/na lines
         if main_line is None:
             q_content = ""
         elif other_lines:
@@ -180,22 +203,36 @@ def parse_markdown(md_text: str):
 
         q_info = "\n".join(info_lines).strip()
 
-        # --- Step 3: build final question object as before, plus "info" ---
-
+        # --- Build question object + responses ---
         q_type = detect_question_type(q_content)
+        responses = build_responses(q_type)
+
+        # Add "Not Applicable" choice when allowed and question is mchoices
+        if allow_na and q_type == "mchoices":
+            responses.append({
+                "title": "Not Applicable",
+                "type": "choice",
+            })
+
         question = {
             "title": q_title,
             "content": q_content,
             "type": q_type,
-            "responses": build_responses(q_type),
+            "responses": responses,
         }
+
         if q_info:
             question["info"] = q_info
+        if allow_na:
+            question["allow_na"] = True  # handy extra flag in JSON
 
         scope["questions"].append(question)
         question_lines = []
+        collecting_question = False
 
-
+    # ----------------------------------------------------------------------
+    # MAIN LOOP
+    # ----------------------------------------------------------------------
     for line in lines:
         raw = line.rstrip("\n")
         stripped = raw.strip()
@@ -278,9 +315,8 @@ def parse_markdown(md_text: str):
                 pending_description = []
 
             else:
-                # level 4+ → treat as descriptive text
-                if stripped:
-                    pending_description.append(title_clean)
+                # level 4+ → treat as descriptive text (only if marked)
+                add_description_line(title_raw)
 
             continue
 
@@ -300,27 +336,27 @@ def parse_markdown(md_text: str):
                 question_lines = [content]
             else:
                 # Indented bullet:
-                # If we're already in a question, append as part of its content.
-                # This prevents nested bullets from becoming separate questions.
                 if collecting_question:
+                    # part of the current question content
                     question_lines.append(f"- {content}")
                 else:
-                    # No active question; treat as descriptive text for current scope
-                    pending_description.append(content)
+                    # Not in a question; can still be description if marked
+                    add_description_line(content)
 
+            continue
+
+        # put-description line (non-bullet)
+        if stripped.lower().startswith("put-description:"):
+            add_description_line(raw)
             continue
 
         # CONTINUATION OF MULTI-LINE QUESTION
         if collecting_question:
-            if stripped == "":
-                question_lines.append("")
-            else:
-                question_lines.append(stripped)
+            question_lines.append(stripped)
             continue
 
-        # DESCRIPTION TEXT FOR CURRENT SCOPE
-        if stripped:
-            pending_description.append(stripped)
+        # Any other text is ignored unless marked with put-description:
+        # we do nothing here.
 
     # End-of-file cleanup
     finalize_question()

@@ -151,202 +151,284 @@
         },
         {
           "title": "Technical Documentation",
-          "questions": [
+          "questions": [],
+          "subsections": [
             {
-              "title": "Intended Purpose & Intended Users",
-              "content": "What is the product’s intended purpose and who are its intended users?",
-              "type": "paragraph",
-              "responses": [],
-              "info": "‘intended purpose’ means the use for which a product with digital elements is intended by the manufacturer, including the specific context and conditions of use, as specified in the information supplied by the manufacturer in the instructions for use, promotional or sales materials and statements, as well as in the technical documentation;\nExample: Smart sensor for home use; connects via Wi-Fi; typical user: consumer.\nReference: Annex VII (1)(a)"
-            },
-            {
-              "title": "Visual & Images for Product",
-              "content": "What visuals or images can you provide to show the product and markings?",
-              "type": "paragraph",
-              "responses": [],
-              "info": "Example: Photo showing general hardware, CE mark, serial number, and model label.\nReference: Annex VII (1)(c)"
-            },
-            {
-              "title": "Key Conditions & Limitations",
-              "content": "What are the key conditions or limitations of use?",
-              "type": "paragraph",
-              "responses": [],
-              "info": "Example: Indoor use only; operating temperature 0–40 °C.\nReference: Annex VII (1)"
-            },
-            {
-              "title": "Software & Firmware Versions Used",
-              "content": "What software or firmware versions are used in the product?",
-              "type": "paragraph",
-              "responses": [],
-              "info": "Example: Firmware v2.1.0; App v3.0.2.\nReference: Annex VII (1)(b)"
-            },
-            {
-              "title": "Previous Software & Firmware Versions",
-              "content": "What previous software or firmware versions have been placed on the market?",
-              "type": "paragraph",
-              "responses": [],
-              "info": "Example: Firmware v1.1, sold until July 2027.\nReference: Annex VII (1)(b)"
-            },
-            {
-              "title": "Version Identification in the Field",
-              "content": "How can each version of the product be identified in the field?",
-              "type": "paragraph",
-              "responses": [],
-              "info": "Example: Version shown in device interface; model number on label.\nReference: Annex VII (1)(b)"
-            },
-            {
-              "title": "User Information & Instructions",
-              "content": "Is the user information and instructions provided?",
-              "type": "mchoices",
-              "responses": [
+              "title": "General Description",
+              "description": "The Technical documentation of a product with digital elements shall contain a general description of the product with digital elements, including:\n1. its intended purpose;\n2. versions of software affecting compliance with essential cybersecurity requirements;\n3. where the product with digital elements is a hardware product, photographs or illustrations showing external features, marking and internal layout;\n4. user information and instructions",
+              "questions": [
                 {
-                  "title": "Yes",
-                  "type": "choice"
+                  "title": "Intended Purpose & Intended Users",
+                  "content": "Does the “general description” of the technical documentation contain the product’s intended purpose and who are its intended users?.",
+                  "type": "mchoices",
+                  "responses": [
+                    {
+                      "title": "Yes",
+                      "type": "choice"
+                    },
+                    {
+                      "title": "No",
+                      "type": "choice"
+                    },
+                    {
+                      "title": "In Progress",
+                      "description": "Work is underway but not yet completed.",
+                      "type": "choice"
+                    }
+                  ],
+                  "info": "‘intended purpose’ means the use for which a product with digital elements is intended by the manufacturer, including the specific context and conditions of use, as specified in the information supplied by the manufacturer in the instructions for use, promotional or sales materials and statements, as well as in the technical documentation;\nExample: Smart sensor for home use; connects via Wi-Fi; typical user: consumer.\nReference: Annex VII (1)(a)"
                 },
                 {
-                  "title": "No",
-                  "type": "choice"
+                  "title": "Visual & Images for Product",
+                  "content": "Does the “general description” of the technical documentation contain visuals or images to show the product and markings?",
+                  "type": "mchoices",
+                  "responses": [
+                    {
+                      "title": "Yes",
+                      "type": "choice"
+                    },
+                    {
+                      "title": "No",
+                      "type": "choice"
+                    },
+                    {
+                      "title": "In Progress",
+                      "description": "Work is underway but not yet completed.",
+                      "type": "choice"
+                    },
+                    {
+                      "title": "Not Applicable",
+                      "type": "choice"
+                    }
+                  ],
+                  "info": "Example: Photo showing general hardware, CE mark, serial number, and model label.\nReference: Annex VII (1)(c)",
+                  "allow_na": true
                 },
                 {
-                  "title": "In Progress",
-                  "description": "Work is underway but not yet completed.",
-                  "type": "choice"
+                  "title": "Key Conditions & Limitations",
+                  "content": "Does the “general description” of the technical documentation contain key conditions or limitations of use?",
+                  "type": "mchoices",
+                  "responses": [
+                    {
+                      "title": "Yes",
+                      "type": "choice"
+                    },
+                    {
+                      "title": "No",
+                      "type": "choice"
+                    },
+                    {
+                      "title": "In Progress",
+                      "description": "Work is underway but not yet completed.",
+                      "type": "choice"
+                    }
+                  ],
+                  "info": "Example: Indoor use only; operating temperature 0–40 °C.\nReference: Annex VII (1)"
+                },
+                {
+                  "title": "Software & Firmware Versions Used",
+                  "content": "Does the “general description” of the technical documentation contain information about the software or firmware versions are used in the product?",
+                  "type": "mchoices",
+                  "responses": [
+                    {
+                      "title": "Yes",
+                      "type": "choice"
+                    },
+                    {
+                      "title": "No",
+                      "type": "choice"
+                    },
+                    {
+                      "title": "In Progress",
+                      "description": "Work is underway but not yet completed.",
+                      "type": "choice"
+                    }
+                  ],
+                  "info": "Example: Firmware v2.1.0; App v3.0.2.\nReference: Annex VII (1)(b)"
+                },
+                {
+                  "title": "Previous Software & Firmware Versions",
+                  "content": "Does the “general description” of the technical documentation contain information about previous software or firmware versions that have been placed on the market and are still available to users?",
+                  "type": "mchoices",
+                  "responses": [
+                    {
+                      "title": "Yes",
+                      "type": "choice"
+                    },
+                    {
+                      "title": "No",
+                      "type": "choice"
+                    },
+                    {
+                      "title": "In Progress",
+                      "description": "Work is underway but not yet completed.",
+                      "type": "choice"
+                    }
+                  ],
+                  "info": "Example: Firmware v1.1, sold until July 2027.\nReference: Annex VII (1)(b)"
+                },
+                {
+                  "title": "Version Identification in the Field",
+                  "content": "How can each version of the product be identified in the field?",
+                  "type": "paragraph",
+                  "responses": [],
+                  "info": "Example: Version shown in device interface; model number on label.\nReference: Annex VII (1)(b)"
+                },
+                {
+                  "title": "User Information & Instructions",
+                  "content": "Is the user information and instructions provided?",
+                  "type": "mchoices",
+                  "responses": [
+                    {
+                      "title": "Yes",
+                      "type": "choice"
+                    },
+                    {
+                      "title": "No",
+                      "type": "choice"
+                    },
+                    {
+                      "title": "In Progress",
+                      "description": "Work is underway but not yet completed.",
+                      "type": "choice"
+                    }
+                  ],
+                  "info": "Example: User manual.\nReference: Annex VII (1)(d)"
+                },
+                {
+                  "title": "Design, Development & Production for Security",
+                  "content": "How was the product designed, developed, and produced to include security?",
+                  "type": "paragraph",
+                  "responses": [],
+                  "info": "Example: Description of secure design approach, architecture overview.\nReference: Annex VII (2)(a)"
+                },
+                {
+                  "title": "Vulnerability Handling Process",
+                  "content": "How do you handle vulnerabilities (intake, triage, remediation)?",
+                  "type": "paragraph",
+                  "responses": [],
+                  "info": "Example: Coordinated vulnerability disclosure policy and process flow.\nReference: Annex VII (2)(b)"
+                },
+                {
+                  "title": "Component & Data Flow Documentation",
+                  "content": "How are components and data flows documented?",
+                  "type": "paragraph",
+                  "responses": [],
+                  "info": "Example: SBOM, HBOM.\nReference: Annex VII (2)(b)"
+                },
+                {
+                  "title": "Security Update Process",
+                  "content": "How are security updates tested, signed, and distributed?",
+                  "type": "paragraph",
+                  "responses": [],
+                  "info": "Example: Signed updates verified through digital signature checks.\nReference: Annex VII (2)(b)"
+                },
+                {
+                  "title": "Secure Manufacturing & Provisioning Steps",
+                  "content": "What secure manufacturing and provisioning steps are applied?",
+                  "type": "paragraph",
+                  "responses": [],
+                  "info": "Example: Secure firmware installation, identity checks, integrity verification.\nReference: Annex VII (2)(c)"
+                },
+                {
+                  "title": "Monitoring & Validation Activities",
+                  "content": "What monitoring and validation activities are in place?",
+                  "type": "paragraph",
+                  "responses": [],
+                  "info": "Example: Telemetry to detect update failures; incident tracking dashboard.\nReference: Annex VII (2)(c)"
+                },
+                {
+                  "title": "Risk Assessment Method or Standard",
+                  "content": "Which method or standard did you use for your risk assessment?",
+                  "type": "paragraph",
+                  "responses": [],
+                  "info": "Example: ISO 27005, ENISA, or internal threat modelling.\nReference: Annex VII (3)"
+                },
+                {
+                  "title": "Risks, Threats, Impacts & Treatments",
+                  "content": "What are the main risks, threats, impacts, and treatments identified?",
+                  "type": "paragraph",
+                  "responses": [],
+                  "info": "Example: Data breach from unsecured Wi-Fi Access Point; Impact: high; Mitigation: encryption.\nReference: Annex VII (3)"
+                },
+                {
+                  "title": "Link Between Risks, Controls & Test Results",
+                  "content": "How are risks linked to design controls and test results?",
+                  "type": "paragraph",
+                  "responses": [],
+                  "info": "Example: Risk-control-test matrix; mapping table.\nReference: Annex VII (3)"
+                },
+                {
+                  "title": "Residual Risks & Acceptance Rationale",
+                  "content": "What residual risks remain and why are they acceptable?",
+                  "type": "paragraph",
+                  "responses": [],
+                  "info": "Example: Denial-of-service risk accepted due to limited exposure.\nReference: Annex VII (3)"
+                },
+                {
+                  "title": "Applicable Essential Requirements (Annex I)",
+                  "content": "What essential requirements found in Annex I ( [check questions](set:essential-cybersecurity-requirements-annex-1) ) CRA apply to the product?",
+                  "type": "paragraph",
+                  "responses": [],
+                  "info": "Example: -- does not apply due to no wireless connection.\nReference: Annex VII (3)"
+                },
+                {
+                  "title": "Support Period Determination",
+                  "content": "How was the product’s support period determined?",
+                  "type": "paragraph",
+                  "responses": [],
+                  "info": "Example: Based on OS vendor support roadmap and internal policy.\nReference: Annex VII (4)"
+                },
+                {
+                  "title": "Declared Support Period",
+                  "content": "What is the declared support period (dates or duration)?",
+                  "type": "paragraph",
+                  "responses": [],
+                  "info": "Example: Security updates provided until 31 December 2030.\nReference: Annex VII (4)"
+                },
+                {
+                  "title": "Support Period Communication",
+                  "content": "Where is the support period communicated to users?",
+                  "type": "paragraph",
+                  "responses": [],
+                  "info": "Example: On website, packaging, or in product interface.\nReference: Annex VII (4)"
+                },
+                {
+                  "title": "Support Period ↔ Risk Assessment Link",
+                  "content": "How does the support period link to the risk assessment and update plan?",
+                  "type": "paragraph",
+                  "responses": [],
+                  "info": "Example: Risk analysis shows update relevance through lifecycle.\nReference: Annex VII (4)"
+                },
+                {
+                  "title": "Standards or Specifications Demonstrating Conformity",
+                  "content": "What standards or specifications demonstrate conformity?",
+                  "type": "paragraph",
+                  "responses": [],
+                  "info": "Example: ISO/IEC 27001.\nReference: Annex VII (5)"
+                },
+                {
+                  "title": "Version Numbers & Publication Dates of Standards",
+                  "content": "What are the version numbers and publication dates of those standards?",
+                  "type": "paragraph",
+                  "responses": [],
+                  "info": "Example: ISO/IEC 27001:2022.\nReference: Annex VII (5)"
+                },
+                {
+                  "title": "Certificates or Attestations Supporting Conformity",
+                  "content": "What certificates or attestations support conformity?",
+                  "type": "paragraph",
+                  "responses": [],
+                  "info": "Example: CE certificate, cybersecurity scheme statement.\nReference: Annex VII (5)"
+                },
+                {
+                  "title": "Standards & Controls Cross-Reference",
+                  "content": "How do the listed standards and controls  link to Annex I ([check questions](set:essential-cybersecurity-requirements-annex-1)) requirements?",
+                  "type": "paragraph",
+                  "responses": [],
+                  "info": "Example: Cross-reference table between requirements and controls.\nReference: Annex VII (5)"
                 }
-              ],
-              "info": "Example: User manual.\nReference: Annex VII (1)(d)"
-            },
-            {
-              "title": "Design, Development & Production for Security",
-              "content": "How was the product designed, developed, and produced to include security?",
-              "type": "paragraph",
-              "responses": [],
-              "info": "Example: Description of secure design approach, architecture overview.\nReference: Annex VII (2)(a)"
-            },
-            {
-              "title": "Vulnerability Handling Process",
-              "content": "How do you handle vulnerabilities (intake, triage, remediation)?",
-              "type": "paragraph",
-              "responses": [],
-              "info": "Example: Coordinated vulnerability disclosure policy and process flow.\nReference: Annex VII (2)(b)"
-            },
-            {
-              "title": "Component & Data Flow Documentation",
-              "content": "How are components and data flows documented?",
-              "type": "paragraph",
-              "responses": [],
-              "info": "Example: SBOM, HBOM.\nReference: Annex VII (2)(b)"
-            },
-            {
-              "title": "Security Update Process",
-              "content": "How are security updates tested, signed, and distributed?",
-              "type": "paragraph",
-              "responses": [],
-              "info": "Example: Signed updates verified through digital signature checks.\nReference: Annex VII (2)(b)"
-            },
-            {
-              "title": "Secure Manufacturing & Provisioning Steps",
-              "content": "What secure manufacturing and provisioning steps are applied?",
-              "type": "paragraph",
-              "responses": [],
-              "info": "Example: Secure firmware installation, identity checks, integrity verification.\nReference: Annex VII (2)(c)"
-            },
-            {
-              "title": "Monitoring & Validation Activities",
-              "content": "What monitoring and validation activities are in place?",
-              "type": "paragraph",
-              "responses": [],
-              "info": "Example: Telemetry to detect update failures; incident tracking dashboard.\nReference: Annex VII (2)(c)"
-            },
-            {
-              "title": "Risk Assessment Method or Standard",
-              "content": "Which method or standard did you use for your risk assessment?",
-              "type": "paragraph",
-              "responses": [],
-              "info": "Example: ISO 27005, ENISA, or internal threat modelling.\nReference: Annex VII (3)"
-            },
-            {
-              "title": "Risks, Threats, Impacts & Treatments",
-              "content": "What are the main risks, threats, impacts, and treatments identified?",
-              "type": "paragraph",
-              "responses": [],
-              "info": "Example: Data breach from unsecured Wi-Fi Access Point; Impact: high; Mitigation: encryption.\nReference: Annex VII (3)"
-            },
-            {
-              "title": "Link Between Risks, Controls & Test Results",
-              "content": "How are risks linked to design controls and test results?",
-              "type": "paragraph",
-              "responses": [],
-              "info": "Example: Risk-control-test matrix; mapping table.\nReference: Annex VII (3)"
-            },
-            {
-              "title": "Residual Risks & Acceptance Rationale",
-              "content": "What residual risks remain and why are they acceptable?",
-              "type": "paragraph",
-              "responses": [],
-              "info": "Example: Denial-of-service risk accepted due to limited exposure.\nReference: Annex VII (3)"
-            },
-            {
-              "title": "Applicable Essential Requirements (Annex I)",
-              "content": "What essential requirements found in Annex I ( [check questions](set:essential-cybersecurity-requirements-annex-1) ) CRA apply to the product?",
-              "type": "paragraph",
-              "responses": [],
-              "info": "Example: -- does not apply due to no wireless connection.\nReference: Annex VII (3)"
-            },
-            {
-              "title": "Support Period Determination",
-              "content": "How was the product’s support period determined?",
-              "type": "paragraph",
-              "responses": [],
-              "info": "Example: Based on OS vendor support roadmap and internal policy.\nReference: Annex VII (4)"
-            },
-            {
-              "title": "Declared Support Period",
-              "content": "What is the declared support period (dates or duration)?",
-              "type": "paragraph",
-              "responses": [],
-              "info": "Example: Security updates provided until 31 December 2030.\nReference: Annex VII (4)"
-            },
-            {
-              "title": "Support Period Communication",
-              "content": "Where is the support period communicated to users?",
-              "type": "paragraph",
-              "responses": [],
-              "info": "Example: On website, packaging, or in product interface.\nReference: Annex VII (4)"
-            },
-            {
-              "title": "Support Period ↔ Risk Assessment Link",
-              "content": "How does the support period link to the risk assessment and update plan?",
-              "type": "paragraph",
-              "responses": [],
-              "info": "Example: Risk analysis shows update relevance through lifecycle.\nReference: Annex VII (4)"
-            },
-            {
-              "title": "Standards or Specifications Demonstrating Conformity",
-              "content": "What standards or specifications demonstrate conformity?",
-              "type": "paragraph",
-              "responses": [],
-              "info": "Example: ISO/IEC 27001.\nReference: Annex VII (5)"
-            },
-            {
-              "title": "Version Numbers & Publication Dates of Standards",
-              "content": "What are the version numbers and publication dates of those standards?",
-              "type": "paragraph",
-              "responses": [],
-              "info": "Example: ISO/IEC 27001:2022.\nReference: Annex VII (5)"
-            },
-            {
-              "title": "Certificates or Attestations Supporting Conformity",
-              "content": "What certificates or attestations support conformity?",
-              "type": "paragraph",
-              "responses": [],
-              "info": "Example: CE certificate, cybersecurity scheme statement.\nReference: Annex VII (5)"
-            },
-            {
-              "title": "Standards & Controls Cross-Reference",
-              "content": "How do the listed standards and controls  link to Annex I ([check questions](set:essential-cybersecurity-requirements-annex-1)) requirements?",
-              "type": "paragraph",
-              "responses": [],
-              "info": "Example: Cross-reference table between requirements and controls.\nReference: Annex VII (5)"
+              ]
             }
           ]
         },

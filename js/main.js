@@ -34,19 +34,22 @@ async function loadQuestionSet(set)
         const raw = await res.text();
         let questions;
         let topTitle = null;
+        let sectionDescriptions = null;
 
         if (set.file.endsWith(".md"))
         {
-            questions = parseQuestionsFromMarkdown(raw, set.id);
-            // for markdown we could also pull the first "# ..." as topTitle
-            // but for now we leave it null so behavior stays as before
+            const parsed = parseQuestionsFromMarkdown(raw, set.id);
+            questions = parsed.questions;
+            topTitle = parsed.topTitle || null;
+            sectionDescriptions = parsed.sectionDescriptions || null;
         }
         else if (set.file.endsWith(".json"))
         {
             const model = JSON.parse(raw);
             const parsed = parseQuestionsFromModelJson(model, set.id);
             questions = parsed.questions;
-            topTitle = parsed.topTitle;
+            topTitle = parsed.topTitle || null;
+            sectionDescriptions = parsed.sectionDescriptions || null;
         }
         else
         {
@@ -63,7 +66,8 @@ async function loadQuestionSet(set)
             progressFillEl: progressFill,
             progressTextEl: progressText,
             topTitle,
-            setDescription: set.description || ""
+            setDescription: set.description || "",
+            sectionDescriptions
         });
     }
     catch (err)

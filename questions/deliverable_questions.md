@@ -33,21 +33,28 @@
   - Do you communicate end-of-support information to users?
   - Do you maintain a compliance log (version history, responsible persons, review dates)?
 ## Technical Documentation
-- **Intended Purpose & Intended Users**: What is the product’s intended purpose and who are its intended users?
+### General Description 
+put-description: The Technical documentation of a product with digital elements shall contain a general description of the product with digital elements, including:
+put-description: 1. its intended purpose;
+put-description: 2. versions of software affecting compliance with essential cybersecurity requirements;
+put-description: 3. where the product with digital elements is a hardware product, photographs or illustrations showing external features, marking and internal layout;
+put-description: 4. user information and instructions
+- **Intended Purpose & Intended Users**: Does the “general description” of the technical documentation contain the product’s intended purpose and who are its intended users?. 
     - info: ‘intended purpose’ means the use for which a product with digital elements is intended by the manufacturer, including the specific context and conditions of use, as specified in the information supplied by the manufacturer in the instructions for use, promotional or sales materials and statements, as well as in the technical documentation;
     - info: 
     - info: Example: Smart sensor for home use; connects via Wi-Fi; typical user: consumer.
     - info: Reference: Annex VII (1)(a)
-- **Visual & Images for Product**: What visuals or images can you provide to show the product and markings?
+- **Visual & Images for Product**: Does the “general description” of the technical documentation contain visuals or images to show the product and markings?
+    - na: true
     - info: Example: Photo showing general hardware, CE mark, serial number, and model label.
     - info: Reference: Annex VII (1)(c)
-- **Key Conditions & Limitations**: What are the key conditions or limitations of use?
+- **Key Conditions & Limitations**: Does the “general description” of the technical documentation contain key conditions or limitations of use?
     - info: Example: Indoor use only; operating temperature 0–40 °C.
     - info: Reference: Annex VII (1)
-- **Software & Firmware Versions Used**: What software or firmware versions are used in the product?
+- **Software & Firmware Versions Used**: Does the “general description” of the technical documentation contain information about the software or firmware versions are used in the product?
   - info: Example: Firmware v2.1.0; App v3.0.2.
   - info: Reference: Annex VII (1)(b)
-- **Previous Software & Firmware Versions**: What previous software or firmware versions have been placed on the market?
+- **Previous Software & Firmware Versions**: Does the “general description” of the technical documentation contain information about previous software or firmware versions that have been placed on the market and are still available to users?
   - info: Example: Firmware v1.1, sold until July 2027.
   - info: Reference: Annex VII (1)(b)
 - **Version Identification in the Field**: How can each version of the product be identified in the field?

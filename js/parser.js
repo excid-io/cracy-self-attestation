@@ -2,8 +2,31 @@ export function parseQuestionsFromMarkdown(mdText, setId)
 {
     const lines = mdText.split(/\r?\n/);
     const questions = [];
+    const sectionDescriptionsMap = new Map();
+
     let currentSection = "";
     let lastQuestion = null;
+    let lastHeading = "";
+    let pendingDescLines = [];
+
+    function flushPendingDescription()
+    {
+        if (!lastHeading || pendingDescLines.length === 0) return;
+
+        const desc = pendingDescLines
+            .map(line => line.trim())
+            .filter(line => line.length > 0)
+            .join(" ");
+
+        if (desc)
+        {
+            // Treat all markdown headings as "level 2" sections for rendering
+            sectionDescriptionsMap.set(`level2:${lastHeading}`, desc);
+        }
+
+        pendingDescLines = [];
+    }
+
 
     for (const rawLine of lines)
     {
@@ -13,7 +36,12 @@ export function parseQuestionsFromMarkdown(mdText, setId)
         const headingMatch = trimmed.match(/^(#{1,6})\s+(.*)$/);
         if (headingMatch)
         {
-            currentSection = headingMatch[2].trim();
+            // We are leaving the previous heading -> store its description, if any
+            flushPendingDescription();
+
+            const headingText = headingMatch[2].trim();
+            currentSection = headingText;
+            lastHeading = headingText;
             lastQuestion = null; // reset grouping on new section
             continue;
         }
@@ -23,10 +51,13 @@ export function parseQuestionsFromMarkdown(mdText, setId)
         const bulletQuestionMatch = rawLine.match(/^\s*-\s+\*\*(.+?)\*\*:\s*(.*)$/);
         if (bulletQuestionMatch)
         {
+            // First question under this heading: freeze any accumulated description
+            flushPendingDescription();
+
             const title = bulletQuestionMatch[1].trim();
             const text = bulletQuestionMatch[2].trim();
 
-            const question = 
+            const question =
             {
                 id: `${setId}-${questions.length}`,
                 section: currentSection,
@@ -42,14 +73,18 @@ export function parseQuestionsFromMarkdown(mdText, setId)
         }
 
         // Detail sub-bullets (no bold title) that belong to the last question
-        // e.g. "    - These can include drawings and schemes"
         if (lastQuestion && rawLine.match(/^\s*-\s+(.*)$/))
         {
             const detailText = rawLine.replace(/^\s*-\s+/, "").trim();
             if (detailText.length > 0)
             {
-                // NEW: if this is an info: line, store it in q.info instead of q.details
                 const lower = detailText.toLowerCase();
+                if (lower.startsWith("na:"))
+                {
+                    lastQuestion.allow_na = true;
+                    // don't add this line to details or info
+                    continue;
+                }
                 if (lower.startsWith("info:"))
                 {
                     const infoText = detailText.slice(5).trim();
@@ -69,10 +104,8 @@ export function parseQuestionsFromMarkdown(mdText, setId)
         }
 
         // Indented paragraphs as extra details for the last question
-        // e.g. the long explanation lines under "intended purpose"
         if (lastQuestion && rawLine.match(/^\s{2,}\S/))
         {
-            // NEW: allow "info:" as indented paragraph too
             const infoMatch = trimmed.match(/^info:\s*(.*)$/i);
             if (infoMatch)
             {
@@ -91,10 +124,25 @@ export function parseQuestionsFromMarkdown(mdText, setId)
             continue;
         }
 
-        // Blank lines or unrelated content are ignored
+        // Section description lines:
+        // If we're after a heading and before the first question in that section,
+        // treat non-empty lines as subsection description.
+        if (lastHeading && !lastQuestion && trimmed.length > 0)
+        {
+            pendingDescLines.push(trimmed);
+        }
+        // Blank lines or unrelated content are otherwise ignored
     }
 
-    return questions;
+    // Flush description for the last heading at EOF
+    flushPendingDescription();
+
+    // Convert Map -> plain object
+    const sectionDescriptions = {};
+    sectionDescriptionsMap.forEach((v, k) => { sectionDescriptions[k] = v; });
+
+    // For now we don't infer a topTitle from Markdown headings
+    return { questions, topTitle: null, sectionDescriptions };
 }
 
 /**
@@ -125,10 +173,11 @@ export function parseQuestionsFromMarkdown(mdText, setId)
 export function parseQuestionsFromModelJson(model, setId)
 {
     const questions = [];
+    const sectionDescriptions = {};
 
     if (!model || !Array.isArray(model.sections))
     {
-        return { questions, topTitle: null };
+        return { questions, topTitle: null, sectionDescriptions };
     }
 
     const rootSections = model.sections;
@@ -142,7 +191,6 @@ export function parseQuestionsFromModelJson(model, setId)
         const lines = content.split(/\r?\n/);
         if (lines.length === 1)
         {
-            // Single-line content: no separate info or details
             return { text: content.trim(), details: [], info: "" };
         }
 
@@ -155,7 +203,6 @@ export function parseQuestionsFromModelJson(model, setId)
             const t = raw.trim();
             if (!t) continue;
 
-            // NEW: capture info: lines (and "- info:")
             const infoMatch = t.match(/^(-\s*)?info:\s*(.*)$/i);
             if (infoMatch)
             {
@@ -170,17 +217,18 @@ export function parseQuestionsFromModelJson(model, setId)
             if (main === null)
             {
                 main = t;
-                continue;
-            }
-
-            const m = t.match(/^-\s*(.*)$/);
-            if (m)
-            {
-                details.push(m[1].trim());
             }
             else
             {
-                details.push(t);
+                const m = t.match(/^-\s*(.*)$/);
+                if (m)
+                {
+                    details.push(m[1].trim());
+                }
+                else
+                {
+                    details.push(t);
+                }
             }
         }
 
@@ -191,10 +239,36 @@ export function parseQuestionsFromModelJson(model, setId)
         };
     }
 
+    function recordDescription(path, description)
+    {
+        if (!description || !description.trim()) return;
+        const desc = description.trim();
+        const depth = path.length;
+
+        if (depth === 1)
+        {
+            sectionDescriptions[`level1:${path[0]}`] = desc;
+        }
+        else if (depth === 2)
+        {
+            sectionDescriptions[`level2:${path[1]}`] = desc;
+        }
+        else if (depth >= 3)
+        {
+            sectionDescriptions[`level3:${path[1]}>${path[2]}`] = desc;
+        }
+    }
+
     function walkNode(node, path)
     {
         const thisTitle = node.title || null;
         const newPath = thisTitle ? [...path, thisTitle] : path;
+
+        // capture description for this node
+        if (node.description)
+        {
+            recordDescription(newPath, node.description);
+        }
 
         const depth = newPath.length;
         const level2 = depth >= 2 ? newPath[1] : null;
@@ -202,7 +276,8 @@ export function parseQuestionsFromModelJson(model, setId)
 
         if (Array.isArray(node.questions))
         {
-            node.questions.forEach((q) => {
+            node.questions.forEach((q) =>
+            {
                 const split = splitContentIntoMainAndDetails(q.content || "");
 
                 questions.push({
@@ -213,9 +288,10 @@ export function parseQuestionsFromModelJson(model, setId)
                     title: q.title || "",
                     text: split.text,
                     details: split.details,
-                    info: (q.info && q.info.trim()) || split.info || ""
+                    info: (q.info && q.info.trim()) || split.info || "",
+                    allow_na: !!q.allow_na
                 });
-        });
+            });
         }
 
         if (Array.isArray(node.subsections))
@@ -226,5 +302,5 @@ export function parseQuestionsFromModelJson(model, setId)
 
     rootSections.forEach((sec) => walkNode(sec, []));
 
-    return { questions, topTitle };
+    return { questions, topTitle, sectionDescriptions };
 }

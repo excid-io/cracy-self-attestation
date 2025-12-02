@@ -6,7 +6,6 @@
       "subsections": [
         {
           "title": "Actively Exploited Vulnerabilities - General Obligation",
-          "description": "**Awareness & Reporting Process**: Do you have a defined process to detect and identify actively exploited vulnerabilities in your product with digital elements? **Mandatory Reporting**: When you become aware of an actively exploited vulnerability, do you notify the CSIRT coordinator and ENISA without undue delay via the single reporting platform?",
           "questions": []
         },
         {

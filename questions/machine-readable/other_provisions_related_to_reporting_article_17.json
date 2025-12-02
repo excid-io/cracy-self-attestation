@@ -42,28 +42,7 @@
         },
         {
           "title": "CSIRT helpdesk",
-          "questions": [
-            {
-              "title": "Awareness of CSIRT Support for Reporting Obligations",
-              "content": "Are you aware that CSIRTs designated as coordinators may provide helpdesk support to assist manufacturers—especially SMEs and microenterprises—with their reporting obligations under Articles 14 and 15?",
-              "type": "mchoices",
-              "responses": [
-                {
-                  "title": "Yes",
-                  "type": "choice"
-                },
-                {
-                  "title": "No",
-                  "type": "choice"
-                },
-                {
-                  "title": "In Progress",
-                  "description": "Work is underway but not yet completed.",
-                  "type": "choice"
-                }
-              ]
-            }
-          ]
+          "questions": []
         }
       ]
     }
