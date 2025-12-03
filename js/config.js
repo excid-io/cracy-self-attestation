@@ -16,15 +16,14 @@ export const QUESTION_SETS = [
 
     - **Done** – the requirement is fully satisfied and evidence is available.  
     - **In Progress** – the requirement is being implemented but is not yet fully satisfied.  
+    - **Not Applicable** – the requirement does not apply to the circumstance.
     - **Not Done** – the requirement is not implemented or lacks evidence.
 
     Notes can be added to track where each requirement is documented or how it is being fulfilled.
 
     You can export the entire checklist—including answers and notes—using the button in the progress bar.
 
-    **Regarding the Technical Documentation (Annex VI) and Information/Instructions to the User (Annex II):**  
-    All required elements listed under these sections must be included in your final documentation and user-facing materials. Use these sections as a completeness checklist.
-    Be sure to tick them as done once you include them.
+    **Regarding the Technical Documentation (Annex VI) and Information/Instructions to the User (Annex II):** All required elements listed under these sections must be included in your final documentation and user-facing materials. Use these sections as a completeness checklist. Be sure to tick them as done once you include them.
 
 		`
     },
