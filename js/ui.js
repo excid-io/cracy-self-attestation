@@ -1,6 +1,5 @@
 import { saveQuestionState, loadQuestionState } from "./storage.js";
 
-
 function renderSectionDescriptionBlock(container, text)
 {
     if (!text || !text.trim()) return;
@@ -17,7 +16,6 @@ function renderSectionDescriptionBlock(container, text)
     wrapper.appendChild(body);
     container.appendChild(wrapper);
 }
-
 
 export function renderSetSelector(selectEl, sets, onChange)
 {
@@ -153,8 +151,7 @@ function renderMarkdownBlocks(text)
     return out.join("");
 }
 
-
-function escapeRegExp(str) 
+function escapeRegExp(str)
 {
     return str.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 }
@@ -163,7 +160,7 @@ function escapeRegExp(str)
  * Replace occurrences of **Title** with markdown links
  * [**Title**](#question-id) when Title matches a known question title.
  */
-function linkifyQuestionRefs(markdownText, titleIndex, selfId) 
+function linkifyQuestionRefs(markdownText, titleIndex, selfId)
 {
     if (!markdownText) return markdownText;
 
@@ -191,7 +188,8 @@ function linkifyQuestionRefs(markdownText, titleIndex, selfId)
     return result;
 }
 
-export function renderQuestions(params) {
+export function renderQuestions(params)
+{
     const container = params.container;
     const questions = params.questions;
     const setId = params.setId;
@@ -205,7 +203,7 @@ export function renderQuestions(params) {
     container.innerHTML = "";
 
     // LEVEL 1: TOP TITLE
-    if (topTitle) 
+    if (topTitle)
     {
         const topEl = document.createElement("div");
         topEl.className = "section-title top-level-section-title";
@@ -222,20 +220,20 @@ export function renderQuestions(params) {
             }
         }
     }
-    
-    if (params.setDescription && params.setDescription.trim().length > 0) 
+
+    if (params.setDescription && params.setDescription.trim().length > 0)
     {
         const wrapper = document.createElement("div");
         wrapper.className = "set-description";
-    
+
         const header = document.createElement("div");
         header.className = "set-description-header";
         header.textContent = "Description";
-    
+
         const body = document.createElement("div");
         body.className = "set-description-body";
         body.innerHTML = renderMarkdownBlocks(params.setDescription.trim());
-    
+
         wrapper.appendChild(header);
         wrapper.appendChild(body);
         container.appendChild(wrapper);
@@ -244,7 +242,7 @@ export function renderQuestions(params) {
     const titleIndex = new Map();
     questions.forEach(
         (q) => {
-            if (q.title) 
+            if (q.title)
             {
                 titleIndex.set(q.title.trim(), q.id);
             }
@@ -255,7 +253,8 @@ export function renderQuestions(params) {
     let currentLevel2 = null;
     let currentLevel3 = null;
 
-    questions.forEach((q) => {
+    questions.forEach((q) =>
+    {
         const level2 = q.sectionLevel2 !== undefined
             ? q.sectionLevel2
             : (q.section || null);
@@ -264,11 +263,13 @@ export function renderQuestions(params) {
             : null;
 
         // LEVEL 2 HEADING
-        if (level2 && level2 !== currentLevel2) {
+        if (level2 && level2 !== currentLevel2)
+        {
             currentLevel2 = level2;
             currentLevel3 = null;
 
-            if (!topTitle || level2 !== topTitle) {
+            if (!topTitle || level2 !== topTitle)
+            {
                 const h2 = document.createElement("div");
                 h2.className = "section-title section-title-level2";
                 h2.textContent = level2;
@@ -276,17 +277,20 @@ export function renderQuestions(params) {
             }
 
             // Description for this level-2 section
-            if (sectionDescriptions) {
+            if (sectionDescriptions)
+            {
                 const key = `level2:${level2}`;
                 const desc = sectionDescriptions[key];
-                if (desc) {
+                if (desc)
+                {
                     renderSectionDescriptionBlock(container, desc);
                 }
             }
         }
 
         // LEVEL 3 HEADING
-        if (level3 && level3 !== currentLevel3) {
+        if (level3 && level3 !== currentLevel3)
+        {
             currentLevel3 = level3;
 
             const h3 = document.createElement("div");
@@ -295,10 +299,12 @@ export function renderQuestions(params) {
             container.appendChild(h3);
 
             // Description for this level-3 section (needs parent + child)
-            if (sectionDescriptions && currentLevel2) {
+            if (sectionDescriptions && currentLevel2)
+            {
                 const key3 = `level3:${currentLevel2}>${level3}`;
                 const desc3 = sectionDescriptions[key3];
-                if (desc3) {
+                if (desc3)
+                {
                     renderSectionDescriptionBlock(container, desc3);
                 }
             }
@@ -307,7 +313,7 @@ export function renderQuestions(params) {
         const card = document.createElement("div");
         card.className = "question-card";
         card.id = q.id;
-        card.style.position = "relative"; 
+        card.style.position = "relative";
 
         //
         // CONTENT AREA
@@ -324,11 +330,11 @@ export function renderQuestions(params) {
         // Linkify references in the main question text
         const linkedText = linkifyQuestionRefs(q.text || "", titleIndex, q.id);
 
-        if (q.title) 
+        if (q.title)
         {
             textEl.innerHTML = `<strong>${renderMarkdownInline(q.title)}:</strong> ${renderMarkdownInline(linkedText)}`;
-        } 
-        else 
+        }
+        else
         {
             textEl.innerHTML = renderMarkdownInline(linkedText);
         }
@@ -355,25 +361,23 @@ export function renderQuestions(params) {
         //
         // OPTIONAL INFO BUTTON (opens popup with q.info)
         //
-        //entry.style.position = "relative";
         if (q.info && q.info.trim().length > 0)
         {
             const infoBtn = document.createElement("button");
             infoBtn.type = "button";
             infoBtn.className = "info-button";
             infoBtn.innerHTML = "💡";
-        
+
             infoBtn.addEventListener("click", () =>
             {
                 const linkedInfo = linkifyQuestionRefs(q.info || "", titleIndex, q.id);
                 const html = linkedInfo
-                .split("\n")
-                .map(p => `<p>${renderMarkdownInline(p)}</p>`)
-                .join("");
-                //const html = renderMarkdownInline(linkedInfo).replace(/\n/g, "<br/>");
+                    .split("\n")
+                    .map(p => `<p>${renderMarkdownInline(p)}</p>`)
+                    .join("");
                 openInfoPopup(q.title || "Info", html);
             });
-        
+
             content.appendChild(infoBtn);
         }
 
@@ -386,7 +390,8 @@ export function renderQuestions(params) {
             detailsList.className = "question-details";
 
             q.details.forEach(
-                (detailLine) => {
+                (detailLine) =>
+                {
                     const li = document.createElement("li");
                     const linkedDetail = linkifyQuestionRefs(detailLine || "", titleIndex, q.id);
                     li.innerHTML = renderMarkdownInline(linkedDetail);
@@ -408,39 +413,51 @@ export function renderQuestions(params) {
 
         content.appendChild(notes);
 
-        // STATUS CONTROLS (Done, In Progress, Not Done)
+        //
+        // STATUS CONTROLS (Done / In progress / Not done / Not applicable)
+        //
         const statusWrapper = document.createElement("div");
         statusWrapper.className = "status-controls";
 
-        // Done (checkbox)
-        const checkbox = document.createElement("input");
-        checkbox.type = "checkbox";
-        checkbox.id = q.id;
-        checkbox.className = "status-done";
-
-        // In Progress button
-        const progressBtn = document.createElement("button");
-        progressBtn.className = "status-progress";
-        progressBtn.textContent = "In Progress";
-
-        // Not Done button
-        const notDoneBtn = document.createElement("button");
-        notDoneBtn.className = "status-notdone";
-        notDoneBtn.textContent = "Not Done";
-
-        // Not Applicable button (only if allowed)
-        let naBtn = null;
-        if (q.allow_na)
+        function makeStatusOption(value, labelText, extraClass)
         {
-            naBtn = document.createElement("button");
-            naBtn.className = "status-na";
-            naBtn.textContent = "Not Applicable";
+            const labelEl = document.createElement("label");
+            labelEl.className = `status-option ${extraClass || ""}`;
+
+            const input = document.createElement("input");
+            input.type = "radio";
+            input.name = `status-${q.id}`;
+            input.value = value;
+            input.className = "status-radio-input";
+
+            const circle = document.createElement("span");
+            circle.className = "status-radio";
+
+            const text = document.createElement("span");
+            text.className = "status-label";
+            text.textContent = labelText;
+
+            labelEl.appendChild(input);
+            labelEl.appendChild(circle);
+            labelEl.appendChild(text);
+
+            return { labelEl, input };
         }
 
-        statusWrapper.appendChild(checkbox);
-        statusWrapper.appendChild(progressBtn);
-        statusWrapper.appendChild(notDoneBtn);
-        if (naBtn) statusWrapper.appendChild(naBtn);
+        const doneOpt     = makeStatusOption("done",     "Done",         "status-option-done");
+        const progressOpt = makeStatusOption("progress", "In progress",  "status-option-progress");
+        const notDoneOpt  = makeStatusOption("notdone",  "Not done",     "status-option-notdone");
+
+        statusWrapper.appendChild(doneOpt.labelEl);
+        statusWrapper.appendChild(progressOpt.labelEl);
+        statusWrapper.appendChild(notDoneOpt.labelEl);
+
+        let naOpt = null;
+        if (q.allow_na)
+        {
+            naOpt = makeStatusOption("na", "Not applicable", "status-option-na");
+            statusWrapper.appendChild(naOpt.labelEl);
+        }
 
         //
         // LOAD STORED STATE (status + notes)
@@ -450,7 +467,7 @@ export function renderQuestions(params) {
         {
             status = stored.status;
         }
-        else if (stored.checked)   // backward compatibility with old schema
+        else if (stored.checked) // backward compatibility
         {
             status = "done";
         }
@@ -459,14 +476,37 @@ export function renderQuestions(params) {
             status = "notdone";
         }
 
-        applyStatus(card, badge, checkbox, status);
-
-        //
-        // EVENT HANDLERS
-        //
-        checkbox.addEventListener("change", () =>
+        // Reflect in radios
+        doneOpt.input.checked     = (status === "done");
+        progressOpt.input.checked = (status === "progress");
+        notDoneOpt.input.checked  = (status === "notdone");
+        if (naOpt)
         {
-            const newStatus = checkbox.checked ? "done" : "notdone";
+            naOpt.input.checked = (status === "na");
+        }
+
+        function updateSelectedClasses()
+        {
+            [doneOpt, progressOpt, notDoneOpt, naOpt].forEach(opt =>
+            {
+                if (!opt) return;
+                if (opt.input.checked)
+                {
+                    opt.labelEl.classList.add("status-option-selected");
+                }
+                else
+                {
+                    opt.labelEl.classList.remove("status-option-selected");
+                }
+            });
+        }
+
+        applyStatus(card, badge, status);
+        updateSelectedClasses();
+
+        function setStatus(newStatus)
+        {
+            status = newStatus;
 
             const state =
             {
@@ -475,50 +515,18 @@ export function renderQuestions(params) {
             };
 
             saveQuestionState(setId, q.id, state);
-            applyStatus(card, badge, checkbox, newStatus);
+            applyStatus(card, badge, newStatus);
+            updateSelectedClasses();
             updateProgress(container, progressFillEl, progressTextEl);
-        });
+        }
 
-        progressBtn.addEventListener("click", () =>
+        // Hook up radios
+        doneOpt.input.addEventListener("change", () => setStatus("done"));
+        progressOpt.input.addEventListener("change", () => setStatus("progress"));
+        notDoneOpt.input.addEventListener("change", () => setStatus("notdone"));
+        if (naOpt)
         {
-            const state =
-            {
-                status: "progress",
-                notes: notes.value.trim()
-            };
-
-            saveQuestionState(setId, q.id, state);
-            applyStatus(card, badge, checkbox, "progress");
-            updateProgress(container, progressFillEl, progressTextEl);
-        });
-
-        notDoneBtn.addEventListener("click", () =>
-        {
-            const state =
-            {
-                status: "notdone",
-                notes: notes.value.trim()
-            };
-
-            saveQuestionState(setId, q.id, state);
-            applyStatus(card, badge, checkbox, "notdone");
-            updateProgress(container, progressFillEl, progressTextEl);
-        });
-
-        if (naBtn)
-        {
-            naBtn.addEventListener("click", () =>
-            {
-                const state =
-                {
-                    status: "na",
-                    notes: notes.value.trim()
-                };
-            
-                saveQuestionState(setId, q.id, state);
-                applyStatus(card, badge, checkbox, "na");
-                updateProgress(container, progressFillEl, progressTextEl);
-            });
+            naOpt.input.addEventListener("change", () => setStatus("na"));
         }
 
         notes.addEventListener("input", () =>
@@ -531,7 +539,6 @@ export function renderQuestions(params) {
             };
 
             saveQuestionState(setId, q.id, state);
-            // status/colours do not change just by typing notes
         });
 
         //
@@ -549,14 +556,12 @@ export function renderQuestions(params) {
     updateProgress(container, progressFillEl, progressTextEl);
 }
 
-function applyStatus(card, badge, checkbox, status)
+function applyStatus(card, badge, status)
 {
     card.classList.remove("answered", "inprogress", "notdone", "na");
 
     const dot = badge.querySelector(".badge-dot");
     const label = badge.querySelector("span:nth-child(2)");
-
-    checkbox.checked = (status === "done");
 
     if (status === "done")
     {
@@ -572,7 +577,6 @@ function applyStatus(card, badge, checkbox, status)
     }
     else if (status === "na")
     {
-        card.classList.add("answered");
         card.classList.add("na");
         dot.classList.remove("pending");
         label.textContent = "Not applicable";
@@ -584,8 +588,6 @@ function applyStatus(card, badge, checkbox, status)
         label.textContent = "Not done";
     }
 }
-
-
 
 export function updateProgress(container, progressFillEl, progressTextEl)
 {
@@ -619,7 +621,8 @@ export function updateProgress(container, progressFillEl, progressTextEl)
         `${done} done | ${progress} in progress | ${notdone} not done`;
 }
 
-document.addEventListener("click", (ev) => {
+document.addEventListener("click", (ev) =>
+{
     const link = ev.target.closest("a[href^='#']");
     if (!link) return;
 
@@ -630,7 +633,6 @@ document.addEventListener("click", (ev) => {
     targetEl.classList.add("flash-highlight");
     setTimeout(() => targetEl.classList.remove("flash-highlight"), 1300);
 });
-
 
 // ===== INFO POPUP (for per-question explanatory text) =====
 
