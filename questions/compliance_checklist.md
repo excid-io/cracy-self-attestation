@@ -1,0 +1,33 @@
+# Compliance Checklist for Manufacturers
+- **Identify Role**: Have you clearly identified your role (manufacturer, authorised representative, importer, or distributor)?
+  - Have you assigned a responsible person for the DoC and technical documentation?
+  - Have you verified that subcontractors provide the necessary information?
+- **Draft DoC**: Have you drafted the Declaration of Conformity (DoC) using the Annex V ( [check questions](set:eu-declaration-of-conformity-annex-5) ) model?
+  - Have you signed the DoC?
+  - Have you checked whether the PDE is subject to other Union legislation?
+  - If yes, have you prepared a single combined DoC?
+  - Is the DoC available in a language accepted by the Member State where the PDE is placed on the market?
+  - Is the DoC written in clear, readable language?
+- **Build Technical Documentation**: Have you prepared complete technical documentation/file for the PDE?
+  - Is the technical file stored in a language understandable to market surveillance authorities?
+  - Have you ensured secure storage of the technical documentation?
+  - Have you set up secure internal access management for the documentation?
+- **Provide Access and Transparency**: Have you established a process to provide authorities with technical documentation upon request?
+  - Have you prepared the required user information and instructions?
+  - Have you verified that the information and instructions are clear to an average test group?
+  - Do you supply a full or simplified DoC with the product, with a direct URL or QR code linking to the full version?
+  - Can you provide information in all languages of destination market? 
+- **Maintain and Distribute DoC**: Do you have processes in place to maintain and distribute the Declaration of Conformity (DoC)?
+  - Do you regularly review and update the DoC?
+  - Do you keep version control of the DoC?
+  - Do you share the current DoC version with importers and distributors?
+  - Do you maintain traceability records for DoC versions?
+  - Can you provide the DoC promptly to market surveillance authorities upon request?
+- **Keep Technical Documentation Up to Date**: Do you ensure the technical documentation is kept up to date?
+  - Do you maintain a procedure for updates after significant hardware, firmware, or process changes?
+  - Do you reflect all versions placed on the market and explain the changes between them?
+  - Do you ensure traceability between product versions, tests, and risk assessments?
+- **Review, Communicate and Record Compliance**: Do you regularly review, communicate, and record compliance?
+  - Do you review the consistency between the DoC, technical documentation, and user information?
+  - Do you communicate end-of-support information to users?
+  - Do you maintain a compliance log (version history, responsible persons, review dates)?

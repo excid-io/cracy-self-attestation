@@ -1,0 +1,149 @@
+{
+  "sections": [
+    {
+      "title": "Compliance Checklist for Manufacturers",
+      "questions": [
+        {
+          "title": "Identify Role",
+          "content": "Have you clearly identified your role (manufacturer, authorised representative, importer, or distributor)?\n- Have you assigned a responsible person for the DoC and technical documentation?\n- Have you verified that subcontractors provide the necessary information?",
+          "type": "mchoices",
+          "responses": [
+            {
+              "title": "Yes",
+              "type": "choice"
+            },
+            {
+              "title": "No",
+              "type": "choice"
+            },
+            {
+              "title": "In Progress",
+              "description": "Work is underway but not yet completed.",
+              "type": "choice"
+            }
+          ]
+        },
+        {
+          "title": "Draft DoC",
+          "content": "Have you drafted the Declaration of Conformity (DoC) using the Annex V ( [check questions](set:eu-declaration-of-conformity-annex-5) ) model?\n- Have you signed the DoC?\n- Have you checked whether the PDE is subject to other Union legislation?\n- If yes, have you prepared a single combined DoC?\n- Is the DoC available in a language accepted by the Member State where the PDE is placed on the market?\n- Is the DoC written in clear, readable language?",
+          "type": "mchoices",
+          "responses": [
+            {
+              "title": "Yes",
+              "type": "choice"
+            },
+            {
+              "title": "No",
+              "type": "choice"
+            },
+            {
+              "title": "In Progress",
+              "description": "Work is underway but not yet completed.",
+              "type": "choice"
+            }
+          ]
+        },
+        {
+          "title": "Build Technical Documentation",
+          "content": "Have you prepared complete technical documentation/file for the PDE?\n- Is the technical file stored in a language understandable to market surveillance authorities?\n- Have you ensured secure storage of the technical documentation?\n- Have you set up secure internal access management for the documentation?",
+          "type": "mchoices",
+          "responses": [
+            {
+              "title": "Yes",
+              "type": "choice"
+            },
+            {
+              "title": "No",
+              "type": "choice"
+            },
+            {
+              "title": "In Progress",
+              "description": "Work is underway but not yet completed.",
+              "type": "choice"
+            }
+          ]
+        },
+        {
+          "title": "Provide Access and Transparency",
+          "content": "Have you established a process to provide authorities with technical documentation upon request?\n- Have you prepared the required user information and instructions?\n- Have you verified that the information and instructions are clear to an average test group?\n- Do you supply a full or simplified DoC with the product, with a direct URL or QR code linking to the full version?\n- Can you provide information in all languages of destination market?",
+          "type": "mchoices",
+          "responses": [
+            {
+              "title": "Yes",
+              "type": "choice"
+            },
+            {
+              "title": "No",
+              "type": "choice"
+            },
+            {
+              "title": "In Progress",
+              "description": "Work is underway but not yet completed.",
+              "type": "choice"
+            }
+          ]
+        },
+        {
+          "title": "Maintain and Distribute DoC",
+          "content": "Do you have processes in place to maintain and distribute the Declaration of Conformity (DoC)?\n- Do you regularly review and update the DoC?\n- Do you keep version control of the DoC?\n- Do you share the current DoC version with importers and distributors?\n- Do you maintain traceability records for DoC versions?\n- Can you provide the DoC promptly to market surveillance authorities upon request?",
+          "type": "mchoices",
+          "responses": [
+            {
+              "title": "Yes",
+              "type": "choice"
+            },
+            {
+              "title": "No",
+              "type": "choice"
+            },
+            {
+              "title": "In Progress",
+              "description": "Work is underway but not yet completed.",
+              "type": "choice"
+            }
+          ]
+        },
+        {
+          "title": "Keep Technical Documentation Up to Date",
+          "content": "Do you ensure the technical documentation is kept up to date?\n- Do you maintain a procedure for updates after significant hardware, firmware, or process changes?\n- Do you reflect all versions placed on the market and explain the changes between them?\n- Do you ensure traceability between product versions, tests, and risk assessments?",
+          "type": "mchoices",
+          "responses": [
+            {
+              "title": "Yes",
+              "type": "choice"
+            },
+            {
+              "title": "No",
+              "type": "choice"
+            },
+            {
+              "title": "In Progress",
+              "description": "Work is underway but not yet completed.",
+              "type": "choice"
+            }
+          ]
+        },
+        {
+          "title": "Review, Communicate and Record Compliance",
+          "content": "Do you regularly review, communicate, and record compliance?\n- Do you review the consistency between the DoC, technical documentation, and user information?\n- Do you communicate end-of-support information to users?\n- Do you maintain a compliance log (version history, responsible persons, review dates)?",
+          "type": "mchoices",
+          "responses": [
+            {
+              "title": "Yes",
+              "type": "choice"
+            },
+            {
+              "title": "No",
+              "type": "choice"
+            },
+            {
+              "title": "In Progress",
+              "description": "Work is underway but not yet completed.",
+              "type": "choice"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

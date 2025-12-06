@@ -1,30 +1,56 @@
 export const QUESTION_SETS = [
     {
-        id: "deliverable-questions",
-        name: "Deliverable Questions",
-        file: "./questions/machine-readable/deliverable_questions.json",
+        id: "technical-documentation",
+        name: "Technical Documentation",
+        file: "./questions/machine-readable/technical_documentation.json",
 		description: `
 		Before you begin, please read this carefully:
-    To ensure conformity with the CRA, review and understand all requirements covered by the sections in this checklist.  
-    Each question corresponds to a **specific legal requirement**. Before marking any item as **Done**, confirm that the requirement is:
+    	To ensure conformity with the CRA, review and understand all requirements covered by the sections in this checklist.  
+    	Each question corresponds to a **specific legal requirement**. Before marking any item as **Done**, confirm that the requirement is:
 
-    - fully implemented within your organisation,  
-    - supported by verifiable evidence (documentation, processes, technical measures, or design artefacts), and  
-    - consistently applied across all relevant products and workflows.
+    	- fully implemented within your organisation,  
+    	- supported by verifiable evidence (documentation, processes, technical measures, or design artefacts), and  
+    	- consistently applied across all relevant products and workflows.
 
-    You may mark each question as:
+    	You may mark each question as:
 
-    - **Done** – the requirement is fully satisfied and evidence is available.  
-    - **In Progress** – the requirement is being implemented but is not yet fully satisfied.  
-    - **Not Applicable** – the requirement does not apply to the circumstance.
-    - **Not Done** – the requirement is not implemented or lacks evidence.
+    	- **Done** – the requirement is fully satisfied and evidence is available.  
+    	- **In Progress** – the requirement is being implemented but is not yet fully satisfied.  
+    	- **Not Applicable** – the requirement does not apply to the circumstance.
+    	- **Not Done** – the requirement is not implemented or lacks evidence.
 
-    Notes can be added to track where each requirement is documented or how it is being fulfilled.
+    	Notes can be added to track where each requirement is documented or how it is being fulfilled.
 
-    You can export the entire checklist—including answers and notes—using the button in the progress bar.
+    	You can export the entire checklist—including answers and notes—using the button in the progress bar.
 
-    **Regarding the Technical Documentation (Annex VI) and Information/Instructions to the User (Annex II):** All required elements listed under these sections must be included in your final documentation and user-facing materials. Use these sections as a completeness checklist. Be sure to tick them as done once you include them.
+    	**Regarding the Technical Documentation (Annex VI):** All required elements listed under these sections must be included in your final documentation and user-facing materials. Use these sections as a completeness checklist. Be sure to tick them as done once you include them.
+		`
+    },
+    {
+        id: "information-and-instructions-user",
+        name: "Information and Instructions to the User",
+        file: "./questions/machine-readable/information_and_instructions_to_the_user.json",
+		description: `
+		Before you begin, please read this carefully:
+    	To ensure conformity with the CRA, review and understand all requirements covered by the sections in this checklist.  
+    	Each question corresponds to a **specific legal requirement**. Before marking any item as **Done**, confirm that the requirement is:
 
+    	- fully implemented within your organisation,  
+    	- supported by verifiable evidence (documentation, processes, technical measures, or design artefacts), and  
+    	- consistently applied across all relevant products and workflows.
+
+    	You may mark each question as:
+
+    	- **Done** – the requirement is fully satisfied and evidence is available.  
+    	- **In Progress** – the requirement is being implemented but is not yet fully satisfied.  
+    	- **Not Applicable** – the requirement does not apply to the circumstance.
+    	- **Not Done** – the requirement is not implemented or lacks evidence.
+
+    	Notes can be added to track where each requirement is documented or how it is being fulfilled.
+
+    	You can export the entire checklist—including answers and notes—using the button in the progress bar.
+
+    	**Information/Instructions to the User (Annex II):** All required elements listed under these sections must be included in your final documentation and user-facing materials. Use these sections as a completeness checklist. Be sure to tick them as done once you include them.
 		`
     },
   //  {
@@ -42,11 +68,11 @@ export const QUESTION_SETS = [
         name: "Essential Cybersecurity Requirements – Annex I",
         file: "./questions/machine-readable/essential_cybersecurity_requirements_annex_1.json"
     },
-    {
-        id: "eu-declaration-of-conformity-annex-5",
-        name: "EU Declaration of Conformity – Annex V",
-        file: "./questions/machine-readable/eu_declaration_of_conformity_annex_5.json"
-    },
+    //{
+    //    id: "eu-declaration-of-conformity-annex-5",
+    //    name: "EU Declaration of Conformity – Annex V",
+    //    file: "./questions/machine-readable/eu_declaration_of_conformity_annex_5.json"
+    //},
     //{
     //    id: "eu-declaration-of-conformity-article-28",
     //    name: "EU Declaration of Conformity – Article 28",
