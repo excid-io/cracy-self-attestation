@@ -552,3 +552,9 @@ select:focus {
   transform: scale(1.05);
   opacity: 1;
 }
+
+.status-option-notdone.status-option-selected .status-radio {
+  border-color: #f87171 !important;
+  box-shadow: 0 0 0 3px rgba(248,113,113,0.35) !important;
+  background: radial-gradient(circle at center, #f87171 40%, transparent 41%) !important;
+}
