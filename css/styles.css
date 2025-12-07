@@ -46,8 +46,7 @@ h1 {
   font-size: 1.3rem;
 }
 
-label,
-select {
+label, select {
   font-size: 0.9rem;
 }
 
@@ -66,7 +65,7 @@ select:focus {
   box-shadow: 0 0 0 1px rgba(34, 197, 94, 0.5);
 }
 
-/* ==== Progress summary bar ==== */
+/* ===== Progress summary bar ===== */
 
 .summary {
   display: flex;
@@ -104,7 +103,7 @@ select:focus {
   font-variant-numeric: tabular-nums;
 }
 
-/* ==== Questions list container ==== */
+/* ===== Questions list container ===== */
 
 .questions {
   flex: 1;
@@ -113,10 +112,10 @@ select:focus {
   flex-direction: column;
   gap: 0.75rem;
   padding-right: 0.25rem;
-  align-items: stretch;   /* children take full width; we cap via max-width below */
+  align-items: stretch;
 }
 
-/* ==== Section titles ==== */
+/* ===== Section titles ===== */
 
 .section-title {
   margin-top: 1.5rem;
@@ -126,8 +125,7 @@ select:focus {
   text-transform: uppercase;
   letter-spacing: 0.08em;
 
-  text-align: center;            /* centered title */
-  border-top: 1px solid rgba(148, 163, 184, 0.35);
+  text-align: center;
   padding-top: 0.75rem;
   position: relative;
 }
@@ -137,9 +135,9 @@ select:focus {
   position: absolute;
   top: 0;
   left: 0;
-  right: 0;      /* FULL WIDTH LINE */
+  right: 0;
   height: 1px;
-  background: rgba(148, 163, 184, 0.35);
+  background: rgba(148, 163, 184, 0.35); /* full-width line */
 }
 
 .top-level-section-title {
@@ -151,7 +149,7 @@ select:focus {
 }
 
 .section-title-level2 {
-  font-size: 0.95rem
+  font-size: 0.95rem;
 }
 
 .section-title-level3 {
@@ -161,7 +159,8 @@ select:focus {
   margin-bottom: 0.25rem;
 }
 
-/* Shared width for titles, descriptions, and cards */
+/* Shared centered width for content (NOT titles) */
+
 .question-card,
 .set-description,
 .section-description {
@@ -170,28 +169,15 @@ select:focus {
   margin-right: auto;
 }
 
+/* ===== Remove borders on descriptions ===== */
 
-.section-title {
-  margin-top: 1.5rem;
-  font-weight: 600;
-  font-size: 0.9rem;
-  color: #9ca3af;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-
-  text-align: left;  /* ⬅ align with description text */
-  border-top: 1px solid rgba(148, 163, 184, 0.35);
-  padding-top: 0.75rem;
-}
-
-/* Remove any accidental borders on descriptions */
 .section-description {
   border-top: none !important;
   padding-top: 0 !important;
-  margin-top: 0.75rem; /* spacing between title and description */
+  margin-top: 0.75rem;
 }
 
-/* ==== Question cards ==== */
+/* ===== Question cards ===== */
 
 .question-card {
   display: flex;
@@ -215,8 +201,6 @@ select:focus {
   transform: translateY(-1px);
 }
 
-/* Card color by status */
-
 .question-card.answered {
   border-color: rgba(34, 197, 94, 0.9);
   background: radial-gradient(circle at top left, rgba(22, 163, 74, 0.25), rgba(15, 23, 42, 0.95));
@@ -232,8 +216,6 @@ select:focus {
   background: radial-gradient(circle at top left, rgba(248, 113, 113, 0.15), rgba(15, 23, 42, 0.95));
 }
 
-/* .question-card.na uses default background but still gets purple radios via CSS below */
-
 .question-content {
   flex: 1;
   min-width: 0;
@@ -242,7 +224,7 @@ select:focus {
   gap: 0.35rem;
 }
 
-/* Question text with divider under it */
+/* Divider under question text */
 
 .question-text {
   padding-bottom: 0.5rem;
@@ -250,7 +232,7 @@ select:focus {
   margin-bottom: 0.6rem;
 }
 
-/* Notes are no longer used in JS, but style kept in case re-enabled later */
+/* Notes (currently unused but preserved) */
 
 .notes {
   width: 100%;
@@ -276,7 +258,7 @@ select:focus {
   color: #6b7280;
 }
 
-/* Status badge hidden */
+/* ===== Status badges (disabled) ===== */
 
 .badge {
   display: none !important;
@@ -293,9 +275,7 @@ select:focus {
   background: #f97316;
 }
 
-/* ----------------------------------------------------
-   GOOGLE FORMS-STYLE RADIO OPTION SET
----------------------------------------------------- */
+/* ===== GOOGLE FORMS-STYLE RADIO SET ===== */
 
 .status-controls {
   display: flex;
@@ -307,7 +287,6 @@ select:focus {
   width: 100%;
 }
 
-/* Bigger, clearer options */
 .status-option {
   display: flex;
   align-items: center;
@@ -317,7 +296,6 @@ select:focus {
   color: #e5e7eb;
 }
 
-/* Hide native radio */
 .status-radio-input {
   position: absolute;
   opacity: 0;
@@ -332,55 +310,35 @@ select:focus {
   box-sizing: border-box;
 }
 
-/* Generic selected visual */
 .status-option-selected .status-radio {
   border-color: #38bdf8;
   box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.25);
-  background: radial-gradient(circle at center, #38bdf8 40%, transparent 41%);
+  background: radial-gradient(circle, #38bdf8 40%, transparent 41%);
 }
-
-/* Per-status radio colors */
 
 .question-card.answered:not(.na) .status-option-done .status-radio {
   border-color: #22c55e;
   box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.25);
-  background: radial-gradient(circle at center, #22c55e 40%, transparent 41%);
+  background: radial-gradient(circle, #22c55e 40%, transparent 41%);
 }
 
 .question-card.inprogress .status-option-progress .status-radio {
   border-color: #38bdf8;
   box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.25);
-  background: radial-gradient(circle at center, #38bdf8 40%, transparent 41%);
+  background: radial-gradient(circle, #38bdf8 40%, transparent 41%);
 }
 
 .question-card.na .status-option-na .status-radio {
   border-color: #a855f7;
   box-shadow: 0 0 0 3px rgba(168, 85, 247, 0.35);
-  background: radial-gradient(circle at center, #a855f7 40%, transparent 41%);
+  background: radial-gradient(circle, #a855f7 40%, transparent 41%);
 }
 
-/* Text label */
 .status-label {
   white-space: nowrap;
 }
 
-/* Neutralize any legacy button styles */
-.status-progress,
-.status-notdone,
-.status-na,
-.status-done {
-  background: none !important;
-  border: none !important;
-  padding: 0 !important;
-  cursor: pointer;
-}
-
-/* Override styles for NA button (kept only for backwards compatibility) */
-.status-na:hover {
-  border-color: #a855f7;
-}
-
-/* ---------------------------------------------------- */
+/* ===== Mobile ===== */
 
 @media (max-width: 768px) {
   body {
@@ -394,7 +352,7 @@ select:focus {
   }
 }
 
-/* Flash highlight for linked question scroll */
+/* ===== Flash for linked question scroll ===== */
 
 .flash-highlight {
   animation: flashBg 1.3s ease-out;
@@ -406,28 +364,24 @@ select:focus {
   100% { background-color: transparent; }
 }
 
-/* ===== INFO POPUP & BUTTON ===== */
+/* ===== Info popup ===== */
 
 .info-button {
   position: absolute;
   bottom: 8px;
   right: 8px;
-
   display: flex;
   align-items: center;
   justify-content: center;
-
   width: 26px;
   height: 26px;
   border-radius: 50%;
   border: none;
-
   background: rgba(255, 255, 255, 0.1);
   color: #facc15;
   cursor: pointer;
   font-size: 15px;
   line-height: 1;
-
   backdrop-filter: blur(4px);
   transition: background 0.15s ease, transform 0.15s ease;
 }
@@ -512,7 +466,7 @@ select:focus {
   }
 }
 
-/* ==== Set / Section descriptions ==== */
+/* ===== Set / Section descriptions ===== */
 
 .set-description {
   background: rgba(15, 23, 42, 0.85);
@@ -573,9 +527,7 @@ select:focus {
   margin: 0.1rem 0;
 }
 
-/* ============================
-   LOGO BLOCK IN SIDEBAR
-============================ */
+/* ===== Sidebar logos ===== */
 
 .sidebar-logos {
   margin-top: 2rem;
