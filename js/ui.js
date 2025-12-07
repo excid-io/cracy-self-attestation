@@ -401,17 +401,7 @@ export function renderQuestions(params)
 
             content.appendChild(detailsList);
         }
-
-        //
-        // NOTES AREA
-        //
         const stored = loadQuestionState(setId, q.id) || {};
-        const notes = document.createElement("textarea");
-        notes.className = "notes";
-        notes.placeholder = "Optional notes / where this is documented…";
-        notes.value = stored.notes || "";
-
-        content.appendChild(notes);
 
         //
         // STATUS CONTROLS (Done / In progress / Not done / Not applicable)
@@ -460,7 +450,7 @@ export function renderQuestions(params)
         }
 
         //
-        // LOAD STORED STATE (status + notes)
+        // LOAD STORED STATE (status)
         //
         let status;
         if (stored.status)
@@ -511,7 +501,6 @@ export function renderQuestions(params)
             const state =
             {
                 status: newStatus,
-                notes: notes.value.trim()
             };
 
             saveQuestionState(setId, q.id, state);
@@ -529,23 +518,13 @@ export function renderQuestions(params)
             naOpt.input.addEventListener("change", () => setStatus("na"));
         }
 
-        notes.addEventListener("input", () =>
-        {
-            // Keep current status, just update notes
-            const state =
-            {
-                status: status,
-                notes: notes.value.trim()
-            };
-
-            saveQuestionState(setId, q.id, state);
-        });
-
         //
         // ASSEMBLE CARD
         //
-        card.appendChild(statusWrapper);
-        card.appendChild(content);
+        card.appendChild(content);        // Question at the top
+        card.appendChild(statusWrapper);  // Options below question
+        container.appendChild(card);
+
 
         container.appendChild(card);
     });
