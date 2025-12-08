@@ -7,36 +7,56 @@
   <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
-  <aside class="sidebar">
-    <h1>CRA Question Checklist</h1>
-    <p class="sidebar-intro">
-      Choose which question set to review. Tick items as you complete them and add notes if you want.
-    </p>
-    <label for="setSelect">Question set</label>
-    <select id="setSelect"></select>
-    <p class="sidebar-footer">
-      Progress is saved in your browser (localStorage) per question, per set.
-    </p>
-    <div class="sidebar-logos">
-    <img src="img/excid.png" alt="Excid logo" />
-    <img src="img/eu_cofunded.png" alt="EU Co-funded" />
-    <img src="img/eccc.png" alt="ECCC" />
-    <img src="img/cracy.png" alt="cra-cy.eu" />
+  <div class="layout">
+    <aside class="sidebar">
+      <h1>CRA Question Checklist</h1>
+      <p class="sidebar-intro">
+        Choose which question set to review. Tick items as you complete them and add notes if you want.
+      </p>
+      <label for="setSelect">Question set</label>
+      <select id="setSelect"></select>
+      <p class="sidebar-footer">
+        Progress is saved in your browser (localStorage) per question, per set.
+      </p>
+    </aside>
+
+    <main class="main">
+      <div class="summary">
+        <div class="summary-progress-bar">
+          <div class="summary-progress-fill" id="progressFill"></div>
+        </div>
+        <div class="summary-count" id="progressText">0 / 0 answered</div>
+        <button id="exportButton" class="export-button">Export JSON</button>
+      </div>
+
+      <div class="questions" id="questionsContainer"></div>
+    </main>
   </div>
-  </aside>
 
-  <main class="main">
-    <div class="summary">
-    <div class="summary-progress-bar">
-        <div class="summary-progress-fill" id="progressFill"></div>
+
+  <!-- <footer class="footer"> <div class="footer-logos"> <img src="img/excid-logo.svg" alt="Excid logo" /> <img src="img/eu-cofunded-logo.png" alt="EU Co-funded" /> <img src="img/eccc-logo.svg" alt="ECCC" /> <img src="img/cracy.png" alt="cra-cy.eu" /> </div> </footer> -->
+
+  <footer class="footer">
+    <div class="footer-logos">
+
+      <a href="https://excid.io/" rel="noopener noreferrer">
+        <img src="img/excid-logo.svg" alt="Excid logo" />
+      </a>
+
+      <a href="https://cybersecurity-centre.europa.eu/index_en" rel="noopener noreferrer">
+        <img src="img/eu-cofunded-logo.png" alt="EU Co-funded" />
+      </a>
+
+      <a href="https://cybersecurity-centre.europa.eu/index_en" rel="noopener noreferrer">
+        <img src="img/eccc-logo.svg" alt="ECCC" height="50" />
+      </a>
+
+      <a href="https://cra-cy.eu/" target="_blank" rel="noopener noreferrer">
+        <img src="img/cracy.png" alt="cra-cy.eu" />
+      </a>
+
     </div>
-    <div class="summary-count" id="progressText">0 / 0 answered</div>
-    <button id="exportButton" class="export-button">Export JSON</button>
-    </div>
-
-    <div class="questions" id="questionsContainer"></div>
-  </main>
-
+  </footer>
   <script type="module" src="js/main.js"></script>
 </body>
 </html>
