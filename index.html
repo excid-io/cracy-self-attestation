@@ -4,59 +4,64 @@
   <meta charset="UTF-8" />
   <title>CRA Question Checklist</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" href="css/styles.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  
 </head>
-<body>
-  <div class="layout">
-    <aside class="sidebar">
-      <h1>CRA Question Checklist</h1>
-      <p class="sidebar-intro">
-        Choose which question set to review. Tick items as you complete them and add notes if you want.
-      </p>
-      <label for="setSelect">Question set</label>
-      <select id="setSelect"></select>
-      <p class="sidebar-footer">
-        Progress is saved in your browser (localStorage) per question, per set.
-      </p>
-    </aside>
+<body class="d-flex flex-column min-vh-100">
 
-    <main class="main">
-      <div class="summary">
-        <div class="summary-progress-bar">
-          <div class="summary-progress-fill" id="progressFill"></div>
-        </div>
-        <div class="summary-count" id="progressText">0 / 0 answered</div>
-        <button id="exportButton" class="export-button">Export JSON</button>
-      </div>
+  <header class="sticky-top text-white py-3 shadow-sm" style="background-color: #003399;">
+    <div class="container">
+      <h1 class="h5 mb-0">CRA Self-assessment tool</h1>
+    </div>
+  </header>
 
-      <div class="questions" id="questionsContainer"></div>
+  <div class="position-fixed top-0 end-0 p-3" style="z-index:1050;">
+    <div class="form-check form-switch bg-transparent">
+      <input class="form-check-input" type="checkbox" id="darkModeToggle" aria-label="Toggle dark mode">
+      <label class="form-check-label small text-white ms-2" for="darkModeToggle">Dark</label>
+    </div>
+  </div>
+
+  <div class="d-flex flex-grow-1">
+    <nav id="section-sidebar" class="border-end p-3" style="width: 250px; overflow-y: auto; background-color: white;">
+      <h6 class="text-uppercase text-muted small mb-3">Sections</h6>
+      <ul id="section-list" class="list-unstyled"></ul>
+    </nav>
+
+    <main class="container my-5 flex-grow-1">
+      <h1 class="display-5 mb-3">Welcome</h1>
+      <p class="lead">This questionnaire can assist a manufacturer of a PDE to assess its compliance with the CRA regulation.</p>
     </main>
   </div>
 
+  <footer class="bg-light text-dark mt-auto">
+    <div class="container py-4">
+      <div class="row">
+        <div class="col-12 d-flex justify-content-center flex-wrap gap-3 mb-3">
+          <a href="https://excid.io/" rel="noopener noreferrer" class="d-inline-block" aria-label="Excid">
+            <img src="img/excid-logo.svg" alt="Excid logo" class="img-fluid" style="max-height:48px;" />
+          </a>
 
-  <!-- <footer class="footer"> <div class="footer-logos"> <img src="img/excid-logo.svg" alt="Excid logo" /> <img src="img/eu-cofunded-logo.png" alt="EU Co-funded" /> <img src="img/eccc-logo.svg" alt="ECCC" /> <img src="img/cracy.png" alt="cra-cy.eu" /> </div> </footer> -->
+          <a href="https://cybersecurity-centre.europa.eu/index_en" rel="noopener noreferrer" class="d-inline-block" aria-label="EU Co-funded">
+            <img src="img/eu-cofunded-logo.png" alt="EU Co-funded" class="img-fluid" style="max-height:48px;" />
+          </a>
 
-  <footer class="footer">
-    <div class="footer-logos">
+          <a href="https://cybersecurity-centre.europa.eu/index_en" rel="noopener noreferrer" class="d-inline-block" aria-label="ECCC">
+            <img src="img/eccc-logo.svg" alt="ECCC" class="img-fluid" style="max-height:48px;" />
+          </a>
 
-      <a href="https://excid.io/" rel="noopener noreferrer">
-        <img src="img/excid-logo.svg" alt="Excid logo" />
-      </a>
+          <a href="https://cra-cy.eu/" target="_blank" rel="noopener noreferrer" class="d-inline-block" aria-label="CRACY">
+            <img src="img/cracy.png" alt="cra-cy.eu" class="img-fluid" style="max-height:48px;" />
+          </a>
+        </div>
 
-      <a href="https://cybersecurity-centre.europa.eu/index_en" rel="noopener noreferrer">
-        <img src="img/eu-cofunded-logo.png" alt="EU Co-funded" />
-      </a>
-
-      <a href="https://cybersecurity-centre.europa.eu/index_en" rel="noopener noreferrer">
-        <img src="img/eccc-logo.svg" alt="ECCC" height="50" />
-      </a>
-
-      <a href="https://cra-cy.eu/" target="_blank" rel="noopener noreferrer">
-        <img src="img/cracy.png" alt="cra-cy.eu" />
-      </a>
-
+        <div class="col-12 text-center">
+          <small class="text-muted d-block">&copy; 2025 CRACY — All rights reserved.</small>
+        </div>
+      </div>
     </div>
   </footer>
-  <script type="module" src="js/main.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>
